@@ -99,8 +99,6 @@ const LANGUAGES = {
   ID_CH: "ID_CH",
   KH_EN: "KH_EN",
   KH_CH: "KH_CH",
-  INT_EN: "INT_EN",
-  INT_CH: "INT_CH",
 };
 const PREFERED_REGION = "preferred_region";
 const PREFERED_LANGUAGE = "preferred_language";
@@ -126,11 +124,19 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const langParams = urlParams.get("lang");
 
+
+const reget_language = () => {
+  return langParams || localStorage.getItem(_get_translator_config) || LANGUAGES.EN;
+}
+
+const reget_region = () => {
+  return localStorage.getItem(PREFERED_REGION) || DEFAULT_REGION;
+}
+
 const _get_translator_config =
   translator.config.persistKey || PREFERED_LANGUAGE;
-const _get_language =
-  langParams || localStorage.getItem(_get_translator_config) || LANGUAGES.EN;
-const _get_region = localStorage.getItem(PREFERED_REGION) || DEFAULT_REGION;
+const _get_language = reget_language();
+const _get_region = reget_region();
 
 translator.fetch(LANGUAGES_ARRAY).then(() => {
   // -> Translations are ready...
@@ -294,17 +300,7 @@ function copyFunction(id) {
  */
 
 function initialize() {
-  // change text of current_text
-  switch (_get_language) {
-    case LANGUAGES.EN:
-      $(".btn-language").html("中");
-      break;
-    case LANGUAGES.CH:
-      $(".btn-language").html("EN");
-      break;
-    default:
-      break;
-  }
+  changeLanguageLabel();
 
   // default select language
   const language_items = $(".language-item").find(".language-select");
@@ -312,37 +308,40 @@ function initialize() {
     const language_item = $(this);
     const language_item_language = language_item.data("language");
     const language_item_region = language_item.data("region");
-    if(language_item_language == _get_language && language_item_region == _get_region) {
-      const language_item_parent = language_item.closest('.language-item');
+    if (
+      language_item_language == _get_language &&
+      language_item_region == _get_region
+    ) {
+      const language_item_parent = language_item.closest(".language-item");
       language_item.addClass("selected");
       language_item_parent.addClass("active");
-
     }
   });
 
-
-  $("#selectLanguageModalBtn, #regions-currencies-languages").on("click", function (e) {
-    e.preventDefault();
-    console.log("click open language modal");
-    // $("#selectLanguageModal").showModal();
-    $("#selectLanguageModal").attr("open", true);
-    $("#mySidenav").removeClass("active");
-  });
-
+  $("#selectLanguageModalBtn, #regions-currencies-languages").on(
+    "click",
+    function (e) {
+      e.preventDefault();
+      console.log("click open language modal");
+      // $("#selectLanguageModal").showModal();
+      $("#selectLanguageModal").attr("open", true);
+      $("#mySidenav").removeClass("active");
+    }
+  );
 
   $(".language-item").on("click", function (e) {
     e.preventDefault();
     $(".language-item").removeClass("active");
     $(this).addClass("active");
 
-    const language_item = $(this).closest(".language-item").find(".language-select");
+    const language_item = $(this)
+      .closest(".language-item")
+      .find(".language-select");
     const first_language_item = language_item[0];
     const _first_language = first_language_item.dataset.language;
     const _first_region = first_language_item.dataset.region;
-    if(first_language_item) {
-      translator.translatePageTo(_first_language);
-      localStorage.setItem(PREFERED_REGION, _first_region);
-      localStorage.setItem(PREFERED_LANGUAGE, _first_language);
+    if (first_language_item) {
+      changeLanguage(_first_language, _first_region);
       $(first_language_item).addClass("selected");
     }
   });
@@ -353,17 +352,26 @@ function initialize() {
     const language_select = $(this);
     const language_select_language = language_select.data("language");
     const language_select_region = language_select.data("region");
-    console.log('language_select_language', language_select_language);
-    console.log('language_select_region', language_select_region);
-    translator.translatePageTo(language_select_language);
-    localStorage.setItem(PREFERED_REGION, language_select_region);
-    localStorage.setItem(PREFERED_LANGUAGE, language_select_language);
+    changeLanguage(language_select_language, language_select_region);
     $(".language-item").removeClass("active");
     language_select.closest(".language-item").addClass("active");
 
     $(".language-select").removeClass("selected");
     language_select.addClass("selected");
   });
+
+  function changeLanguageLabel() {
+    const _get_language = reget_language();
+    const language_label = _get_language.includes("CH") ? "EN" : "中";
+    $(".btn-language").html(language_label);
+  }
+
+  function changeLanguage(language, region) {
+    translator.translatePageTo(language);
+    localStorage.setItem(PREFERED_REGION, region);
+    localStorage.setItem(PREFERED_LANGUAGE, language);
+    changeLanguageLabel();
+  }
 }
 
 console.log("--- index.jsaaa");
