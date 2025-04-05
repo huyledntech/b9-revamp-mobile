@@ -52,8 +52,9 @@ $(function () {
  *
  */
 $(window).on("load", function () {
-  setTimeout(removeLoader, 300); //wait for page load PLUS x second
+  setTimeout(removeLoader, 500); //wait for page load PLUS x second
 });
+
 function removeLoader() {
   $("#loadingDiv").fadeOut(500, function () {
     // fadeOut complete. Remove the loading div
