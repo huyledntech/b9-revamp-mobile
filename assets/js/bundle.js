@@ -104,12 +104,14 @@ const LANGUAGES = {
 };
 const PREFERED_REGION = "preferred_region";
 const PREFERED_LANGUAGE = "preferred_language";
+const DEFAULT_LANGUAGE = LANGUAGES.EN;
+const DEFAULT_REGION = "International";
 
 const LANGUAGES_ARRAY = Object.values(LANGUAGES);
 console.log(LANGUAGES_ARRAY);
 
 var translator = new Translator({
-  defaultLanguage: "en",
+  defaultLanguage: LANGUAGES.EN,
   detectLanguage: true,
   selector: "[data-i18n]",
   debug: false,
@@ -128,7 +130,7 @@ const _get_translator_config =
   translator.config.persistKey || PREFERED_LANGUAGE;
 const _get_language =
   langParams || localStorage.getItem(_get_translator_config) || LANGUAGES.EN;
-const _get_region = localStorage.getItem(PREFERED_REGION) || "Singapore";
+const _get_region = localStorage.getItem(PREFERED_REGION) || DEFAULT_REGION;
 
 translator.fetch(LANGUAGES_ARRAY).then(() => {
   // -> Translations are ready...
