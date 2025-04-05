@@ -1,0 +1,49 @@
+<form id="loginForm" class="login__form">
+  <div class="input-group">
+    <input
+      type="text"
+      class="form-control"
+      name="username"
+      data-i18n="login_page.Username"
+      data-i18n-attr="placeholder"
+    />
+  </div>
+  <div class="input-group">
+    <input
+      type="password"
+      name="password"
+      class="form-control"
+      data-i18n="login_page.Password"
+      data-i18n-attr="placeholder"
+    />
+  </div>
+  <div class="form-check">
+    <input
+      type="checkbox"
+      class="form-check-input"
+      id="exampleCheck1"
+    />
+    <label
+      class="form-check-label"
+      for="exampleCheck1"
+      data-i18n="login_page.Remember_me"
+      >Remember password</label
+    >
+  </div>
+  <div class="">
+    <button type="submit" class="btn btn-warning btn-login" data-i18n="login_page.login"></button>
+    <div class="text-center mt-4">
+      <a href="/" class="forget_password" data-i18n="forget_password" data-bs-toggle="modal" data-bs-target="#forgetPasswordModal">Forget password?</a>
+    </div>
+  </div>
+  <a href="/download-app.html" class="download-app">
+    <img class="download-app__logo" src="assets/icons/uwin-icon.svg" />
+    <div class="download-app__content">
+      <div class="download-app__content__title" data-i18n="login_page.Uwin33_App_Download"></div>
+      <div class="download-app__content__description" data-i18n="login_page.Secure_Private_Gaming_Environment"></div>
+    </div>
+    <div class="download-app__download">
+      <img src="assets/icons/download.svg" />
+    </div>
+  </a>
+</form>

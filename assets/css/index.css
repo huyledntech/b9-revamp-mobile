@@ -1,0 +1,2383 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Aldo the Apache";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Aldo the Apache"), url("../fonts/AldotheApache.woff") format("woff");
+}
+:root {
+  --primary-color: #4E7FFF;
+  --max-with-mobile: 768px;
+  --default-font-size: 14px;
+  --default-small-font-size: 13px;
+  --default-padding-content: 20px;
+  --default-mobile-padding-content: 15px;
+  --bs-gutter-x: 20px;
+  --bs-gutter-y: 20px;
+  --bs-gutter-x-mobile: 15px;
+  --bs-gutter-y-mobile: 15px;
+  --bs-danger-rgb: 255, 0, 0;
+  --bs-body-color: #fff;
+}
+
+body {
+  font-size: var(--default-font-size);
+  line-height: 16px;
+  font-weight: 300;
+  max-width: var(--max-with-mobile);
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  background: #fff;
+  @apply text-blue1;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container,
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+}
+
+#mySidenav.sidenav {
+  width: 100%;
+  position: fixed;
+  z-index: 1035;
+  top: 0;
+  bottom: 0;
+  left: -500%;
+  overflow-x: hidden;
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+#mySidenav.sidenav .left-nav {
+  width: 100%;
+  background: #000B26;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  place-content: space-between;
+  min-width: 300px;
+  overflow: auto;
+  max-width: var(--max-with-mobile);
+}
+#mySidenav.sidenav .left-nav__container {
+  max-width: var(--max-with-mobile);
+  padding: 40px var(--bs-gutter-y-mobile);
+  height: 100%;
+  margin: auto;
+}
+#mySidenav.sidenav .left-nav__container__menu__footer {
+  display: flex;
+  place-content: space-around;
+  place-items: center;
+  gap: 10px 20px;
+  flex-wrap: wrap;
+  padding: 20px 0;
+}
+#mySidenav.sidenav .left-nav__container__menu__footer a {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+#mySidenav.sidenav .left-nav__container__menu__action {
+  padding: 40px 0 15px;
+}
+#mySidenav.sidenav .left-nav__container__menu__action a {
+  min-height: 50px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+}
+#mySidenav.sidenav .left-nav__container__menu__welcome {
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 15px 0 13px;
+}
+#mySidenav.sidenav .left-nav__container__menu__welcome span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #0089FF;
+}
+#mySidenav.sidenav .left-nav__container__menu__info {
+  margin-bottom: 15px;
+}
+#mySidenav.sidenav .left-nav__container__menu__info a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+#mySidenav.sidenav .left-nav__container__menu__info a span {
+  padding-left: 10px;
+}
+#mySidenav.sidenav .left-nav__container__menu__country {
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+#mySidenav.sidenav .left-nav__container__menu__country span {
+  padding: 0 10px;
+}
+#mySidenav.sidenav .left-nav__container__menu__country a.country-name {
+  color: rgba(255, 255, 255, 0.4);
+}
+#mySidenav.sidenav .left-nav__container__menu__country a.country-name img {
+  transition: all 0.5s;
+}
+#mySidenav.sidenav .left-nav__container__menu__country a.country-name.active img {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+#mySidenav.sidenav .left-nav__container__menu .collapse__item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.4);
+  padding: 7px 30px;
+  display: flex;
+  place-content: flex-start;
+  place-items: center;
+  gap: 6px;
+}
+#mySidenav.sidenav .left-nav__container__menu .collapse__item:first-child {
+  padding-top: 15px !important;
+}
+#mySidenav.sidenav .left-nav__container__menu .collapse__item.active {
+  color: #FFFFFF;
+}
+#mySidenav.sidenav .left-nav__container__menu__nav {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #FFFFFF;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+  padding-bottom: 8px;
+}
+#mySidenav.sidenav .left-nav__container__menu__content {
+  margin: 15px -5px !important;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+}
+#mySidenav.sidenav .left-nav__container__menu__content__item {
+  padding-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#mySidenav.sidenav .left-nav__container__menu__content__item .category {
+  background: #26314C;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+#mySidenav.sidenav .left-nav__container__menu__content__item .category img {
+  width: 100%;
+  margin-top: -2px;
+}
+#mySidenav.sidenav .left-nav__container__menu__content__item .category span {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+#mySidenav.sidenav .backdrop {
+  transition: 1s;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 0;
+}
+#mySidenav.sidenav.active {
+  left: 0;
+}
+
+.login-page {
+  background-image: url(../images/login/login-bg.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 0;
+}
+.login-page__content .nav-tabs {
+  border-bottom: 0;
+  margin-bottom: 25px;
+}
+.login-page__content .nav-tabs .nav-item .nav-link {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0 30px 0 0;
+}
+.login-page__content .nav-tabs .nav-item .nav-link.active {
+  color: #FDBB2C;
+  background: transparent;
+  border-color: transparent;
+}
+.login-page__content .tab-content .login__form .download-app {
+  margin-top: 33px;
+  border: 2px solid #194284;
+  border-radius: 4px;
+  gap: 0;
+  place-content: flex-start;
+  display: flex;
+  place-items: center;
+  align-items: stretch;
+}
+.login-page__content .tab-content .login__form .download-app__logo {
+  padding: 7px 0 7px 11px;
+}
+.login-page__content .tab-content .login__form .download-app__content {
+  padding: 7px 0 7px 10px;
+  width: 100%;
+}
+.login-page__content .tab-content .login__form .download-app__content__title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+.login-page__content .tab-content .login__form .download-app__content__description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.login-page__content .tab-content .login__form .download-app__download {
+  min-width: 50px;
+  min-height: 50px;
+  background: #194284;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.login-page__content .tab-content .login__form .forget_password {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #0089FF;
+}
+.login-page__content .tab-content .login__form .btn-login {
+  margin-top: 20px;
+  background: #FDBB2C;
+  border-radius: 4px;
+  min-height: 50px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #000000;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.login-page__content .tab-content .login__form .input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.login-page__content .tab-content .login__form .input-group .form-control {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 4px;
+  min-height: 50px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+  border: none;
+  padding: 16px 13px;
+  width: 100%;
+}
+.login-page__content .tab-content .login__form .input-group .form-control::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+.login-page__content .tab-content .login__form .input-group .form-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+.login-page__content .tab-content .login__form .input-group .form-text.warning {
+  color: #FDBB2C;
+}
+.login-page__content .tab-content .login__form .input-group .form-text.danger {
+  color: #FF1A1A;
+}
+.login-page__content .tab-content .login__form .input-group .form-text ul {
+  margin-bottom: 0;
+}
+.login-page__content .tab-content .login__form .input-group .error {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 4px;
+  color: #FF1A1A;
+}
+.login-page__content .tab-content .login__form .form-check .form-check-input {
+  margin-top: 0;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.login-page__logo {
+  padding-top: 47px;
+  padding-bottom: 37px;
+}
+.login-page__logo img {
+  max-width: 120px;
+}
+.login-page__navbar {
+  position: relative;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.login-page__navbar .dropdown .dropdown-toggle {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 4px;
+  border: none;
+  width: 70px;
+  height: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.login-page__navbar .dropdown .dropdown-toggle img {
+  max-width: 18px;
+}
+.login-page__navbar .dropdown .dropdown-toggle:focus {
+  box-shadow: none;
+}
+.login-page__navbar .dropdown .dropdown-menu {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 0px 0px 4px 4px;
+  right: 0;
+  margin-top: 0;
+  border: none;
+  width: 70px;
+  min-width: initial;
+  padding: 0;
+}
+.login-page__navbar .dropdown .dropdown-menu li .dropdown-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  height: 30px;
+  padding-left: 6px;
+}
+.login-page__navbar .dropdown .dropdown-menu li .dropdown-item img {
+  max-width: 18px;
+}
+
+#forgetPasswordModal .modal-dialog .modal-content {
+  padding: 25px;
+}
+#forgetPasswordModal .modal-dialog .modal-content .modal-header {
+  border-bottom: 0;
+  padding-top: 0;
+  padding-right: 0;
+}
+#forgetPasswordModal .modal-dialog .modal-content .modal-header button {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+  opacity: 1;
+}
+#forgetPasswordModal .modal-dialog .modal-content .modal-body .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FDBB2C;
+  margin-bottom: 20px;
+}
+#forgetPasswordModal .modal-dialog .modal-content .modal-body .btn-login {
+  min-height: 40px;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+}
+#forgetPasswordModal .modal-dialog .modal-content .modal-body .input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+#forgetPasswordModal .modal-dialog .modal-content .modal-body .input-group .error {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 4px;
+  color: #FF1A1A;
+}
+#forgetPasswordModal .modal-dialog .modal-content .modal-body .input-group .form-control {
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 4px;
+  min-height: 45px;
+  padding: 10px 13px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+  border: none;
+  padding: 16px 13px;
+  width: 100%;
+}
+#forgetPasswordModal .modal-dialog .modal-content .modal-body .input-group .form-control::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+.register {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  background-image: url("../images/login-bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  text-align: center;
+  color: #fff;
+}
+.register__logo {
+  margin-bottom: 20px;
+}
+.register__logo img {
+  max-width: 265px;
+}
+.register__logo1 {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: 60px;
+  margin-bottom: 65px;
+}
+.register__form {
+  display: flex;
+  min-height: 450px;
+}
+.register__form form {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0px 10px 10px 0px;
+  padding: 20px;
+  width: 100%;
+}
+.register__form form.no-bg {
+  background: transparent;
+}
+.register__form form h2 {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+.register__form form h4 {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.register__form form .input-group {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  border: none;
+  min-height: 50px;
+}
+.register__form form .input-group .input-group-text {
+  background-color: transparent;
+  border: none;
+  padding-left: 20px;
+}
+.register__form form .input-group .input-group-text:first-child img {
+  width: 25px;
+}
+.register__form form .input-group .input-group-text:not(:first-child) {
+  padding-right: 20px;
+}
+.register__form form .input-group .form-control {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+}
+.register__form form .input-group .form-control::placeholder {
+  color: #ffffff;
+}
+.register__form form .input-group .form-control:focus {
+  box-shadow: none;
+}
+.register__form form a {
+  font-style: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.register__form form .btn-login {
+  background: rgba(89, 126, 247, 0.5);
+  border: none;
+  border-radius: 30px;
+  width: 100%;
+  min-height: 50px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  text-transform: uppercase;
+}
+.register__form form .font-small {
+  font-style: normal;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.register__form__left-button {
+  display: contents;
+}
+.register__form__left-button .register_link {
+  display: flex;
+  place-content: center;
+  writing-mode: tb-rl;
+  text-orientation: mixed;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  border-radius: 0px 10px 10px 0px;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  gap: 20px;
+  min-width: 50px;
+}
+.register__form__left-button .register_link img {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  width: 25px;
+}
+.register.register-second {
+  flex-direction: column;
+}
+.register.register-second .container {
+  padding-top: 20px;
+}
+.register.register-second .customer-service {
+  font-size: 14px;
+  line-height: 14px;
+  color: #FFFFFF;
+  padding: 10px 0;
+  text-decoration: none;
+}
+.register.register-thank-you .register__logo1 {
+  margin-bottom: 40px;
+}
+.register.register-thank-you .register__form {
+  padding-top: 0;
+}
+.register.register-thank-you h1 {
+  font-family: "Aldo the Apache", sans-serif;
+  font-style: normal;
+  font-size: 36px;
+  line-height: 31px;
+  text-align: center;
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(#E5D6C3, #C9AF92);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.register.register-thank-you h4 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  background: -webkit-linear-gradient(#E5D6C3, #C9AF92);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+.register.register-thank-you h5 {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.register.register-thank-you .btn-login {
+  background: rgb(89, 126, 247);
+}
+
+@media only screen and (max-width: 425px) {
+  .register {
+    min-height: 100vh;
+  }
+  .register__logo {
+    margin-bottom: 20px;
+  }
+  .register__logo img {
+    max-width: 265px;
+  }
+  .register__logo1 {
+    gap: 60px;
+    margin-bottom: 65px;
+  }
+  .register__form {
+    min-height: 450px;
+  }
+  .register__form form {
+    border-radius: 10px 0 0 10px;
+    padding: 15px;
+    width: 100%;
+  }
+  .register__form form h2 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 30px;
+  }
+  .register__form form .input-group {
+    border-radius: 30px;
+    min-height: 45px;
+  }
+  .register__form form .input-group .input-group-text {
+    padding-left: 15px;
+  }
+  .register__form form .form-check {
+    gap: 10px;
+  }
+  .register__form form .form-check .form-check-input {
+    border-radius: 50%;
+    margin-right: 0;
+  }
+  .register__form form .form-check .form-check-label {
+    font-size: 12px;
+    line-height: 14px;
+    padding-top: 2px;
+  }
+  .register__form form a {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .register__form form .btn-login {
+    border-radius: 30px;
+    width: 100%;
+    min-height: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .register__form__right-button .register_link {
+    border-radius: 10px 0px 0px 10px;
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    gap: 20px;
+  }
+}
+.home__content {
+  padding-left: 0;
+  padding-right: 0;
+}
+.home__content__commitment__content {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: 10px;
+  height: 100%;
+}
+.home__content__commitment__content__item {
+  background: rgba(255, 255, 255, 0.15);
+  background-image: url(../images/commitment/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 16px;
+  min-height: 230px;
+  position: relative;
+  padding: 25px 10px;
+}
+@media only screen and (max-width: 405px) {
+  .home__content__commitment__content__item {
+    min-height: 250px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .home__content__commitment__content__item {
+    min-height: 255px;
+  }
+}
+.home__content__commitment__content__item__icon {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  max-width: 45px;
+  max-height: 70px;
+}
+.home__content__commitment__content__item__title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 15px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  min-height: 45px;
+}
+.home__content__commitment__content__item__description {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.home__content__special_odds__content {
+  display: flex;
+  place-content: flex-start;
+  gap: 10px;
+  overflow-y: auto;
+  padding-bottom: 10px;
+}
+.home__content__special_odds__content__item {
+  background: #131D39;
+  border-radius: 8px;
+  padding: 0;
+  width: 120px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.home__content__special_odds__content__item__label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #FDBB2C;
+  padding: 3px;
+  background: rgba(253, 187, 44, 0.35);
+  border-radius: 0px 0px 12px 12px;
+}
+.home__content__special_odds__content__item__img {
+  margin: 0;
+  max-width: 117px;
+}
+.home__content__special_odds__content__item__title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 12px;
+}
+.home__content__hot_games {
+  padding-left: 0;
+  padding-right: 0;
+}
+.home__content__hot_games > .label {
+  margin-left: 15px;
+}
+.home__content__hot_games .title {
+  padding-left: 15px;
+}
+.home__content__hot_games .subtitle {
+  padding-right: 15px;
+}
+.home__content__hot_games__content {
+  display: flex;
+  place-content: flex-start;
+  gap: 10px;
+  overflow-y: auto;
+  padding: 0 15px 10px 15px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.home__content__hot_games__content::-webkit-scrollbar {
+  display: none;
+}
+.home__content__hot_games__content__item {
+  background: #131D39;
+  border-radius: 8px;
+  padding: 0 15px;
+  min-width: 100px;
+  text-align: center;
+  position: relative;
+}
+.home__content__hot_games__content__item__label {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 0px 0px 6px 6px;
+  padding: 3px;
+}
+.home__content__hot_games__content__item__label.success {
+  background: rgba(73, 185, 2, 0.3);
+  color: #49B902;
+}
+.home__content__hot_games__content__item__label.danger {
+  background: rgba(203, 19, 47, 0.3);
+  color: #CB132F;
+}
+.home__content__hot_games__content__item__img {
+  margin: 8px 0;
+  max-width: 56px;
+}
+.home__content__hot_games__content__item__title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: 10px;
+}
+.home__content__hot_games__content__item .action {
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #FDBB2C;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+  opacity: 0;
+  z-index: -1;
+}
+.home__content__hot_games__content__item .action .btn {
+  width: 100%;
+  height: 30px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  min-width: auto;
+  padding: 0;
+}
+.home__content__hot_games__content__item.active .action {
+  opacity: 1;
+  z-index: 1;
+}
+.home__content__gaming_licenses {
+  min-height: 145px;
+  background-image: url(../images/gaming-licenses/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  place-content: center;
+  place-items: flex-start;
+  flex-direction: column;
+  padding-top: 0 !important;
+  margin-top: 40px;
+  padding: 15px;
+}
+.home__content__gaming_licenses__content {
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+  gap: 15px;
+  width: 100%;
+}
+.home__content__gaming_licenses__content__img {
+  width: 30%;
+  text-align: center;
+  max-height: 70px;
+}
+.home__content__luck_surprise {
+  background-image: url(../images/luck-surprise-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 212px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-content: center;
+  margin-top: 35px;
+}
+.home__content__luck_surprise__title {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  font-weight: 900;
+  font-size: 34px;
+  line-height: 46px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.35);
+}
+.home__content__luck_surprise__title__left {
+  padding-bottom: 30px;
+  margin-right: -30px;
+}
+.home__content__luck_surprise__title__icon {
+  max-width: 130px;
+}
+.home__content__luck_surprise__title__right {
+  padding-top: 30px;
+  margin-left: -30px;
+}
+.home__content__luck_surprise__subtitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-top: 15px;
+}
+.home__content__exclusive_event__content {
+  background: #131D39;
+  border-radius: 18px;
+  padding: 25px 15px;
+  overflow: hidden;
+}
+.home__content__exclusive_event__content__header {
+  position: relative;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+}
+.home__content__exclusive_event__content__header__title {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 35px;
+  background: linear-gradient(90deg, #FCA20D 0%, #FFCD0C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 10px;
+}
+.home__content__exclusive_event__content__header__total-prize {
+  background: #000B26;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 4px 10px;
+}
+.home__content__exclusive_event__content__header__icon {
+  position: absolute;
+  top: -50px;
+  right: -30px;
+  max-width: 170px;
+}
+.home__content__exclusive_event__content__item {
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+  padding: 8px 0;
+}
+.home__content__exclusive_event__content__item .username {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+.home__content__exclusive_event__content__item .name {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.home__content__exclusive_event__content__item .price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: right;
+  background: linear-gradient(89.95deg, #FCA20D 50%, #FFCD0C 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-bottom: 2px;
+}
+.home__content__exclusive_event__content__item .date {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.3);
+}
+.home__content__exclusive_event__content__action a {
+  width: 100%;
+  min-height: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #000000;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.home__content__event {
+  margin-top: 35px;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+.home__content__event__container {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.home__content__event__container:first-child > div {
+  background-image: url("../images/event-bg.png");
+}
+.home__content__event__container:last-child > div {
+  background-image: url("../images/download-bg.png");
+}
+.home__content__event__container__item {
+  background: #131D39;
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.65);
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10px 13px 13px;
+  min-height: 100px;
+  height: 100%;
+  position: relative;
+}
+.home__content__event__container__item__icon {
+  position: absolute;
+  right: 13px;
+  top: 13px;
+}
+.home__content__event__container__item__img {
+  height: 45px;
+  display: flex;
+  place-content: flex-start;
+  place-items: flex-end;
+}
+.home__content__event__container__item__img img {
+  max-height: 40px;
+  max-width: 50px;
+  margin-bottom: 5px;
+}
+.home__content__event__container__item__sub {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 3px;
+}
+.home__content__event__container__item__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+}
+.home__content__category {
+  display: flex;
+  place-content: space-between;
+  place-items: flex-start;
+  margin-top: 33px;
+  text-align: center;
+}
+.home__content__category__item__img {
+  background: #131D39;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.4);
+  border-radius: 18px;
+  width: 62px;
+  height: 62px;
+  border: 2px solid rgba(25, 66, 132, 0.3);
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.home__content__category__item__img img {
+  max-height: 34px;
+}
+.home__content__category__item__text {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 5px;
+}
+.home__content__feature {
+  display: none;
+}
+.home__content__feature__title {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 15px;
+}
+.home__content__feature__content {
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+}
+.home__content__feature__content img {
+  max-height: 20px;
+  max-width: 90px;
+}
+.home__content__feature__content img.mh-13px {
+  max-height: 13px;
+}
+.home__content .top-slider {
+  margin-bottom: 20px !important;
+  padding: 20px 15px;
+  min-height: 140px;
+}
+.home__content .top-slider .slick-slide {
+  border-radius: 20px;
+}
+.home__content .top-slider .slick-slide img {
+  width: 100%;
+  border-radius: 9px;
+}
+.home__content .top-slider .slick-dots {
+  width: auto;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+}
+.home__content .top-slider .slick-dots li {
+  margin: 0 2px;
+  width: 6px;
+}
+.home__content .top-slider .slick-dots li button {
+  width: 6px;
+}
+.home__content .top-slider .slick-dots li button::before {
+  background-color: #707070;
+  content: "";
+  width: 7px;
+  height: 7px;
+  opacity: 1;
+  border-radius: 50%;
+}
+.home__content .top-slider .slick-dots li.slick-active,
+.home__content .top-slider .slick-dots li.slick-active button {
+  width: 27px;
+}
+.home__content .top-slider .slick-dots li.slick-active button::before {
+  width: 27px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.home__content .top-slider .no-overflow {
+  overflow: hidden;
+}
+.home__content .top-slider .slick-slider {
+  overflow: hidden;
+}
+
+#firstTimeRevampModal .modal-dialog,
+#newbieModal .modal-dialog {
+  max-width: 350px;
+}
+#firstTimeRevampModal .modal-dialog .modal-content,
+#newbieModal .modal-dialog .modal-content {
+  padding: 0;
+}
+#firstTimeRevampModal .modal-dialog .modal-content .modal-header,
+#newbieModal .modal-dialog .modal-content .modal-header {
+  border-bottom: none !important;
+}
+#firstTimeRevampModal .modal-dialog .modal-content .modal-header .btn-close,
+#newbieModal .modal-dialog .modal-content .modal-header .btn-close {
+  opacity: 1;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+}
+#firstTimeRevampModal .modal-dialog .modal-content .modal-body img,
+#newbieModal .modal-dialog .modal-content .modal-body img {
+  max-width: 180px;
+}
+#firstTimeRevampModal .modal-dialog .modal-content .modal-body .title,
+#newbieModal .modal-dialog .modal-content .modal-body .title {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #FFFFFF;
+  margin: 15px 0;
+}
+#firstTimeRevampModal .modal-dialog .modal-content .modal-body .subtitle,
+#newbieModal .modal-dialog .modal-content .modal-body .subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+#firstTimeRevampModal .modal-dialog .modal-content .modal-body .subtitle span,
+#newbieModal .modal-dialog .modal-content .modal-body .subtitle span {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FDBB2C;
+}
+#firstTimeRevampModal .modal-dialog .modal-content .modal-footer,
+#newbieModal .modal-dialog .modal-content .modal-footer {
+  border-top: none;
+  padding: 0;
+  margin-top: 20px;
+}
+#firstTimeRevampModal .modal-dialog .modal-content .modal-footer .btn,
+#newbieModal .modal-dialog .modal-content .modal-footer .btn {
+  width: 100%;
+  min-height: 50px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #000000;
+  margin: 0;
+  border-radius: 0;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+
+#firstTimeRevampModal .modal-body {
+  padding: 0 20px;
+}
+#firstTimeRevampModal .modal-body .title {
+  color: #FDBB2C !important;
+}
+#firstTimeRevampModal .modal-body .subtitle {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.home-section {
+  padding-top: 40px;
+}
+.home-section .label {
+  border: 1px solid #FDBB2C;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  display: inline-block;
+  min-width: 45px;
+  padding: 2px 10px;
+}
+.home-section .title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+  margin: 3px 0 15px;
+}
+.home-section .subtitle {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  color: #FFFFFF;
+}
+
+.forget-password-page {
+  background-color: #f2f2f2;
+  padding-top: 60px;
+  padding-bottom: 0;
+}
+.forget-password-page__content {
+  background-color: #ffffff;
+  padding: 30px 15px;
+  height: calc(100vh - 60px);
+}
+.forget-password-page__content__success {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 28px;
+  color: #4E7FFF;
+  margin-bottom: 15px;
+}
+.forget-password-page__content__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+.forget-password-page__content .form-control {
+  padding: 10px 0 20px 0;
+  border: none;
+  border-bottom: 1px solid #EEEEEE;
+  border-radius: 0;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #000000;
+}
+.forget-password-page__content .form-control::placeholder {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 14px;
+  color: #CED4D9;
+}
+.forget-password-page__content .form-control:focus {
+  box-shadow: none;
+}
+.forget-password-page__content__button {
+  margin-top: 50px;
+}
+.forget-password-page__content__button .btn {
+  width: 100%;
+  background: #597EF7;
+  border-radius: 10px;
+  min-height: 50px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFFFFF;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.forget-password-page__content__description {
+  font-weight: 300;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: center;
+  color: #000000;
+  margin-top: 15px;
+}
+
+.footer {
+  background: rgba(19, 29, 57, 0.5);
+  padding: 25px 15px 40px;
+  margin-top: 40px;
+}
+.footer__logo {
+  max-width: 100px;
+}
+.footer__copy_right {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 30px;
+  margin-top: 5px;
+}
+.footer__items {
+  margin-bottom: 30px;
+}
+.footer__items__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+.footer__items__item {
+  padding-top: 10px;
+  display: flex;
+  place-content: flex-start;
+  place-items: center;
+  gap: 10px;
+}
+.footer__items__item.social img {
+  width: 36px;
+}
+.footer__items__item.question img {
+  width: 28px;
+}
+.footer__items__item.responsible-gaming img {
+  max-height: 26px;
+}
+.footer__items__item.security-trust img {
+  max-width: 83px;
+}
+.footer__items__item.certification img {
+  max-width: 70%;
+}
+.footer__items__item.payment-method img {
+  max-width: 80%;
+}
+.promotion__content__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #FFFFFF;
+  padding: 20px 0;
+}
+.promotion__content__container__item {
+  background: #131D39;
+  border-radius: 9px;
+  margin-bottom: 20px;
+}
+.promotion__content__container__item__img {
+  width: 100%;
+}
+.promotion__content__container__item__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FDBB2C;
+  padding: 15px 12px;
+}
+
+.promotionDetailModal .modal-dialog .modal-content {
+  height: 80vh;
+  padding: 15px;
+}
+.promotionDetailModal .modal-dialog .modal-content .close-button {
+  text-align: center;
+  padding-bottom: 5px;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content {
+  overflow-x: auto;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content table {
+  margin: 15px 0;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content table thead tr th {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  color: #FDBB2C;
+  background: #19264B;
+  text-align: center;
+  vertical-align: middle;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content table tbody {
+  border-top-color: transparent;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content table tbody tr td {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FDBB2C;
+  padding: 15px 0;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__subtitle {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+  padding: 10px 0;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__subdescription {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FDBB2C;
+  padding-left: 15px;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__subdescription ul {
+  padding-left: 15px;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__step {
+  margin-left: -5px;
+  margin-right: 0;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__step__container {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__step__container__item {
+  border: 2px dashed #194183;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  color: #FFFFFF;
+  height: 100%;
+  padding: 7px;
+  text-align: center;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__step__container__item__count {
+  color: #FDBB2C;
+  border: 2px solid #FDBB2C;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
+  place-content: center;
+  place-items: center;
+  font-weight: bold;
+  font-size: 12px;
+}
+.promotionDetailModal .modal-dialog .modal-content .promotion-content__step__container__item__text a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.category-page__content__container__tab {
+  margin-top: 20px;
+}
+.category-page__content__container__tab__nav {
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.category-page__content__container__tab__nav .btn-nav {
+  background: #194284;
+  box-shadow: -4px 0px 4px rgba(0, 0, 0, 0.25);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  border: none;
+  width: 30px;
+  min-height: 40px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.category-page__content__container__tab__nav .btn-nav img {
+  max-width: 10px;
+  margin-top: -3px;
+}
+.category-page__content__container__tab__nav .nav {
+  flex-wrap: nowrap;
+  overflow: auto;
+  padding: 2px 0;
+  border-bottom: none;
+  background: #131D39;
+  width: 100%;
+  gap: 2px;
+  min-height: 40px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.category-page__content__container__tab__nav .nav::-webkit-scrollbar {
+  display: none;
+}
+.category-page__content__container__tab__nav .nav-item .nav-link {
+  min-width: 60px;
+  height: 100%;
+  padding: 5px 0;
+}
+.category-page__content__container__tab__nav .nav-item .nav-link img {
+  opacity: 0.5;
+  max-width: 50px;
+  max-height: 24px;
+}
+.category-page__content__container__tab__nav .nav-item .nav-link.active {
+  background-color: transparent;
+  border-color: transparent;
+}
+.category-page__content__container__tab__nav .nav-item .nav-link.active img {
+  opacity: 1;
+}
+.category-page__content__container__tab .tab-content {
+  margin-top: 15px;
+  background: #131D39;
+  border: 1.5px solid #194284;
+  border-radius: 8px;
+  min-height: 200px;
+}
+.category-page__content__container__tab .tab-content .tab4d-container__title {
+  display: flex;
+  place-content: space-between;
+  place-items: center;
+  padding: 10px 15px;
+  background: #19264B;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+  text-align: right;
+}
+.category-page__content__container__tab .tab-content .tab4d-container__title .date {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: right;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 5px;
+}
+.category-page__content__container__tab .tab-content .tab4d-container__title img {
+  width: 40px;
+}
+.category-page__content__container__tab .tab-content .tab4d-container__subtitle {
+  background: #19264B;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 10px 0;
+}
+.category-page__content__container__tab .tab-content .tab4d-container__content {
+  display: flex;
+  place-content: space-around;
+  place-items: center;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 10px 0;
+}
+.category-page__content__container__tab .tab-content .tab4d-container__content.text-warning {
+  color: #FDBB2C;
+}
+.category-page__content__container__tab .tab-content .tab4d-container__contenttext {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.category-page__content__container__tab .tab-content .tab4d-container__contenttext div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.category-page__content__container__lucky_number {
+  background-image: url(../images/4d-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  min-height: 125px;
+  margin-top: 30px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  gap: 7px;
+  flex-direction: column;
+  padding: 5px;
+}
+.category-page__content__container__lucky_number__title {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+}
+.category-page__content__container__lucky_number__number {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  text-align: center;
+  color: #5A81C4;
+  padding: 0px 15px;
+}
+.category-page__content__container__lucky_number__number img {
+  margin-left: 5px;
+}
+.category-page__content__container__lucky_number__bet_now .btn {
+  height: 26px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #000000;
+}
+.category-page__content__container__lucky_number__payout .btn {
+  height: 26px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #0089FF;
+}
+.category-page__content__container__lucky_number__payout .btn:focus {
+  box-shadow: none;
+}
+.category-page__content__container__special_odds__content {
+  display: flex;
+  place-content: flex-start;
+  gap: 10px;
+  overflow-y: auto;
+  padding-bottom: 10px;
+}
+.category-page__content__container__special_odds__content__item {
+  background: #131D39;
+  border-radius: 8px;
+  padding: 0;
+  width: 120px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.category-page__content__container__special_odds__content__item__label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #FDBB2C;
+  padding: 3px;
+  background: rgba(253, 187, 44, 0.35);
+  border-radius: 0px 0px 12px 12px;
+}
+.category-page__content__container__special_odds__content__item__img {
+  margin: 0;
+}
+.category-page__content__container__special_odds__content__item__title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 12px;
+}
+.category-page__content__container__games_lobby__content {
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-top: 30px;
+}
+.category-page__content__container__games_lobby__content__item {
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 20px;
+}
+.category-page__content__container__games_lobby__content__item__title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+.category-page__content__container__games_lobby__content__item__img {
+  height: 126px;
+  display: block;
+  text-align: center;
+  background-image: url(../images/games-lobby-1.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+}
+.category-page__content__container__games_lobby__content__item__img__icon {
+  margin-top: -40px;
+  max-width: 95px;
+  max-height: 95px;
+}
+.category-page__content__container__games_lobby__content__item__img__logo {
+  max-width: 90px;
+  max-height: 25px;
+}
+.category-page__content__container__games_lobby__content__item__img__logo.mh-14px {
+  max-height: 14px;
+}
+.category-page__content__container__games_lobby__content__item__content {
+  display: block;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  background: #131D39;
+  border-radius: 8px;
+  padding: 15px 12px;
+}
+.category-page__content__container__games_lobby__content__item__content__icon {
+  max-width: 95px;
+  max-height: 95px;
+}
+.category-page__content__container__games_lobby__content__item__content__title {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 5px;
+}
+.category-page__content__container__games_lobby__content__item:nth-child(even) .category-page__content__container__games_lobby__content__item__img {
+  background-image: url(../images/games-lobby-2.svg);
+}
+.category-page__content__container__hot_games__content {
+  display: flex;
+  place-content: flex-start;
+  gap: 10px;
+  overflow-y: auto;
+  padding-bottom: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  padding: 0 15px;
+}
+.category-page__content__container__hot_games__content::-webkit-scrollbar {
+  display: none;
+}
+.category-page__content__container__hot_games__content__item {
+  background: #131D39;
+  border-radius: 8px;
+  padding: 0 15px;
+  min-width: 100px;
+  text-align: center;
+  position: relative;
+}
+.category-page__content__container__hot_games__content__item__label {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  border-radius: 0px 0px 6px 6px;
+  padding: 3px;
+}
+.category-page__content__container__hot_games__content__item__label.success {
+  background: rgba(73, 185, 2, 0.3);
+  color: #49B902;
+}
+.category-page__content__container__hot_games__content__item__label.danger {
+  background: rgba(203, 19, 47, 0.3);
+  color: #CB132F;
+}
+.category-page__content__container__hot_games__content__item__img {
+  margin: 8px 0;
+  max-height: 72px;
+}
+.category-page__content__container__hot_games__content__item__title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 13px;
+  text-align: center;
+  color: #FFFFFF;
+  padding-bottom: 10px;
+}
+.category-page__content__container__hot_games__content__item .action {
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #FDBB2C;
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  gap: 10px;
+  transition: all 0.2s;
+  opacity: 0;
+  z-index: -1;
+}
+.category-page__content__container__hot_games__content__item .action .btn {
+  width: 100%;
+  height: 30px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  min-width: auto;
+  padding: 0;
+}
+.category-page__content__container__hot_games__content__item.active .action {
+  opacity: 1;
+  z-index: 1;
+}
+.category-page__content__top {
+  background: #131D39;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+  border-radius: 0px 0px 26px 26px;
+}
+.category-page__content__top.home {
+  background: transparent !important;
+  box-shadow: none !important;
+  margin-top: 30px;
+}
+.category-page__content__top.home .home__content__feature {
+  display: block;
+}
+.category-page__content__top__navbar {
+  display: flex;
+  place-content: space-between;
+  place-items: flex-start;
+  margin-top: 20px;
+  text-align: center;
+  border-bottom: none;
+  gap: 1px;
+  padding-bottom: 12px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.category-page__content__top__navbar__item__img {
+  background: #131D39;
+  border-radius: 18px;
+  width: 60px;
+  height: 60px;
+  border: 2px solid rgba(25, 66, 132, 0.3);
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.4);
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
+.category-page__content__top__navbar__item__img img {
+  max-height: 34px;
+}
+.category-page__content__top__navbar__item__img img.active {
+  display: none;
+}
+@media only screen and (max-width: 370px) {
+  .category-page__content__top__navbar__item__img {
+    width: 55px;
+    height: 55px;
+  }
+}
+.category-page__content__top__navbar__item__text {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 14px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 5px;
+}
+.category-page__content__top__navbar__item.active {
+  pointer-events: none;
+}
+.category-page__content__top__navbar__item.active .category-page__content__top__navbar__item__img {
+  background: rgba(252, 162, 13, 0.24);
+  border: 2px solid #FDBB2C;
+}
+.category-page__content__top__navbar__item.active .category-page__content__top__navbar__item__img img {
+  display: none;
+}
+.category-page__content__top__navbar__item.active .category-page__content__top__navbar__item__img img.active {
+  display: initial;
+}
+.category-page__content__top .top-slider {
+  margin-bottom: 20px !important;
+  padding: 20px 15px;
+  min-height: 140px;
+}
+.category-page__content__top .top-slider .slick-slide {
+  border-radius: 20px;
+}
+.category-page__content__top .top-slider .slick-slide img {
+  width: 100%;
+  border-radius: 9px;
+}
+.category-page__content__top .top-slider .slick-dots {
+  width: auto;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+}
+.category-page__content__top .top-slider .slick-dots li {
+  margin: 0 2px;
+  width: 6px;
+}
+.category-page__content__top .top-slider .slick-dots li button {
+  width: 6px;
+}
+.category-page__content__top .top-slider .slick-dots li button::before {
+  background-color: #707070;
+  content: "";
+  width: 7px;
+  height: 7px;
+  opacity: 1;
+  border-radius: 50%;
+}
+.category-page__content__top .top-slider .slick-dots li.slick-active,
+.category-page__content__top .top-slider .slick-dots li.slick-active button {
+  width: 27px;
+}
+.category-page__content__top .top-slider .slick-dots li.slick-active button::before {
+  width: 27px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.category-page__content__top .top-slider .no-overflow {
+  overflow: hidden;
+}
+.category-page__content__top .top-slider .slick-slider {
+  overflow: hidden;
+}
+
+#payoutTableModal .modal-dialog .modal-content {
+  height: 80vh;
+  padding: 15px;
+}
+#payoutTableModal .modal-dialog .modal-content .close-button {
+  text-align: center;
+  padding-bottom: 5px;
+}
+#payoutTableModal .modal-dialog .modal-content .content {
+  overflow-x: auto;
+}
+#payoutTableModal .modal-dialog .modal-content .content table {
+  margin: 15px 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+#payoutTableModal .modal-dialog .modal-content .content table thead tr th {
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 14px;
+  color: #FDBB2C;
+  background: #19264B;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom: none;
+  box-shadow: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#payoutTableModal .modal-dialog .modal-content .content table tbody {
+  border-top: none;
+}
+#payoutTableModal .modal-dialog .modal-content .content table tbody tr td {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#payoutTableModal .modal-dialog .modal-content .content table tbody tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.15);
+}
+#payoutTableModal .modal-dialog .modal-content .content__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FDBB2C;
+  padding: 15px 0;
+}
+#payoutTableModal .modal-dialog .modal-content .content__subtitle {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+  padding: 10px 0;
+}
+#payoutTableModal .modal-dialog .modal-content .content__description {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FFFFFF;
+}
+#payoutTableModal .modal-dialog .modal-content .content__subdescription {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FDBB2C;
+  padding-left: 15px;
+}
+#payoutTableModal .modal-dialog .modal-content .content__subdescription ul {
+  padding-left: 15px;
+}
+
+.my-account-page .navbar.fixed-top .title {
+  text-transform: capitalize;
+}
+.my-account-page__content {
+  padding-top: 10px;
+}
+.my-account-page__content #myAccountNav {
+  border-bottom: none;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 4px;
+  padding: 4px;
+}
+.my-account-page__content #myAccountNav .nav-item .nav-link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  height: 100%;
+}
+.my-account-page__content #myAccountNav .nav-item .nav-link.active {
+  background: #FDBB2C;
+  border-radius: 2px;
+  color: #000000;
+}
+.my-account-page__content #myAccountContent {
+  padding: 20px 0;
+}
+.my-account-page__content #myAccountContent .form__action .btn {
+  width: 100%;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  min-height: 50px;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  margin-bottom: 5px;
+}
+.my-account-page__content #myAccountContent .form__action .btn-warning {
+  background: #FDBB2C;
+  border-radius: 4px;
+}
+.my-account-page__content #myAccountContent .form__action .btn-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.my-account-page__content #myAccountContent .form__action .btn:focus {
+  box-shadow: none;
+}
+.my-account-page__content #myAccountContent .form__container {
+  margin-bottom: 20px;
+  position: relative;
+}
+.my-account-page__content #myAccountContent .form__container .error {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #FF1A1A;
+  margin-bottom: 5px;
+  display: block;
+}
+.my-account-page__content #myAccountContent .form__container .help-text {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+  color: #FDBB2C;
+}
+.my-account-page__content #myAccountContent .form__container .form-label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+.my-account-page__content #myAccountContent .form__container .form-select,
+.my-account-page__content #myAccountContent .form__container .form-control {
+  background: rgba(255, 255, 255, 0.13);
+  border: none;
+  border-radius: 4px;
+  min-height: 50px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FDBB2C;
+  margin-bottom: 10px;
+}
+.my-account-page__content #myAccountContent .form__container .form-select::placeholder,
+.my-account-page__content #myAccountContent .form__container .form-control::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.4);
+}
+.my-account-page__content #myAccountContent .form__container .form-select:disabled,
+.my-account-page__content #myAccountContent .form__container .form-control:disabled {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: transparent;
+}
+
+#addBankDetailModal .modal-dialog .modal-content {
+  padding: 25px;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-header {
+  border-bottom: 0;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-header button {
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat;
+  opacity: 1;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #FDBB2C;
+  margin-bottom: 20px;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .btn-submit {
+  min-height: 40px;
+  width: 50%;
+  margin: auto;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  color: #000000;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-select,
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-control {
+  background: transparent;
+  border-radius: 4px;
+  min-height: 45px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #FDBB2C;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  padding: 12px 13px;
+  width: 100%;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-select::placeholder,
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-control::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: rgba(255, 255, 255, 0.4);
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-select:invalid,
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-control:invalid {
+  color: rgba(255, 255, 255, 0.4);
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-select:disabled,
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-control:disabled {
+  background: rgba(255, 255, 255, 0.13);
+  border: none;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-select {
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-text.warning {
+  color: #FDBB2C;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-text.danger {
+  color: #FF1A1A;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .form-text ul {
+  margin-bottom: 0;
+}
+#addBankDetailModal .modal-dialog .modal-content .modal-body .add-bank-form__container .error {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  margin-top: 4px;
+  color: #FF1A1A;
+}

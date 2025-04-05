@@ -1,0 +1,46 @@
+:root {
+  --primary-color: #4E7FFF;
+  --max-with-mobile: 768px;
+  --default-font-size: 14px;
+  --default-small-font-size: 13px;
+  --default-padding-content: 20px;
+  --default-mobile-padding-content: 15px;
+  --bs-gutter-x: 20px;
+  --bs-gutter-y: 20px;
+  --bs-gutter-x-mobile: 15px;
+  --bs-gutter-y-mobile: 15px;
+  --bs-danger-rgb: 255, 0, 0;
+  --bs-body-color: #fff;
+}
+
+body {
+  font-size: var(--default-font-size);
+  line-height: 16px;
+  font-weight: 300;
+  max-width: var(--max-with-mobile);
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  background: #fff;
+  @apply text-blue1;
+}
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container,
+.container,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+}

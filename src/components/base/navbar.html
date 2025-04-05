@@ -1,0 +1,70 @@
+<div id="loadingDiv"><div class="loader">Loading...</div></div>
+
+
+<nav class="navbar fixed-top navbar-light fixed top-0 inset-x-0 !bg-dark">
+  <div class="container content justify-between w-full">
+    <div class="flex items-center">
+      <!-- <button class="btn me-2" id="navMenu">
+        <img src="assets/icons/menu.png" alt="" />
+      </button> -->
+      @@if (!!context.without_login) {
+        <a href="/home-without-login.html">
+          <img class="content__logo" src="assets/images/b9-logo.png" alt="" />
+        </a>
+      }
+      @@if (!context.without_login) {
+        <a href="/">
+          <img class="content__logo" src="assets/images/b9-logo.png" alt="" />
+        </a>
+      }
+    </div>
+    <div class="flex items-center gap-2">
+      <button type="button" class="btn btn-language bg-gradient-to-b from-blue to-blue1 !border-none shadow-none !mr-0" id="selectLanguageModalBtn">中</button>
+      @@if (!context.without_login) {
+        <div class="btn-group flex items-center gap-1" role="group" aria-label="Basic mixed styles example">
+          <a href="/deposit.html" class="btn btn-secondary btn-currency !text-white !bg-transparent !border !border-blue !shadow-none !pr-0">
+            <img class="content__logo" src="assets/icons/navbar-wallet.svg" alt="" />
+            <span class="font-normal">520,50</span>
+            <span class="btn !px-1 !border-none !bg-blue shadow-none text-white">
+              <i class="fa-solid fa-pager"></i>
+            </span>
+          </a>
+          <a href="/" class="btn !px-1 !border-none !bg-transparent shadow-none text-blue">
+            <i class="fa-solid fa-users text-lg"></i>
+          </a>
+          <a href="/" class="btn !px-1 !border-none !bg-transparent shadow-none text-blue">
+            <i class="fa-solid fa-envelope text-lg"></i>
+          </a>
+        </div>
+      }
+      @@if (!!context.without_login) {
+        <a href="/login.html" class="btn !border !border-blue !bg-transparent !text-white !shadow-none">
+          <div>
+            <span data-i18n="LOGIN"></span>
+          </div>
+        </a>
+        <a href="/register.html" class="btn btn !border !border-blue !bg-blue !text-white !shadow-none">
+          <div>
+            <span data-i18n="REGISTER"></span>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+
+  <!-- <div class="text-animated">
+    <span class="text-overflow" data-i18n="notification_run">The announcement message will runs here. The announcement message will runs here. The announcement message will runs here</span>
+  </div> -->
+
+</nav>
+@@if (!!context.without_login) {
+  @@include('./sidebar-without-login.html')
+}
+@@if (!context.without_login) {
+  @@include('./sidebar.html')
+}
+
+
+<!-- MODAL -->
+@@include('../please-login-modal.html')
+<!-- MODAL -->

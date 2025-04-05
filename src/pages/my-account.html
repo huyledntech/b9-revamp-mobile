@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'My Account'})
+  <body>
+    <!-- Content -->
+    <section class="main my-account-page">
+      @@include('../components/base/navbar-top.html', {title: 'my_account_page.My_Account', back_url: '/', icon_back_white: true})
+
+      <div class="my-account-page__content">
+        <div class="container">
+          <ul class="nav nav-tabs nav-fill" id="myAccountNav" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="my-account-profile-tab" data-bs-toggle="tab" data-bs-target="#my-account-profile" type="button" role="tab" aria-controls="my-account-profile" aria-selected="true" data-i18n="my_account_page.Profile"></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="my-account-change-password-tab" data-bs-toggle="tab" data-bs-target="#my-account-change-password" type="button" role="tab" aria-controls="my-account-change-password" aria-selected="false" data-i18n="my_account_page.Change_Password"></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="my-account-banking-details-tab" data-bs-toggle="tab" data-bs-target="#my-account-banking-details" type="button" role="tab" aria-controls="my-account-banking-details" aria-selected="false" data-i18n="my_account_page.Banking_Details"></button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myAccountContent">
+            <div class="tab-pane fade show active" id="my-account-profile" role="tabpanel" aria-labelledby="my-account-profile-tab">
+              @@include('../components/my-account/profile.html')
+            </div>
+            <div class="tab-pane fade" id="my-account-change-password" role="tabpanel" aria-labelledby="my-account-change-password-tab">
+              @@include('../components/my-account/change-password.html')
+              <!-- my-account-change-password-tab -->
+            </div>
+            <div class="tab-pane fade" id="my-account-banking-details" role="tabpanel" aria-labelledby="my-account-banking-details-tab">
+              @@include('../components/my-account/bank-details.html')
+              <!-- my-account-banking-details-tab -->
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- MODAL -->
+      @@include('../components/my-account/add-bank-detail-modal.html')
+      <!-- MODAL -->
+
+
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+
+    @@include('../components/base/footer.html')
+  </body>
+</html>
