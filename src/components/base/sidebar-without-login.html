@@ -1,104 +1,138 @@
-<div id="mySidenav" class="sidenav">
-  <div class="left-nav">
-    <div class="left-nav__container">
-      <div class="left-nav__container__menu">
+<div id="mySidenav" class="sidenav !top-[60px]">
+  <div class="left-nav !bg-white p-4">
+    <!-- <div class="left-nav__container__menu__nav">
+      <div data-i18n="menu.Menu"></div>
+      <img class="close-nav" src="assets/icons/close-white.svg" alt="" />
+    </div> -->
 
-        <div class="left-nav__container__menu__nav">
-          <div data-i18n="menu.Menu"></div>
-          <img class="close-nav" src="assets/icons/close-white.svg" alt="" />
-        </div>
-
-        <!-- <div class="left-nav__container__menu__welcome">
-          <div class="d-flex align-items-center gap-2">
-            <img class="close-nav" src="assets/icons/user-white.svg" alt="" />
-            <span data-i18n="menu.Welcome"></span>
-          </div>
-          <a href="#" data-i18n="menu.View_my_account"></a>
-        </div> -->
-        
-        <div class="left-nav__container__menu__content row">
-          <div class="col-6 left-nav__container__menu__content__item">
-            <a href="/slot-without-login.html" class="category">
-              <img src="assets/images/menu/slot1.png" alt="" />
-              <span data-i18n="menu.Slot"></span>
-            </a>
-          </div>
-          <div class="col-6 left-nav__container__menu__content__item">
-            <a href="/casino-without-login.html" class="category">
-              <img src="assets/images/menu/casino.png" alt="" />
-              <span data-i18n="menu.Casino"></span>
-            </a>
-          </div>
-          <div class="col-6 left-nav__container__menu__content__item">
-            <a href="/arcade-without-login.html" class="category">
-              <img src="assets/images/menu/arcade.png" alt="" />
-              <span data-i18n="menu.Arcade"></span>
-            </a>
-          </div>
-          <div class="col-6 left-nav__container__menu__content__item">
-            <a href="/sport-without-login.html" class="category">
-              <img src="assets/images/menu/sport.png" alt="" />
-              <span data-i18n="menu.Sport_E_sport"></span>
-            </a>
-          </div>
-          <div class="col-6 left-nav__container__menu__content__item">
-            <a href="/4d-without-login.html" class="category">
-              <img src="assets/images/menu/4d.png" alt="" />
-              <span data-i18n="menu.4D"></span>
-            </a>
-          </div>
-          <div class="col-6 left-nav__container__menu__content__item">
-            <a href="/voucher.html" class="category btn-please-login">
-              <img src="assets/images/menu/voucher.svg" alt="" />
-              <span data-i18n="menu.Redeem_Voucher"></span>
-            </a>
-          </div>
-        </div>
-
-        <div class="left-nav__container__menu__info">
-          <a href="#">
-            <img src="assets/icons/infomation.svg" alt="" />
-            <span data-i18n="menu.Information"></span>
-          </a>
-        </div>
-
-        <div class="left-nav__container__menu__country">
-          <div>
-            <img src="assets/icons/country.svg" alt="" />
-            <span data-i18n="menu.Country"></span>
-          </div>
-          <div>
-            <a class="country-name" data-bs-toggle="collapse" href="#collapseCountry" role="button" aria-expanded="false" aria-controls="collapseCountry">
-              <span class="current-country" data-i18n="menu.Uwin33_Singapore"></span>
-              <img src="assets/icons/down-white.svg" alt="" />
-            </a>
-            </div>
-        </div>
-
-        <div class="collapse" id="collapseCountry">
-          <div class="collapse__item" data-region="Singapore" role="button">
-            <img src="assets/images/Uwin33_Singapore.svg" alt="" />
-            <span data-i18n="menu.Uwin33_Singapore"></span>
-          </div>
-          <div class="collapse__item" data-region="Malaysia" role="button">
-            <img src="assets/images/Uwin33_Malaysia.svg" alt="" />
-            <span data-i18n="menu.Uwin33_Malaysia"></span>
-          </div>
-        </div>
-
-        <div class="left-nav__container__menu__action">
-          <a href="/login.html" class="btn btn-warning" data-i18n="menu.Login_Register"></a>
-        </div>
-
-        <div class="left-nav__container__menu__footer">
-          <a href="#" data-i18n="menu.Responsible_Gaming"></a>
-          <a href="#" data-i18n="menu.Privacy_Policy"></a>
-          <a href="#" data-i18n="menu.About_Us"></a>
-          <a href="#" data-i18n="menu.TermsConditions"></a>
-        </div>
-
+    <div class="flex flex-col gap-0 w-full">
+      <a href="" class="w-full">
+        <img src="assets/images/welcome-banner.png" class="w-full" />
+      </a>
+      <div class="flex items-center justify-center gap-2 mt-3">
+        <span data-i18n="Already_a_member"></span>
+        <a href="" class="text-blue1 font-bold underline" data-i18n="Login_here"></a>
       </div>
+      <div class="collapse collapse-arrow w-full mt-3">
+        <input type="radio" name="sidebar-games" checked="checked" class="!py-3 !min-h-auto" />
+        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="Games"></div>
+        <div class="collapse-content !p-0">
+          <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Casino"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Sports"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-gamepad !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="eSports"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Slot"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-fish !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Fishing"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-plane !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Arcade"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-bowling-ball !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="4D"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="collapse collapse-arrow w-full mt-3">
+        <input type="radio" name="sidebar-games" class="!py-2 !min-h-auto"/>
+        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="Rewards"></div>
+        <div class="collapse-content !p-0">
+          <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Cash_Rebate"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Refer_Earn"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-users !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Cash_Rebate"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Promotions"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-ticket-simple !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Voucher"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-crown !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="VIP_Club"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Affiliate_Program"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <img class="!h-[40px] !w-[40px] object-contain" src="assets/images/poker-king-icon.png" alt="">
+              <div class="w-full text-center" data-i18n="Poker_King"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4 mt-3 flex items-center gap-2">
+        <img src="assets/images/download-app.png" class="h-[65px]" />
+        <div>
+          <div data-i18n="Download_Application" class="font-bold"></div>
+          <div data-i18n="Download_Application_Note" class="text-xs font-normal mt-1"></div>
+        </div>
+        <i class="fa-solid fa-download !text-4xl text-gray1"></i>
+      </div>
+      <div class="collapse collapse-arrow w-full mt-3">
+        <input type="radio" name="sidebar-games" class="!py-2 !min-h-auto"/>
+        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="B9_Casino_Supports"></div>
+        <div class="collapse-content !p-0">
+          <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Sponsorship"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Blog_Vlog"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Help_Center"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="About_Us"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="Contact_Us"></div>
+            </a>
+            <a href="" class="col-span-1 flex flex-col items-center justify-start gap-1">
+              <i class="fa-solid fa-futbol !text-3xl"></i>
+              <div class="w-full text-center" data-i18n="TnCs"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="regions-currencies-languages" class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4 my-3" data-i18n="Regions_Currencies_Languages"></div>
     </div>
+  
+
   </div>
   <div class="backdrop"></div>
 </div>

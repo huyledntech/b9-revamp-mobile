@@ -288,11 +288,12 @@ function initialize() {
       break;
   }
 
-  $("#selectLanguageModalBtn").on("click", function (e) {
+  $("#selectLanguageModalBtn, #regions-currencies-languages").on("click", function (e) {
     e.preventDefault();
     console.log("click open language modal");
     // $("#selectLanguageModal").showModal();
     $("#selectLanguageModal").attr("open", true);
+    $("#mySidenav").removeClass("active");
   });
 }
 
