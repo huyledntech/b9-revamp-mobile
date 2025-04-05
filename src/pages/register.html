@@ -17,7 +17,7 @@
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-2 font-semibold text-gray1">
               <a href="/login.html" class="text-gray1" data-i18n="Login"></a>
-              <span>|</span>
+              <span class="bg-gray3 h-[25px] w-[1px]"></span>
               <div data-i18n="Register" class="text-blue1 underline"></div>
             </div>
             <div>
@@ -56,18 +56,39 @@
           </div>
 
           <form class="flex flex-col gap-4 my-6" autocomplete="off">
-            <input type="text" data-i18n="Username" data-i18n-attr="placeholder" class="input border-blue1 placeholder:text-blue1 rounded-lg w-full" autocomplete="one-time-code"/>
-            <label class="input border-blue1 placeholder:text-blue1 rounded-lg w-full">
+            <input type="text" data-i18n="Username" data-i18n-attr="placeholder" class="input border-gray3 placeholder:text-blue1 rounded-lg w-full" autocomplete="one-time-code"/>
+            <div>
+              <input type="text" data-i18n="Full_Name" data-i18n-attr="placeholder" class="input border-gray3 placeholder:text-blue1 rounded-lg w-full" autocomplete="one-time-code"/>
+              <div class="fieldset-label text-[12px] mt-1 text-blue ml-2" data-i18n="Full_Name_Note"></div>
+            </div>
+            <div class="join w-full">
+              <select class="select w-[100px] border-gray3 rounded-lg rounded-r-none">
+                <option disabled selected>+60</option>
+                <option>+65</option>
+                <option>+66</option>
+                <option>+67</option>
+              </select>
+              <div class="w-full input validator join-item input border-gray3 rounded-lg rounded-l-none">
+                <input type="text" data-i18n="Phone_Number" data-i18n-attr="placeholder" class="placeholder:text-blue1 w-full" autocomplete="one-time-code"/>
+              </div>
+            </div>
+            <input type="email" data-i18n="Email" data-i18n-attr="placeholder" class="input border-gray3 placeholder:text-blue1 rounded-lg w-full" autocomplete="one-time-code"/>
+            <label class="input border-gray3 placeholder:text-blue1 rounded-lg w-full">
               <input type="password" data-i18n="Password" data-i18n-attr="placeholder" class="grow placeholder:text-blue1" placeholder="Search" />
               <i class="fa-solid fa-eye"></i>
             </label>
-            <div class="text-right">
-              <a href="/forgot-password.html" class="font-semibold " data-i18n="Forgot_Password"></a>
-            </div>
-            <button class="btn bg-gradient-to-r from-blue1 to-blue2 text-white rounded-lg w-full" data-i18n="Login"></button>
+            <label class="fieldset-label text-blue1 text-sm">
+              <input type="checkbox" checked="checked" class="checkbox" />
+              <span data-i18n="register_aree1"></span>
+            </label>
+            <label class="fieldset-label text-blue1 text-sm">
+              <input type="checkbox" checked="checked" class="checkbox" />
+              <span data-i18n="register_aree2"></span>
+            </label>
+            <button class="btn bg-gradient-to-r from-blue1 to-blue2 text-white rounded-lg w-full" data-i18n="Register"></button>
             <div class="">
-              <span data-i18n="new_to_b9_casino"></span>
-              <a href="/register.html" class="font-semibold text-blue1" data-i18n="Create_an_account"></a>
+              <span data-i18n="already_have_account"></span>
+              <a href="/login.html" class="font-semibold text-blue1" data-i18n="sign_in"></a>
             </div>
           </form>
         </div>
