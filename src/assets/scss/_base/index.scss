@@ -64,3 +64,21 @@ img {
   background: var(--color-dark);
   color: var(--color-white);
 }
+
+.language-item {
+  opacity: 0.5;
+
+  &.active {
+    opacity: 1;
+
+    &>div {
+      border-color: var(--color-blue);
+    }
+
+    .selected,
+    .title {
+      font-weight: 600;
+      color: var(--color-blue);
+    }
+  }
+}

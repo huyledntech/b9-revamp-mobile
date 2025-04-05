@@ -68,6 +68,21 @@ img {
   color: var(--color-white);
 }
 
+.language-item {
+  opacity: 0.5;
+}
+.language-item.active {
+  opacity: 1;
+}
+.language-item.active > div {
+  border-color: var(--color-blue);
+}
+.language-item.active .selected,
+.language-item.active .title {
+  font-weight: 600;
+  color: var(--color-blue);
+}
+
 #mySidenav.sidenav {
   width: 100%;
   position: fixed;

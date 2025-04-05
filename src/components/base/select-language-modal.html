@@ -1,91 +1,131 @@
 <dialog id="selectLanguageModal" class="modal">
   <div class="modal-box h-full w-full rounded-none p-0">
-    <div class="flex justify-between">
+    <div class="flex justify-between items-center bg-dark p-4 text-white">
       <form method="dialog">
-        <button class="btn">Close</button>
+        <button class="">
+          <i class="fa-solid fa-arrow-left text-xl"></i>
+        </button>
       </form>
-      <h3 class="font-bold text-lg">Hello!</h3>
+      <h3 class="font-bold text-center" data-i18n="Regions_Currencies_Languages"></h3>
       <form method="dialog">
-        <button class="btn">Close</button>
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-2xl"></i>
+        </button>
       </form>
     </div>
-    <h3 class="font-bold text-lg">Hello!</h3>
-    <p class="py-4">Press ESC key or click the button below to close</p>
-    <div class="modal-action">
-      <form method="dialog">
-        <button class="btn">Close</button>
-      </form>
+    <div>
+      <div class="language-item p-2 border-b border-gray2">
+        <div class="flex items-center justify-between gap-2 p-2 rounded-lg border border-transparent">
+          <div class="flex items-center gap-2">
+            <img class="w-[50px] h-[50px]" src="assets/images/regions/singapore.png" alt="">
+            <div class="flex flex-col gap-0">
+              <span class="text-base title uppercase">Singapore</span>
+              <span class="text-xs">(SGD)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="language-select py-2" data-language="SG_EN" data-region="Singapore">English</span>
+            <span>|</span>
+            <span class="language-select py-2" data-language="SG_CH" data-region="Singapore">简体中文</span>
+          </div>
+        </div>
+      </div>
+      <div class="language-item p-2 border-b border-gray2">
+        <div class="flex items-center justify-between gap-2 p-2 rounded-lg border border-transparent">
+          <div class="flex items-center gap-2">
+            <img class="w-[50px] h-[50px]" src="assets/images/regions/malaysia.png" alt="">
+            <div class="flex flex-col gap-0">
+              <span class="text-base title uppercase">Malaysia</span>
+              <span class="text-xs">(MYR)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="language-select py-2" data-language="MY_EN" data-region="Malaysia">English</span>
+            <span>|</span>
+            <span class="language-select py-2" data-language="MY_CH" data-region="Malaysia">简体中文</span>
+          </div>
+        </div>
+      </div>
+      <div class="language-item p-2 border-b border-gray2">
+        <div class="flex items-center justify-between gap-2 p-2 rounded-lg border border-transparent">
+          <div class="flex items-center gap-2">
+            <img class="w-[50px] h-[50px]" src="assets/images/regions/brunei.png" alt="">
+            <div class="flex flex-col gap-0">
+              <span class="text-base title uppercase">Brunei</span>
+              <span class="text-xs">(BND)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="language-select py-2" data-language="BN_EN" data-region="Brunei">English</span>
+            <span>|</span>
+            <span class="language-select py-2" data-language="BN_CH" data-region="Brunei">简体中文</span>
+          </div>
+        </div>
+      </div>
+      <div class="language-item p-2 border-b border-gray2">
+        <div class="flex items-center justify-between gap-2 p-2 rounded-lg border border-transparent">
+          <div class="flex items-center gap-2">
+            <img class="w-[50px] h-[50px]" src="assets/images/regions/vietnam.png" alt="">
+            <div class="flex flex-col gap-0">
+              <span class="text-base title uppercase">Vietnam</span>
+              <span class="text-xs">(VND)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="language-select py-2" data-language="VN_EN" data-region="Vietnam">English</span>
+            <span>|</span>
+            <span class="language-select py-2" data-language="VN_CH" data-region="Vietnam">简体中文</span>
+          </div>
+        </div>
+      </div>
+      <div class="language-item p-2 border-b border-gray2">
+        <div class="flex items-center justify-between gap-2 p-2 rounded-lg border border-transparent">
+          <div class="flex items-center gap-2">
+            <img class="w-[50px] h-[50px]" src="assets/images/regions/singapore.png" alt="">
+            <div class="flex flex-col gap-0">
+              <span class="text-base title uppercase">Singapore</span>
+              <span class="text-xs">(SGD)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="language-select py-2" data-language="ID_EN" data-region="Indonesia">English</span>
+            <span>|</span>
+            <span class="language-select py-2" data-language="ID_CH" data-region="Indonesia">简体中文</span>
+          </div>
+        </div>
+      </div>
+      <div class="language-item p-2 border-b border-gray2">
+        <div class="flex items-center justify-between gap-2 p-2 rounded-lg border border-transparent">
+          <div class="flex items-center gap-2">
+            <img class="w-[50px] h-[50px]" src="assets/images/regions/cambodia.png" alt="">
+            <div class="flex flex-col gap-0">
+              <span class="text-base title uppercase">Cambodia</span>
+              <span class="text-xs">(KHR)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="language-select py-2" data-language="KH_EN" data-region="Cambodia">English</span>
+            <span>|</span>
+            <span class="language-select py-2" data-language="KH_CH" data-region="Cambodia">简体中文</span>
+          </div>
+        </div>
+      </div>
+      <div class="language-item p-2 border-b border-gray2">
+        <div class="flex items-center justify-between gap-2 p-2 rounded-lg border border-transparent">
+          <div class="flex items-center gap-2">
+            <i class="fa-solid fa-earth-americas text-[45px] p-1"></i>
+            <div class="flex flex-col gap-0">
+              <span class="text-base title uppercase">INTERNATIONAL</span>
+              <span class="text-xs">(USDT)</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 text-xs">
+            <span class="language-select py-2" data-language="EN" data-region="INTERNATIONAL">English</span>
+            <span>|</span>
+            <span class="language-select py-2" data-language="CH" data-region="INTERNATIONAL">简体中文</span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </dialog>
-
-<!-- Modal -->
-<!-- <div class="modal fade" id="selectLanguage" tabindex="-1" aria-labelledby="selectLanguageLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="selectLanguageLabel" data-i18n="Choose_Region">Choose Region & Language</h5>
-      </div>
-      <div class="modal-body">
-
-        <div class="row mb-4" role="button">
-          <div class="col-4 text-center">
-            <img src="assets/images/language/1.png" />
-            <div class="title" data-i18n="universal_page.Malaysia"></div>
-          </div>
-          <div class="col-8 subtitle justify-content-start gap-2">
-            <span class="choose-language" data-language="EN" data-region="Malaysia">English</span> |
-            <span class="choose-language" data-language="ZH" data-region="Malaysia">中文</span> |
-            <span class="choose-language" data-language="" data-region="Malaysia">Bahasa Malaysia</span>
-          </div>
-        </div>
-
-        <div class="row mb-4" role="button">
-          <div class="col-4 text-center">
-            <img src="assets/images/language/2.png" />
-            <div class="title" data-i18n="universal_page.Singapore"></div>
-          </div>
-          <div class="col-8 subtitle justify-content-start gap-2">
-            <span class="choose-language" data-language="EN" data-region="Singapore">English</span> |
-            <span class="choose-language" data-language="ZH" data-region="Singapore">中文</span>
-          </div>
-        </div>
-
-        <div class="row mb-4" role="button">
-          <div class="col-4 text-center">
-            <img src="assets/images/language/3.png" />
-            <div class="title" data-i18n="universal_page.Thailand"></div>
-          </div>
-          <div class="col-8 subtitle justify-content-start gap-2">
-            <span class="choose-language" data-language="" data-region="Thailand">ไทย</span> |
-            <span class="choose-language" data-language="EN" data-region="Thailand">English</span>
-          </div>
-        </div>
-
-        <div class="row mb-4" role="button">
-          <div class="col-4 text-center">
-            <img src="assets/images/language/4.png" />
-            <div class="title" data-i18n="universal_page.Vietnam"></div>
-          </div>
-          <div class="col-8 subtitle justify-content-start gap-2">
-            <span class="choose-language" data-language="" data-region="Vietnam">Tiếng Việt</span> |
-            <span class="choose-language" data-language="EN" data-region="Vietnam">English</span>
-          </div>
-        </div>
-
-        <div class="row mb-2" role="button">
-          <div class="col-4 text-center">
-            <img src="assets/images/language/5.png" />
-            <div class="title" data-i18n="universal_page.Indonesia"></div>
-          </div>
-          <div class="col-8 subtitle justify-content-start gap-2">
-            <span class="choose-language" data-language="" data-region="Indonesia">Bahasa Indonesia</span> |
-            <span class="choose-language" data-language="EN" data-region="Indonesia">English</span>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </div>
-</div> -->
