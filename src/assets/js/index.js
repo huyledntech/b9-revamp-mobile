@@ -383,6 +383,10 @@ function initialize() {
     pagination: {
       el: ".swiper-pagination",
     },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
   });
 
   new Swiper(".topPickedSwiper", {
@@ -399,13 +403,6 @@ function initialize() {
       clickable: true,
     },
   });
-  $(".swiper")
-    .find("button")
-    .off("mousedown")
-    .on("mousedown", function (e) {
-      e.preventDefault();
-      e.stopImmediatePropagation();
-    });
 }
 
 console.log("--- index.jsaaa");
