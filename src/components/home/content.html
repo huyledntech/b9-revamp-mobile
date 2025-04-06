@@ -1,70 +1,70 @@
-<!-- start slider -->
-<!-- <div class="top-slider" data-aos="fade-in">
-  <div class="columns">
-      <img src="assets/images/slider/2.jpeg" alt="" />
-  </div>
-  <div class="columns">
-      <img src="assets/images/slider/2.jpeg" alt="" />
-  </div>
-  <div class="columns">
-      <img src="assets/images/slider/2.jpeg" alt="" />
-  </div>
-</div> -->
-<!-- end slider -->
+<div class="flex flex-col gap-4 mb-10">
 
-<!-- <div class="home__content__feature container" data-aos="fade-up"> 
-  <div class="home__content__feature__title" data-i18n="As_feature_in"></div>
-  <div class="home__content__feature__content">
-    <img class="mh-13px" src="assets/images/feature/1.png" alt="" />
-    <img src="assets/images/feature/2.png" alt="" />
-    <img src="assets/images/feature/3.png" alt="" />
-    <img src="assets/images/feature/4.png" alt="" />
-    <img src="assets/images/feature/5.png" alt="" />
+  <!-- SLIDER -->
+  <div>
+    @@include('./slider.html')
   </div>
-</div> -->
 
-<!-- <div class="home__content__category container" data-aos="fade-up">
-  <a href="/slot@@if (!!context.without_login) {-without-login}.html" class="home__content__category__item">
-    <div class="home__content__category__item__img">
-      <img src="assets/images/category/slot-blue.png" alt="" />
-    </div>
-    <div class="home__content__category__item__text" data-i18n="menu.Slot"></div>
-  </a>
-  <a href="/casino@@if (!!context.without_login) {-without-login}.html" class="home__content__category__item">
-    <div class="home__content__category__item__img">
-      <img src="assets/images/category/casino-blue.png" alt="" />
-    </div>
-    <div class="home__content__category__item__text" data-i18n="menu.Casino"></div>
-  </a>
-  <a href="/sport@@if (!!context.without_login) {-without-login}.html" class="home__content__category__item">
-    <div class="home__content__category__item__img">
-      <img src="assets/images/category/sport-blue.png" alt="" />
-    </div>
-    <div class="home__content__category__item__text" data-i18n="menu.Sport_E_sport"></div>
-  </a>
-  <a href="/arcade@@if (!!context.without_login) {-without-login}.html" class="home__content__category__item">
-    <div class="home__content__category__item__img">
-      <img src="assets/images/category/arcade-blue.png" alt="" />
-    </div>
-    <div class="home__content__category__item__text" data-i18n="menu.Arcade"></div>
-  </a>
-  <a href="/4d@@if (!!context.without_login) {-without-login}.html" class="home__content__category__item">
-    <div class="home__content__category__item__img">
-      <img src="assets/images/category/4d-blue.png" alt="" />
-    </div>
-    <div class="home__content__category__item__text" data-i18n="menu.4D"></div>
-  </a>
-</div> -->
+  <!-- CATEGORIES -->
+  <div class="px-4">
+    @@include('./categories.html', {active: -1})
+  </div>
 
-<div class="category-page__content" data-aos="fade-up">
-  @@include('./tab-nav.html', {active: 0})
+  <!-- TOP PICKED -->
+  <div class="">
+    <div class="flex justify-between items-center px-4">
+      <div class="text-blue1 font-semibold text-base" data-i18n="home.B9_TOP_PICKED"></div>
+      <a href="" class="text-white btn btn-xs bg-blue border-none rounded-full px-4" data-i18n="View_All" class="text-sm"></a>
+    </div>
 
-  @@include('./tab-content.html', {active: 0})
+    @@include('./top-picked.html')
+
+  </div>
+
+  <!-- B9 HOT MATCH -->
+  <div class="">
+    <div class="flex justify-between items-center px-4">
+      <div class="text-blue1 font-semibold text-base" data-i18n="home.B9_HOT_MATCH"></div>
+      <a href="" class="text-white btn btn-xs bg-blue border-none rounded-full px-4" data-i18n="View_All" class="text-sm"></a>
+    </div>
+
+    @@include('./hot-match.html')
+  </div>
+
+  <!-- B9 EXCLUSIVE -->
+  <div class="">
+    <div class="flex justify-between items-center px-4">
+      <div class="text-blue1 font-semibold text-base" data-i18n="home.B9_EXCLUSIVE"></div>
+      <a href="" class="text-white btn btn-xs bg-blue border-none rounded-full px-4" data-i18n="View_All" class="text-sm"></a>
+    </div>
+
+    @@include('./exclusive.html')
+  </div>
+
+  <!-- RECENTLY WINNERS -->
+  <div class="px-4">
+    <div class="flex justify-between items-center">
+      <div class="text-blue1 font-semibold text-base" data-i18n="home.RECENTLY_WINNERS"></div>
+      <div class="flex gap-2 recently-winners">
+        <input id="recently-winners-checkbox" type="radio" name="recently-winners" class="hidden" checked />
+        <input id="recently-winners-checkbox1" type="radio" name="recently-winners" class="hidden" />
+        <label for="recently-winners-checkbox" class="btn btn-xs border-none bg-transparent text-blue1 rounded-full lucky-win" data-i18n="home.Lucky_Win"></label>
+        <label for="recently-winners-checkbox1" class="btn btn-xs border-none bg-transparent text-blue1 rounded-full high-roller" data-i18n="home.High_Roller"></label>
+      </div>
+    </div>
+
+    @@include('./recently-winner.html')
+  </div>
+
+  <!-- GAME PROVIDER -->
+  <div class="">
+    <div class="flex justify-between items-center px-4">
+      <div class="text-blue1 font-semibold text-base" data-i18n="home.GAME_PROVIDER"></div>
+      <a href="" class="text-white btn btn-xs bg-blue border-none rounded-full px-4" data-i18n="View_All" class="text-sm"></a>
+    </div>
+
+    @@include('./game-provider.html')
+  </div>
+
+
 </div>
-
-
-<button type="button" class="btn btn-newbie" data-bs-toggle="modal" data-bs-target="#newbieModal">
-  <img src="assets/images/newbie-icon.png" alt="" />
-</button>
-
-@@include('../first-time-revamp-modal.html')

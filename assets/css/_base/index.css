@@ -16,7 +16,7 @@
 body {
   font-size: var(--default-font-size);
   line-height: 16px;
-  font-weight: 300;
+  font-weight: 400;
   max-width: var(--max-with-mobile);
   margin: auto;
   font-family: "Roboto", sans-serif;
@@ -73,4 +73,17 @@ img {
 .language-item.active .title {
   font-weight: 600;
   color: var(--color-blue);
+}
+
+.btn {
+  font-weight: 400;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

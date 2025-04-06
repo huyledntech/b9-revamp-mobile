@@ -124,14 +124,15 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const langParams = urlParams.get("lang");
 
-
 const reget_language = () => {
-  return langParams || localStorage.getItem(_get_translator_config) || LANGUAGES.EN;
-}
+  return (
+    langParams || localStorage.getItem(_get_translator_config) || LANGUAGES.EN
+  );
+};
 
 const reget_region = () => {
   return localStorage.getItem(PREFERED_REGION) || DEFAULT_REGION;
-}
+};
 
 const _get_translator_config =
   translator.config.persistKey || PREFERED_LANGUAGE;
@@ -372,6 +373,39 @@ function initialize() {
     localStorage.setItem(PREFERED_LANGUAGE, language);
     changeLanguageLabel();
   }
+
+  /**
+   * SWIPER
+   */
+  new Swiper(".home-slider-swiper", {
+    direction: "horizontal",
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
+  new Swiper(".topPickedSwiper", {
+    slidesPerView: 2,
+    spaceBetween: 30,
+    watchSlideProgress: true,
+    preventClicks: true,
+    preventClicksPropagation: true,
+    noSwiping: true,
+    noSwipingSelector: "button",
+    slideToClickedSlide: false,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+  });
+  $(".swiper")
+    .find("button")
+    .off("mousedown")
+    .on("mousedown", function (e) {
+      e.preventDefault();
+      e.stopImmediatePropagation();
+    });
 }
 
 console.log("--- index.jsaaa");
