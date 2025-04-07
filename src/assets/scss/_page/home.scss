@@ -15,7 +15,7 @@
 }
 
 .home-categories {
-  .arcade-item {
+  .hide-when-more-item {
     display: none;
   }
 
@@ -23,7 +23,7 @@
 
     &:checked {
       ~.collapse-title {
-        .arcade-item {
+        .hide-when-more-item {
           display: flex;
         }
 

@@ -10,10 +10,10 @@
   background-color: var(--color-blue);
 }
 
-.home-categories .arcade-item {
+.home-categories .hide-when-more-item {
   display: none;
 }
-.home-categories #home-categories-checkbox:checked ~ .collapse-title .arcade-item {
+.home-categories #home-categories-checkbox:checked ~ .collapse-title .hide-when-more-item {
   display: flex;
 }
 .home-categories #home-categories-checkbox:checked ~ .collapse-title .more-item {

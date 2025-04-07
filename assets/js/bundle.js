@@ -403,6 +403,31 @@ function initialize() {
       clickable: true,
     },
   });
+
+  /**
+   * CUSTOM TABS
+   */
+  const default_tab_active = $(".custom-tabs .tab input[type='radio']:checked").val();
+  if(default_tab_active) {
+    // set default tab content active
+    const default_tab_content = $(".custom-tabs .tab-content-list .tab-content-item").eq(default_tab_active - 1);
+    default_tab_content.addClass("active");
+  }
+
+  // change tab content when click tab
+  $(".custom-tabs .tab input[type='radio']").on("change", function() {
+    // remove active class from all tab content
+    $(".custom-tabs .tab-content-list .tab-content-item").removeClass("active");
+    // add active class to the clicked tab content
+    const tab_active = $(this).val();
+    const tab_content = $(".custom-tabs .tab-content-list .tab-content-item").eq(tab_active - 1);
+    tab_content.addClass("active");
+  });
+  /**
+   * END CUSTOM TABS
+   */
+
+
 }
 
 console.log("--- index.jsaaa");

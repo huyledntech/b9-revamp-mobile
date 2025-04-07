@@ -1,0 +1,38 @@
+<div class="flex flex-col gap-6 mt-4 mb-10">
+
+  <!-- CATEGORIES -->
+  <div class="px-4" data-aos="fade-up">
+    @@include('../home/categories-reverse.html', {active: 1})
+  </div>
+
+  <!-- Game lobby -->
+  <div class="" data-aos="fade-up">
+    <div class="flex justify-between items-center px-4">
+      <div class="text-blue1 font-semibold text-base" data-i18n="4d.GAME_LOBBY"></div>
+    </div>
+
+    @@include('./game-lobby.html')
+  </div>
+
+  <div class="px-4" data-aos="fade-up">
+    <div class="tabs tabs-border results-tabs">
+      <label class="tab pl-0 before:hidden">
+        <input type="radio" name="4d-tab" class="hidden" checked="checked" />
+        <span class="font-semibold text-base" data-i18n="4d.Draw_Result"></span>
+      </label>
+      <div class="tab-content">
+        @@include('./draw-result-content.html')
+      </div>
+    
+      <label class="tab pl-0 before:hidden">
+        <input type="radio" name="4d-tab" class="hidden" />
+        <span class="font-semibold text-base" data-i18n="4d.Payout"></span>
+      </label>
+      <div class="tab-content">
+        PAYOUT TAB CONTENT
+      </div>
+    
+    </div>
+  </div>
+
+</div>
