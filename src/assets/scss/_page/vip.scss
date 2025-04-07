@@ -1,0 +1,73 @@
+.vip-content {
+
+  .vip-level-card {
+    .steps {
+      margin-left: -10px;
+      margin-right: -10px;
+      width: calc(100% + 15px);
+
+      .step {
+        grid-template-rows: 25px 1fr;
+        min-width: 20px;
+
+        &.step-color {
+          --step-bg: #419BCB;
+          --step-fg: #419BCB;
+        }
+
+        .step-icon {
+          width: 20px;
+          height: 20px;
+          background: transparent;
+          border: none;
+        }
+      }
+    }
+  }
+
+  .table {
+    thead {
+      tr {
+        th {
+          &:nth-child(2) {
+            background-color: rgba(5, 59, 122, 0.8);
+            color: var(--color-white);
+          }
+
+          &:nth-child(3) {
+            min-width: 100px;
+          }
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        background-color: var(--color-gray-100);
+        border-bottom: none !important;
+
+        &:nth-child(2n) {
+          background-color: var(--color-gray2);
+        }
+
+        td {
+
+          &:first-child {
+            font-weight: 600;
+          }
+
+          &:nth-child(2) {
+            text-align: center;
+            background-color: rgba(5, 59, 122, 0.8);
+            color: var(--color-white);
+          }
+
+          &:nth-child(3) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+}

@@ -404,6 +404,10 @@ function initialize() {
     },
   });
 
+  new Swiper(".vipLevelSwiper", {
+    spaceBetween: 30,
+  });
+
   /**
    * CUSTOM TABS
    */

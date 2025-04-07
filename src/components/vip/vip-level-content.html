@@ -1,0 +1,165 @@
+<div class="flex flex-col gap-2 text-white pt-10 vip-content">
+
+  <div class="bg-dark rounded-lg p-4 relative flex items-center justify-between gap-4 vip-level-card">
+    <div class="flex-1">
+      <div class="text-xl font-semibold uppercase" data-i18n="@@current.title"></div>
+      <div class="text-gray-400" data-i18n="vip.MEMBER"></div>
+      <div class="flex flex-col gap-0 items-center justify-between w-full mt-4">
+        <div class="flex items-center justify-between gap-2 w-full text-gray1 text-2xs">
+          <div data-i18n="vip.Your_VIP_Progress"></div>
+          <div>18.2%</div>
+        </div>
+        <div class="w-full">
+          <ul class="steps">
+            <li class="step step-color">
+              <span class="step-icon">
+                <img src="@@current.image" width="20" height="20" />
+              </span>
+            </li>
+            <li class="step step-color">
+              <span class="step-icon"></span>
+            </li>
+            <li class="step step-color">
+              <span class="step-icon"></span>
+            </li>
+            <li class="step step-color step-current">
+              <span class="step-icon">
+                <img src="assets/images/vip/vip-process-current.png" width="20" height="20" />
+              </span>
+            </li>
+            <li class="step">
+              <span class="step-icon"></span>
+            </li>
+            <li class="step">
+              <span class="step-icon"></span>
+            </li>
+            <li class="step">
+              <span class="step-icon"></span>
+            </li>
+            <li class="step">
+              <span class="step-icon">
+                <img src="@@next.image" width="20" height="20" />
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center justify-center gap-2 text-2xs">
+          <span>SGD18,200</span>
+          <span>|</span>
+          <span class="text-gray-400">SGD100,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="-mt-[100px]">
+      <img src="@@current.image" alt="vip-level-1" class="w-[100px] h-[120px]">
+    </div>
+  </div>
+
+
+  <div class="flex justify-between items-center mt-4">
+    <div class="text-blue1 font-semibold text-base flex items-center gap-1">
+      <div data-i18n="vip.VIP_Privileges"></div>
+      <div class="font-normal text-xs" data-i18n="vip.VIP_Privileges_Description"></div>
+    </div>
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="table table-zebra text-blue1 table-sm rounded-b-none rounded-t-lg overflow-hidden">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class=" text-blue1 bg-gray2" data-i18n="vip.Privileges"></th>
+          <th class="text-center text-blue1 bg-gray2">
+            <img src="@@current.image" width="20" height="20" class="mx-auto" />
+            <div data-i18n="@@current.title"></div>
+          </th>
+          <th class="text-center text-blue1 bg-gray2">
+            <img src="@@next.image" width="20" height="20" class="mx-auto" />
+            <div data-i18n="@@next.title"></div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Accumulated_Deposit"></td>
+          <td>@@current.Accumulated_Deposit</td>
+          <td>@@next.Accumulated_Deposit</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Life_Span"></td>
+          <td>@@current.Life_Span</td>
+          <td>@@next.Life_Span</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Membership_Maintenance"></td>
+          <td>@@current.Membership_Maintenance</td>
+          <td>@@next.Membership_Maintenance</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Upgrade_Bonus"></td>
+          <td>@@current.Upgrade_Bonus</td>
+          <td>@@next.Upgrade_Bonus</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Maintenance_Bonus"></td>
+          <td>@@current.Maintenance_Bonus</td>
+          <td>@@next.Maintenance_Bonus</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Birthday_Bonus"></td>
+          <td>@@current.Birthday_Bonus</td>
+          <td>@@next.Birthday_Bonus</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Live_Casino"></td>
+          <td>@@current.Live_Casino</td>
+          <td>@@next.Live_Casino</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Sportsbook_Esports"></td>
+          <td>@@current.Sportsbook_Esports</td>
+          <td>@@next.Sportsbook_Esports</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Slots_Fishing"></td>
+          <td>@@current.Slots_Fishing</td>
+          <td>@@next.Slots_Fishing</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.4D"></td>
+          <td>@@current.4D</td>
+          <td>@@next.4D</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Withdrawal_Limit"></td>
+          <td>@@current.Withdrawal_Limit</td>
+          <td>@@next.Withdrawal_Limit</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Transaction_Limit_SGD"></td>
+          <td>@@current.Transaction_Limit_SGD</td>
+          <td>@@next.Transaction_Limit_SGD</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Transaction_Limit_CRYPTO"></td>
+          <td>@@current.Transaction_Limit_CRYPTO</td>
+          <td>@@next.Transaction_Limit_CRYPTO</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

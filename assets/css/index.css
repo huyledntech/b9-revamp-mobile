@@ -1328,3 +1328,48 @@ img {
 .tabs-4d-images > .tab-content-list .tab-content-item.active {
   display: block;
 }
+
+.vip-content .vip-level-card .steps {
+  margin-left: -10px;
+  margin-right: -10px;
+  width: calc(100% + 15px);
+}
+.vip-content .vip-level-card .steps .step {
+  grid-template-rows: 25px 1fr;
+  min-width: 20px;
+}
+.vip-content .vip-level-card .steps .step.step-color {
+  --step-bg: #419BCB;
+  --step-fg: #419BCB;
+}
+.vip-content .vip-level-card .steps .step .step-icon {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+}
+.vip-content .table thead tr th:nth-child(2) {
+  background-color: rgba(5, 59, 122, 0.8);
+  color: var(--color-white);
+}
+.vip-content .table thead tr th:nth-child(3) {
+  min-width: 100px;
+}
+.vip-content .table tbody tr {
+  background-color: var(--color-gray-100);
+  border-bottom: none !important;
+}
+.vip-content .table tbody tr:nth-child(2n) {
+  background-color: var(--color-gray2);
+}
+.vip-content .table tbody tr td:first-child {
+  font-weight: 600;
+}
+.vip-content .table tbody tr td:nth-child(2) {
+  text-align: center;
+  background-color: rgba(5, 59, 122, 0.8);
+  color: var(--color-white);
+}
+.vip-content .table tbody tr td:nth-child(3) {
+  text-align: center;
+}
