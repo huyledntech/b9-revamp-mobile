@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'Poker King'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home pt-[60px] bg-black">
+      @@include('../components/base/navbar-top.html', {title: 'B9_Poker_King', back_url: '/', icon_back_white: true})
+
+
+      <div class="">
+
+        @@include('../components/poker-king/content.html')
+        
+      </div>
+
+      
+      @@include('../components/base/navbar-footer.html')
+      
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>

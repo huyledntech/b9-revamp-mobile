@@ -431,6 +431,39 @@ function initialize() {
    * END CUSTOM TABS
    */
 
+  /**
+   * POKER KING
+   */
+
+  const poker_king_card_back = $(".poker-king .game-container .card-back");
+  const poker_king_card_front = $(".poker-king .game-container .card-front");
+  poker_king_card_front.addClass("hidden");
+  const pokerKingCongratulationsModal = $("#pokerKingCongratulationsModal");
+  const pokerKingRewardModal = $("#pokerKingRewardModal");
+  const pokerKingLeaderboardModal = $("#pokerKingLeaderboardModal");
+  const pokerKingOopsModal = $("#pokerKingOopsModal");
+  $("#draw-btn").on("click", function() {
+    poker_king_card_back.addClass("hidden");
+    poker_king_card_front.removeClass("hidden");
+
+    // reset card back
+    setTimeout(() => {
+      poker_king_card_back.removeClass("hidden");
+      poker_king_card_front.addClass("hidden");
+    }, 3000);
+
+    // show random modal
+    setTimeout(() => {
+      const modal_list = [pokerKingCongratulationsModal, pokerKingOopsModal];
+      const random_modal = modal_list[Math.floor(Math.random() * modal_list.length)];
+      random_modal.attr("open", true);
+    }, 1000);
+
+  });
+  /**
+   * END POKER KING
+   */
+
 
 }
 

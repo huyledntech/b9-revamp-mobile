@@ -1,0 +1,72 @@
+<div class="poker-king bg-[url(assets/images/poker-king/bg.png)] bg-no-repeat bg-top [background-size:100%]">
+
+  <div class="min-h-screen flex flex-col gap-6 pt-4 pb-10">
+    <!-- LOGO -->
+    <div class="pt-16 pb-6" data-aos="fade-in">
+      <img src="assets/images/poker-king/Poker-Mini-Game-logo.png" alt="logo" width="210" class="mx-auto">
+    </div>
+
+    <!-- GAME -->
+    <div class="px-4">
+      <div class="min-h-[200px] w-4/5 flex flex-col items-center justify-center gap-10 mx-auto text-center">
+        <div class="text-dark1 text-center mb-4" data-i18n="poker_king.Click_DRAW_to_Start_the_Game" data-aos="fade-up"></div>
+        <div class="game-container" data-aos="fade-up">
+          <div class="card-back grid grid-cols-5 gap-2">
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Back.png" alt="card" class="mx-auto">
+            </div>
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Back.png" alt="card" class="mx-auto">
+            </div>
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Back.png" alt="card" class="mx-auto">
+            </div>
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Back.png" alt="card" class="mx-auto">
+            </div>
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Back.png" alt="card" class="mx-auto">
+            </div>
+          </div>
+          <div class="card-front grid grid-cols-5 gap-2">
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Spades-10.png" alt="card" class="mx-auto">
+            </div>
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Spades-J.png" alt="card" class="mx-auto">
+            </div>
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Spades-K.png" alt="card" class="mx-auto">
+            </div>
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Spades-Q.png" alt="card" class="mx-auto">
+            </div>
+            <div class="col-span-1">
+              <img src="assets/images/poker-king/Poker-Card-Spades-1.png" alt="card" class="mx-auto">
+            </div>
+          </div>
+        </div>
+        <div data-aos="fade-up">
+          <button id="draw-btn" class="bg-[url(assets/images/poker-king/Poker-Mini-Game-Btn.png)] bg-no-repeat bg-center bg-contain text-white text-center mt-2 text-base font-bold mx-auto w-[150px] h-[50px] flex items-center justify-center" data-i18n="poker_king.Draw"></button>
+          <div class="text-dark1 text-center text-gray1 text-xs">
+            <span data-i18n="poker_king.You_have"></span> (1) <span data-i18n="poker_king.Ticket_available"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERMS AND CONDITIONS -->
+    <div class="px-4" data-aos="fade-up">
+      @@include('./terms.html')
+    </div>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+@@include('./how-to-play-modal.html')
+@@include('./reward-modal.html')
+@@include('./leaderboard-modal.html')
+@@include('./congratulations-modal.html')
+@@include('./oops-modal.html')
+<!-- MODAL -->
