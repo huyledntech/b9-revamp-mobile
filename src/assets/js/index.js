@@ -457,7 +457,7 @@ function initialize() {
       const modal_list = [pokerKingCongratulationsModal, pokerKingOopsModal];
       const random_modal = modal_list[Math.floor(Math.random() * modal_list.length)];
       random_modal.attr("open", true);
-    }, 1000);
+    }, 500);
 
   });
   /**

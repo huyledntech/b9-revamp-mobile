@@ -2,7 +2,12 @@
 
   <div class="min-h-screen flex flex-col gap-6 pt-4 pb-10">
     <!-- LOGO -->
-    <div class="pt-16 pb-6" data-aos="fade-in">
+    <div class="px-4 pt-12 pb-6 relative" data-aos="fade-in">
+      <div class="text-right">
+        <button class="">
+          <img src="assets/images/poker-king/btn.png" alt="logo" width="25" class="mx-auto">
+        </button>
+      </div>
       <img src="assets/images/poker-king/Poker-Mini-Game-logo.png" alt="logo" width="210" class="mx-auto">
     </div>
 
@@ -61,12 +66,13 @@
     </div>
   </div>
 
-</div>
+  
+  <!-- MODAL -->
+  @@include('./how-to-play-modal.html')
+  @@include('./reward-modal.html')
+  @@include('./leaderboard-modal.html')
+  @@include('./congratulations-modal.html')
+  @@include('./oops-modal.html')
+  <!-- MODAL -->
 
-<!-- MODAL -->
-@@include('./how-to-play-modal.html')
-@@include('./reward-modal.html')
-@@include('./leaderboard-modal.html')
-@@include('./congratulations-modal.html')
-@@include('./oops-modal.html')
-<!-- MODAL -->
+</div>
