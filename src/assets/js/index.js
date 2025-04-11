@@ -464,6 +464,27 @@ function initialize() {
    * END POKER KING
    */
 
+  /**
+   * NAVBAR ACCORDION
+   */
+  const navbar_accordion = $("#navbar-accordion");
+  const navbar_accordion_input = $("#navbar-accordion input");
+  const navbar_accordion_icon = $("#navbar-accordion i");
+  const top_nav_child = $("#top-nav-child");
+  navbar_accordion_input.on("change", function() {
+    const is_checked = $(this).is(":checked");
+    if (is_checked) {
+      navbar_accordion_icon.css('transform', 'rotate(180deg)');
+      top_nav_child.removeClass("hidden");
+    } else {
+      navbar_accordion_icon.css('transform', 'rotate(0deg)');
+      top_nav_child.addClass("hidden");
+    }
+  });
+  /**
+   * END NAVBAR ACCORDION
+   */
+
 
 }
 

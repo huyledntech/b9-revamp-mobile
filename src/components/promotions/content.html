@@ -1,0 +1,89 @@
+<!-- TOP NAV -->
+<div class="p-4 pb-0" data-aos="fade-in">
+  @@include('../base/top-nav-child/index.html', {
+    active: 'promotions',
+    top_items: 'rewards',
+  })
+</div>
+
+<!-- TABS -->
+<div class="px-4" data-aos="fade-up">
+  <div class="tabs custom-tabs tabs-promotions">
+    <div class="tab-list">
+      <!-- tab 1 -->
+      <label class="tab">
+        <input type="radio" name="promotions-tab" class="hidden" value="1" checked="checked" />
+        <div data-i18n="promotions_page.Hot"></div>
+      </label>
+
+      <!-- tab 2 -->
+      <label class="tab">
+        <input type="radio" name="promotions-tab" class="hidden" value="2" />
+        <div data-i18n="promotions_page.New_Member"></div>
+      </label>
+
+      <!-- tab 3 -->
+      <label class="tab">
+        <input type="radio" name="promotions-tab" class="hidden" value="3" />
+        <div data-i18n="promotions_page.VIP"></div>
+      </label>
+
+      <!-- tab 4 -->
+      <label class="tab">
+        <input type="radio" name="promotions-tab" class="hidden" value="4" />
+        <div data-i18n="promotions_page.Slots"></div>
+      </label>
+
+      <!-- tab 5 -->
+      <label class="tab">
+        <input type="radio" name="promotions-tab" class="hidden" value="5" />
+        <div data-i18n="promotions_page.Live_Casino"></div>
+      </label>
+
+      <!-- tab 6 -->
+      <label class="tab">
+        <input type="radio" name="promotions-tab" class="hidden" value="6" />
+        <div data-i18n="promotions_page.Sports"></div>
+      </label>
+
+      <!-- tab 7 -->
+      <label class="tab">
+        <input type="radio" name="promotions-tab" class="hidden" value="7" />
+        <div data-i18n="promotions_page.Special"></div>
+      </label>
+
+      <!-- tab 8 -->
+      <label class="tab">
+        <input type="radio" name="promotions-tab" class="hidden" value="8" />
+        <div data-i18n="promotions_page.All"></div>
+      </label>
+    </div>
+    
+    <div class="tab-content-list w-full">
+      <div class="tab-content-item py-4">
+        @@include('./tab-content-item.html')
+      </div>
+      <div class="tab-content-item py-4">
+        @@include('./tab-content-item1.html')
+      </div>
+      <div class="tab-content-item py-4">
+        @@include('./tab-content-item1.html')
+      </div>
+      <div class="tab-content-item py-4">
+        @@include('./tab-content-item2.html')
+      </div>
+      <div class="tab-content-item py-4">
+        @@include('./tab-content-item2.html')
+      </div>
+      <div class="tab-content-item py-4">
+        @@include('./tab-content-item1.html')
+      </div>
+      <div class="tab-content-item py-4">
+        @@include('./tab-content-item.html')
+      </div>
+      <div class="tab-content-item py-4">
+        @@include('./tab-content-item2.html')
+      </div>
+    </div>
+  </div>
+</div>

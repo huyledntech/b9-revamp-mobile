@@ -6,6 +6,64 @@
   font-weight: 400;
   src: local("Aldo the Apache"), url("../fonts/AldotheApache.woff") format("woff");
 }
+@font-face {
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-display: block;
+  src: url("../fonts/fontawesome/fa-light-300.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: block;
+  src: url("../fonts/fontawesome/fa-regular-400.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+  font-weight: 900;
+  font-display: block;
+  src: url("../fonts/fontawesome/fa-solid-900.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Font Awesome 6 Pro";
+  font-style: normal;
+  font-weight: 100;
+  font-display: block;
+  src: url("../fonts/fontawesome/fa-thin-100.ttf") format("truetype");
+}
+.fa,
+.fas,
+.fa-solid {
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 900;
+}
+
+.far,
+.fa-regular {
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 400;
+}
+
+.fab,
+.fa-light {
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 300;
+}
+
+.fab,
+.fa-thin {
+  font-family: "Font Awesome 6 Pro";
+  font-weight: 100;
+}
+
+:root, :host {
+  --fa-style-family-classic: "Font Awesome 6 Pro";
+  --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Pro";
+}
+
 :root {
   --primary-color: #4E7FFF;
   --max-with-mobile: 768px;
@@ -367,134 +425,49 @@ img {
 .footer__items__item.payment-method img {
   max-width: 80%;
 }
-.promotion__content__title {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 30px;
-  color: #FFFFFF;
-  padding: 20px 0;
+.tabs-promotions {
+  gap: 10px;
 }
-.promotion__content__container__item {
-  background: #131D39;
-  border-radius: 9px;
-  margin-bottom: 20px;
-}
-.promotion__content__container__item__img {
-  width: 100%;
-}
-.promotion__content__container__item__title {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  color: #FDBB2C;
-  padding: 15px 12px;
-}
-
-.promotionDetailModal .modal-dialog .modal-content {
-  height: 80vh;
-  padding: 15px;
-}
-.promotionDetailModal .modal-dialog .modal-content .close-button {
-  text-align: center;
-  padding-bottom: 5px;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content {
-  overflow-x: auto;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content table {
-  margin: 15px 0;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content table thead tr th {
-  font-weight: 600;
-  font-size: 10px;
-  line-height: 14px;
-  color: #FDBB2C;
-  background: #19264B;
-  text-align: center;
-  vertical-align: middle;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content table tbody {
-  border-top-color: transparent;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content table tbody tr td {
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 12px;
-  color: #FFFFFF;
-  background: rgba(255, 255, 255, 0.1);
-  border-color: transparent;
-  text-align: center;
-  vertical-align: middle;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__title {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 19px;
-  color: #FDBB2C;
-  padding: 15px 0;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__subtitle {
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  text-decoration-line: underline;
-  color: #FFFFFF;
-  padding: 10px 0;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__description {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: #FFFFFF;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__subdescription {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
-  color: #FDBB2C;
-  padding-left: 15px;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__subdescription ul {
-  padding-left: 15px;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__step {
-  margin-left: -5px;
-  margin-right: 0;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__step__container {
-  padding-left: 5px;
-  padding-right: 5px;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__step__container__item {
-  border: 2px dashed #194183;
-  font-weight: 400;
-  font-size: 10px;
-  line-height: 14px;
-  color: #FFFFFF;
-  height: 100%;
-  padding: 7px;
-  text-align: center;
-}
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__step__container__item__count {
-  color: #FDBB2C;
-  border: 2px solid #FDBB2C;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
+.tabs-promotions .tab-list {
   display: flex;
-  margin: auto;
-  margin-bottom: 10px;
-  place-content: center;
-  place-items: center;
-  font-weight: bold;
-  font-size: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-right: 10px;
 }
-.promotionDetailModal .modal-dialog .modal-content .promotion-content__step__container__item__text a {
-  color: #fff;
+.tabs-promotions .tab-list::-webkit-scrollbar {
+  display: none;
+}
+.tabs-promotions .tab-list > .tab {
+  flex: none;
+  padding: 3px 10px;
+  height: auto;
+  border-right: 1px solid var(--color-blue1);
+  filter: grayscale(0);
+  color: var(--color-blue1);
+  min-width: 50px;
   text-decoration: underline;
+  font-weight: 600;
+}
+.tabs-promotions .tab-list > .tab:before {
+  display: none;
+}
+.tabs-promotions .tab-list > .tab:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
+  opacity: 0.5;
+  color: var(--color-blue);
+  text-decoration: none;
+  font-weight: 400;
+}
+.tabs-promotions .tab-list > .tab:last-child {
+  border-right: none;
+}
+.tabs-promotions > .tab-content-list .tab-content-item {
+  display: none;
+}
+.tabs-promotions > .tab-content-list .tab-content-item.active {
+  display: block;
 }
 
 .category-page__content__container__tab {

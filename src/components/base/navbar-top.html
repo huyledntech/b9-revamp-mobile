@@ -19,6 +19,12 @@
     @@if (!!context.right_expand_icon && !!context.right_expand_icon_url) {
       @@include('@@right_expand_icon', {right_expand_icon_url: '@@right_expand_icon_url'})
     }
+    @@if (!!context.show_accordion) {
+      <label id="navbar-accordion" class="cursor-pointer text-white">
+        <input type="checkbox" name="navbar-accordion"  class="hidden"/>
+        <i class="fa-solid fa-caret-down text-2xl transition-transform duration-100"></i>
+      </label>
+    }
   </div>
   @@if (!!context.nav_expand_url || !!context.nav_expand_active_btn || !!content.nav_expand_active_btn_text) {
     @@include('@@nav_expand_url', {nav_expand_active_btn: '@@nav_expand_active_btn', nav_expand_active_btn_text: '@@nav_expand_active_btn_text'})

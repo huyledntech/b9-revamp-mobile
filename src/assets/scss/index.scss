@@ -12,7 +12,7 @@
   src: local('Aldo the Apache'), url('../fonts/AldotheApache.woff') format('woff');
 }
 
-
+@import "./_fontawesome.scss";
 @import "./_base/index.scss";
 @import "./_base/sidebar.scss";
 
