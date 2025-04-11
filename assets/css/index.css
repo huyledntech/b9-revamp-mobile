@@ -450,6 +450,7 @@ img {
   min-width: 50px;
   text-decoration: underline;
   font-weight: 600;
+  font-size: 16px;
 }
 .tabs-promotions .tab-list > .tab:before {
   display: none;
@@ -459,6 +460,7 @@ img {
   color: var(--color-blue);
   text-decoration: none;
   font-weight: 400;
+  font-size: 16px;
 }
 .tabs-promotions .tab-list > .tab:last-child {
   border-right: none;
