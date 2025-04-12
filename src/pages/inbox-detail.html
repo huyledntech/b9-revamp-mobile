@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'Inbox Detail'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home pt-[60px]">
+      @@include('../components/base/navbar-top.html', {
+        title: 'Inbox', 
+        back_url: '/', 
+        icon_back_white: true,
+        right_expand_icon: '../inbox/inbox-delete-popup.html',
+        right_expand_icon_url: '/inbox.html',
+      })
+
+
+      <div class="min-h-screen">
+
+        @@include('../components/inbox/content-detail.html')
+        
+      </div>
+
+      
+      @@include('../components/base/navbar-footer.html')
+      
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>

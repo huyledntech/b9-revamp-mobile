@@ -485,6 +485,26 @@ function initialize() {
    * END NAVBAR ACCORDION
    */
 
+  /**
+   * INBOX
+   */
+  const inbox_tab_edit = $(".tabs-inbox input[name='inbox-tab-edit']");
+  inbox_tab_edit.on("change", function() {
+    const is_checked = $(this).is(":checked");
+    const inbox_table_checkbox_container = $(".inbox-table .checkbox-container");
+    const inbox_actions_nav = $(".inbox-actions-nav");
+    if (is_checked) {
+      inbox_table_checkbox_container.removeClass("hidden");
+      inbox_actions_nav.removeClass("hidden");
+    } else {
+      inbox_table_checkbox_container.addClass("hidden");
+      inbox_actions_nav.addClass("hidden");
+    }
+  });
+  /**
+   * END INBOX
+   */
+
 
 }
 

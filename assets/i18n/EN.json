@@ -290,6 +290,19 @@
     "": "",
     "": ""
   },
+  "inbox_page": {
+    "Notifications": "Notifications",
+    "Activities": "Activities",
+    "Select_all": "Select all",
+    "Mark_as_read": "Mark as read",
+    "Delete": "Delete",
+    "delete_popup_title": "Confirm Message Deletion",
+    "delete_popup_description": "Are you sure you want to permanently delete the selected messages from your inbox?",
+    "yes": "Yes, Delete",
+    "cancel": "Cancel",
+    "": "",
+    "": ""
+  },
   "": "",
   "": "",
   "": "",

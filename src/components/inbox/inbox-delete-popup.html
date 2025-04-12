@@ -1,0 +1,29 @@
+<button class="text-white" onclick="inbox_delete_popup.showModal()">
+  <i class="fa-solid fa-trash text-base"></i>
+</button>
+<dialog id="inbox_delete_popup" class="modal">
+  <div class="modal-box !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-base"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="inbox_page.delete_popup_title"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="text-center">
+        <p class="font-semibold" data-i18n="inbox_page.delete_popup_description"></p>
+      </div>
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="inbox_page.yes"></button>
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gray1 text-white !font-semibold text-sm" data-i18n="inbox_page.cancel"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
