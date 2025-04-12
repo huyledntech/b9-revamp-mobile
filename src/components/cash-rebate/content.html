@@ -1,0 +1,144 @@
+<!-- TOP NAV -->
+<div class="p-4 pb-0" data-aos="fade-in">
+  @@include('../base/top-nav-child/index.html', {
+    active: 'cash-rebate',
+    top_items: 'rewards',
+  })
+</div>
+
+<div class="flex flex-col gap-6">
+
+  <!-- COIN -->
+  <div class="px-4 flex flex-col gap-1" data-aos="fade-in">
+    <div class="flex items-center gap-1">
+      <div class="text-base font-semibold" data-i18n="cash_rebate_page.Available_to_Claim"></div>
+      (SGD)
+    </div>
+    <div class="flex items-center justify-between gap-1">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-coins text-yellow-500 text-lg"></i>
+        <div class="text-xl font-bold">53.72</div>
+      </div>
+      <div>
+        <button class="btn btn-xs bg-blue text-white min-w-[100px] shadow-none rounded-full border-none" data-i18n="cash_rebate_page.Claim_now"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLE -->
+  <div class="px-4 flex flex-col gap-1" data-aos="fade-up">
+    <div class="overflow-x-auto rounded-t-lg">
+      <table class="table table-sm table-zebra">
+        <!-- head -->
+        <thead>
+          <tr class="bg-gray2 border-b-0">
+            <th class="!text-blue1 py-2 text-xs" data-i18n="cash_rebate_page.Date"></th>
+            <th class="!text-blue1 py-2 text-xs" data-i18n="cash_rebate_page.Rebate"></th>
+            <th class="!text-blue1 py-2 text-xs" data-i18n="cash_rebate_page.Status"></th>
+            <th class="text-center !text-blue1 py-2 text-xs" data-i18n="cash_rebate_page.Receipt"></th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- row 1 -->
+          <tr class="border-b-0">
+            <td class="text-2xs">03/3/2025 (Mon)</td>
+            <td class="text-2xs">
+              <i class="fa-solid fa-coins text-yellow-500"></i>
+              15.20
+            </td>
+            <td class="text-2xs" data-i18n="cash_rebate_page.Credited"></td>
+            <td class="text-center">
+              <img src="/assets/icons/rebate.svg" alt="receipt" class="w-2.5 mx-auto">
+            </td>
+          </tr>
+
+          <!-- row 1 -->
+          <tr>
+            <td class="text-2xs">04/3/2025 (Tue)</td>
+            <td class="text-2xs">
+              <i class="fa-solid fa-coins text-yellow-500"></i>
+              38.20
+            </td>
+            <td class="text-2xs" data-i18n="cash_rebate_page.Credited"></td>
+            <td class="text-center">
+              <img src="/assets/icons/rebate.svg" alt="receipt" class="w-2.5 mx-auto">
+            </td>
+          </tr>
+
+          <!-- row 1 -->
+          <tr>
+            <td class="text-2xs">05/3/2025 (Wed)</td>
+            <td class="text-2xs">
+              <i class="fa-solid fa-coins text-yellow-500"></i>
+              00.00
+            </td>
+            <td class="text-2xs" data-i18n="cash_rebate_page.Calculating"></td>
+            <td class="text-center"></td>
+          </tr>
+
+          <!-- row 1 -->
+          <tr>
+            <td class="text-2xs">06/3/2025 (Thu)</td>
+            <td class="text-2xs">
+              <i class="fa-solid fa-coins text-yellow-500"></i>
+              00.00
+            </td>
+            <td class="text-2xs opacity-50" data-i18n="cash_rebate_page.Coming_soon"></td>
+            <td class="text-center"></td>
+          </tr>
+
+          <!-- row 1 -->
+          <tr>
+            <td class="text-2xs">07/3/2025 (Fri)</td>
+            <td class="text-2xs">
+              <i class="fa-solid fa-coins text-yellow-500"></i>
+              00.00
+            </td>
+            <td class="text-2xs opacity-50" data-i18n="cash_rebate_page.Coming_soon"></td>
+            <td class="text-center"></td>
+          </tr>
+
+          <!-- row 1 -->
+          <tr>
+            <td class="text-2xs">08/3/2025 (Sat)</td>
+            <td class="text-2xs">
+              <i class="fa-solid fa-coins text-yellow-500"></i>
+              00.00
+            </td>
+            <td class="text-2xs opacity-50" data-i18n="cash_rebate_page.Coming_soon"></td>
+            <td class="text-center"></td>
+          </tr>
+
+          <!-- row 1 -->
+          <tr>
+            <td class="text-2xs">09/3/2025 (Sun)</td>
+            <td class="text-2xs">
+              <i class="fa-solid fa-coins text-yellow-500"></i>
+              00.00
+            </td>
+            <td class="text-2xs opacity-50" data-i18n="cash_rebate_page.Coming_soon"></td>
+            <td class="text-center"></td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+  <!-- NOTE -->
+  <div class="px-4 flex flex-col gap-1" data-aos="fade-up">
+    <div class="text-sm font-semibold" data-i18n="cash_rebate_page.Important_Notes"></div>
+    <ul class="text-xs pl-3 py-2">
+      <li class="list-decimal" data-i18n="cash_rebate_page.note_1"></li>
+      <li class="list-decimal" data-i18n="cash_rebate_page.note_2"></li>
+      <li class="list-decimal" data-i18n="cash_rebate_page.note_3"></li>
+      <li class="list-decimal" data-i18n="cash_rebate_page.note_4"></li>
+      <li class="list-decimal" data-i18n="cash_rebate_page.note_5"></li>
+    </ul>
+  </div>
+
+
+
+</div>
