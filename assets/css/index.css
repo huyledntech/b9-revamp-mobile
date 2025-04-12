@@ -1439,3 +1439,74 @@ img {
 .inbox-table tbody tr td .checkbox-container .checkbox:checked {
   opacity: 1;
 }
+
+.tabs-voucher {
+  gap: 10px;
+}
+.tabs-voucher .tab-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 6px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-right: 10px;
+}
+.tabs-voucher .tab-list::-webkit-scrollbar {
+  display: none;
+}
+.tabs-voucher .tab-list > .tab {
+  flex: none;
+  padding: 3px 6px;
+  height: auto;
+  border-right: 1px solid var(--color-blue1);
+  filter: grayscale(0);
+  color: var(--color-blue1);
+  min-width: 50px;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 16px;
+}
+.tabs-voucher .tab-list > .tab:before {
+  display: none;
+}
+.tabs-voucher .tab-list > .tab:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
+  opacity: 0.3;
+  color: var(--color-blue);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+.tabs-voucher .tab-list > .tab:last-child {
+  border-right: none;
+}
+.tabs-voucher > .tab-content-list .tab-content-item {
+  display: none;
+}
+.tabs-voucher > .tab-content-list .tab-content-item.active {
+  display: block;
+}
+
+.inbox-table tbody tr {
+  border-bottom: none;
+  background-color: rgba(22, 36, 65, 0.05);
+}
+.inbox-table tbody tr:nth-child(2n) {
+  background-color: rgba(22, 36, 65, 0.1);
+}
+.inbox-table tbody tr th {
+  background-color: var(--color-blue1);
+  color: var(--color-white);
+  font-weight: 400;
+  padding-left: 16px;
+}
+.inbox-table tbody tr td {
+  vertical-align: text-top;
+}
+.inbox-table tbody tr td .checkbox-container .checkbox {
+  border-color: var(--color-blue1);
+  opacity: 0.3;
+}
+.inbox-table tbody tr td .checkbox-container .checkbox:checked {
+  opacity: 1;
+}

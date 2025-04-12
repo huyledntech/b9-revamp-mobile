@@ -1,7 +1,7 @@
-.tabs-voucher {
+.tabs-inbox {
   gap: 10px;
 }
-.tabs-voucher .tab-list {
+.tabs-inbox .tab-list {
   display: flex;
   flex-wrap: nowrap;
   overflow-x: auto;
@@ -10,10 +10,10 @@
   -ms-overflow-style: none;
   padding-right: 10px;
 }
-.tabs-voucher .tab-list::-webkit-scrollbar {
+.tabs-inbox .tab-list::-webkit-scrollbar {
   display: none;
 }
-.tabs-voucher .tab-list > .tab {
+.tabs-inbox .tab-list > .tab {
   flex: none;
   padding: 3px 6px;
   height: auto;
@@ -25,23 +25,23 @@
   font-weight: 600;
   font-size: 16px;
 }
-.tabs-voucher .tab-list > .tab:before {
+.tabs-inbox .tab-list > .tab:before {
   display: none;
 }
-.tabs-voucher .tab-list > .tab:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
+.tabs-inbox .tab-list > .tab:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
   opacity: 0.3;
   color: var(--color-blue);
   text-decoration: none;
   font-weight: 400;
   font-size: 16px;
 }
-.tabs-voucher .tab-list > .tab:last-child {
+.tabs-inbox .tab-list > .tab:last-child {
   border-right: none;
 }
-.tabs-voucher > .tab-content-list .tab-content-item {
+.tabs-inbox > .tab-content-list .tab-content-item {
   display: none;
 }
-.tabs-voucher > .tab-content-list .tab-content-item.active {
+.tabs-inbox > .tab-content-list .tab-content-item.active {
   display: block;
 }
 

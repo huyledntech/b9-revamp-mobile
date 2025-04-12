@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'Voucher Detail'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home pt-[60px]">
+      @@include('../components/base/navbar-top.html', {
+        title: 'voucher_page.Voucher_Detail', 
+        back_url: '/voucher.html', 
+        icon_back_white: true,
+      })
+
+
+      <div class="min-h-screen">
+
+        @@include('../components/voucher/content-detail.html')
+        
+      </div>
+
+      
+      @@include('../components/base/navbar-footer.html')
+      
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>

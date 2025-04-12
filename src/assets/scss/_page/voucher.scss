@@ -1,0 +1,93 @@
+.tabs-voucher {
+  gap: 10px;
+
+  .tab-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &>.tab {
+      flex: none;
+      padding: 3px 6px;
+      height: auto;
+      border-right: 1px solid var(--color-blue1);
+      filter: grayscale(0);
+      color: var(--color-blue1);
+      min-width: 50px;
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 16px;
+
+      &:before {
+        display: none;
+      }
+
+      &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
+        opacity: 0.3;
+        color: var(--color-blue);
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+    }
+  }
+
+  &>.tab-content-list {
+    .tab-content-item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+.inbox-table {
+  tbody {
+
+    tr {
+      border-bottom: none;
+      background-color: rgba(22, 36, 65, 0.05);
+
+      &:nth-child(2n) {
+        background-color: rgba(22, 36, 65, 0.1);
+      }
+
+      th {
+        background-color: var(--color-blue1);
+        color: var(--color-white);
+        font-weight: 400;
+        padding-left: 16px;
+      }
+
+      td {
+        vertical-align: text-top;
+
+        .checkbox-container {
+          .checkbox {
+            border-color: var(--color-blue1);
+            opacity: 0.3;
+
+            &:checked {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+<!-- TOP NAV -->
+<div class="p-4 pb-0" data-aos="fade-in">
+  @@include('../base/top-nav-child/index.html', {
+    active: 'voucher',
+    top_items: 'rewards',
+  })
+</div>
+
+<!-- TABS -->
+<div class="px-4 mb-4" data-aos="fade-in">
+  <div class="text-base font-bold mb-2" data-i18n="voucher_page.Voucher_Code"></div>
+  <div class="join w-full">
+    <div class="flex-1">
+      <label class="input border-blue rounded-l-lg validator join-item text-sm">
+        <input type="text" data-i18n="voucher_page.Enter_Voucher_Code" data-i18n-attr="placeholder" required/>
+      </label>
+    </div>
+    <button class="btn bg-gradient-to-b from-blue to-blue1 text-white join-item min-w-[100px] rounded-r-lg border border-blue" data-i18n="voucher_page.Claim"></button>
+  </div>
+</div>
+
+<!-- TABS -->
+<div class="px-4 mb-10" data-aos="fade-up">
+  <div class="tabs custom-tabs tabs-voucher">
+    <div class="tab-list py-2 relative w-full">
+      <!-- tab 1 -->
+      <label class="tab">
+        <input type="radio" name="voucher-tab" class="hidden" value="1" checked="checked" />
+        <div class="flex items-center gap-2">
+          <div data-i18n="voucher_page.Active_Vouchers"></div>
+        </div>
+      </label>
+
+      <!-- tab 2 -->
+      <label class="tab">
+        <input type="radio" name="voucher-tab" class="hidden" value="2" />
+        <div class="flex items-center gap-2">
+          <div data-i18n="voucher_page.Voucher_History"></div>
+        </div>
+      </label>
+
+    </div>
+    
+    <div class="tab-content-list w-full flex flex-col gap-4">
+      <div class="tab-content-item">
+        @@include('./tab-content-item.html')
+      </div>
+      <div class="tab-content-item">
+        @@include('./tab-content-item1.html')
+      </div>
+      
+    </div>
+  </div>
+</div>
