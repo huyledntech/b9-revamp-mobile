@@ -1,7 +1,7 @@
 :root {
   --primary-color: #4E7FFF;
   --max-with-mobile: 768px;
-  --default-font-size: 14px;
+  --default-font-size: 13px;
   --default-small-font-size: 13px;
   --default-padding-content: 20px;
   --default-mobile-padding-content: 15px;
@@ -15,11 +15,11 @@
 
 body {
   font-size: var(--default-font-size);
-  line-height: 16px;
+  line-height: 18px;
   font-weight: 400;
   max-width: var(--max-with-mobile);
   margin: auto;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   position: relative;
   background: #fff;
   color: var(--color-blue1);
@@ -32,6 +32,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+.main {
+  padding-top: 60px;
 }
 
 .container,

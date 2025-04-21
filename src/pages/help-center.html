@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'Help Center'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home">
+      @@include('../components/base/navbar-top.html', {
+        title: 'help_center_page.title', 
+        back_url: '/', 
+        icon_back_white: true,
+        show_accordion: false
+      })
+
+
+      <div class="min-h-screen p-4 flex flex-col gap-4">
+
+        <div class="flex items-center bg-gray8 px-4 py-6 text-white font-bold text-xl whitespace-pre-line" data-i18n="help_center_page.title"></div>
+
+        <div class="" data-i18n="help_center_page.description"></div>
+
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-rocket text-blue text-lg mt-1"></i>
+          <div class="flex flex-col gap-1">
+            <div class="font-semibold text-sm" data-i18n="help_center_page.Quick_Solutions"></div>
+            <div data-i18n="help_center_page.Quick_Solutions_Description"></div>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-message text-blue text-lg mt-1"></i>
+          <div class="flex flex-col gap-1">
+            <div class="font-semibold text-sm" data-i18n="help_center_page.Live_Chat_Support"></div>
+            <div>
+              <div data-i18n="help_center_page.Live_Chat_Support_Description"></div>
+              <a href="#" class="font-semibold underline" data-i18n="help_center_page.Live_Chat_Support_Description_1"></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-lock text-blue text-lg mt-1"></i>
+          <div class="flex flex-col gap-1">
+            <div class="font-semibold text-sm" data-i18n="help_center_page.Useful_Topics"></div>
+            <ul class="ml-4 flex flex-col gap-1">
+              <li class="list-decimal" data-i18n="help_center_page.Useful_Topics_Description_1"></li>
+              <li class="list-decimal" data-i18n="help_center_page.Useful_Topics_Description_2"></li>
+              <li class="list-decimal" data-i18n="help_center_page.Useful_Topics_Description_3"></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-lock text-blue text-lg mt-1"></i>
+          <div class="flex flex-col gap-1">
+            <div class="font-semibold text-sm" data-i18n="help_center_page.Account_Security"></div>
+            <ul class="ml-4 flex flex-col gap-1">
+              <li class="list-decimal" data-i18n="help_center_page.Account_Security_Description_1"></li>
+              <li class="list-decimal" data-i18n="help_center_page.Account_Security_Description_2"></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-2">
+          <div class="flex flex-col gap-1">
+            <div class="font-semibold text-sm" data-i18n="help_center_page.need_more_help"></div>
+            <div data-i18n="help_center_page.Quick_Solutions_Description"></div>
+          </div>
+        </div>
+        
+      </div>
+
+      
+      @@include('../components/base/navbar-footer.html')
+      
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>

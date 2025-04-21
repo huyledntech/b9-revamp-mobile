@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'Help Center'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home">
+      @@include('../components/base/navbar-top.html', {
+        title: 'responsible_gaming_page.title', 
+        back_url: '/', 
+        icon_back_white: true,
+        show_accordion: false
+      })
+
+
+      <div class="min-h-screen p-4 flex flex-col gap-4 mb-10">
+
+        <div class="text-blue font-bold text-xl" data-i18n="responsible_gaming_page.title1"></div>
+
+        <div class="flex items-center bg-gray8 px-4 py-6 text-white font-bold text-xl whitespace-pre-line min-h-[120px]"></div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="responsible_gaming_page.Enjoy_Gambling_Responsibly"></div>
+          <div>
+            <div data-i18n="responsible_gaming_page.Enjoy_Gambling_Responsibly_Description"></div>
+            <div data-i18n="responsible_gaming_page.Enjoy_Gambling_Responsibly_Description_1"></div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="responsible_gaming_page.Responsible_Gaming_Measures"></div>
+          <div data-i18n="responsible_gaming_page.Responsible_Gaming_Measures_Description"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction"></div>
+          <div data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_1"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_2"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_3"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_4"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_5"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_6"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_7"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_8"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_9"></li>
+          </ul>
+          <div data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_10"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="responsible_gaming_page.Preventing_Underage_Gambling"></div>
+          <div data-i18n="responsible_gaming_page.Preventing_Underage_Gambling_Description"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Underage_Gambling_Description_1"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Underage_Gambling_Description_2"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Underage_Gambling_Description_3"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Underage_Gambling_Description_4"></li>
+            <li class="list-decimal" data-i18n="responsible_gaming_page.Preventing_Underage_Gambling_Description_5"></li>
+          </ul>
+          <div data-i18n="responsible_gaming_page.Preventing_Underage_Gambling_Description_6"></div>
+        </div>
+        
+      </div>
+
+      
+      @@include('../components/base/navbar-footer.html')
+      
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>

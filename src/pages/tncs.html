@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'Help Center'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home">
+      @@include('../components/base/navbar-top.html', {
+        title: 'tncs_page.title', 
+        back_url: '/', 
+        icon_back_white: true,
+        show_accordion: false
+      })
+
+
+      <div class="min-h-screen p-4 flex flex-col gap-4 mb-10">
+
+        <div class="text-blue font-bold text-xl" data-i18n="tncs_page.title1"></div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.Terms_Conditions_Apply"></div>
+          <div data-i18n="tncs_page.Terms_Conditions_Apply_Description"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.General_Use"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="tncs_page.General_Use_Description_1"></li>
+            <li class="list-decimal" data-i18n="tncs_page.General_Use_Description_2"></li>
+            <li class="list-decimal" data-i18n="tncs_page.General_Use_Description_3"></li>
+            <li class="list-decimal" data-i18n="tncs_page.General_Use_Description_4"></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.General_Rules"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="tncs_page.General_Rules_Description_1"></li>
+            <li class="list-decimal" data-i18n="tncs_page.General_Rules_Description_2"></li>
+            <li class="list-decimal" data-i18n="tncs_page.General_Rules_Description_3"></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.Deposits_Withdrawals"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="tncs_page.Deposits_Withdrawals_Description_1"></li>
+            <li class="list-decimal" data-i18n="tncs_page.Deposits_Withdrawals_Description_2"></li>
+            <li class="list-decimal" data-i18n="tncs_page.Deposits_Withdrawals_Description_3"></li>
+          </ul>
+        </div>
+        
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.Bonuses_and_Promotions"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="tncs_page.Bonuses_and_Promotions_Description_1"></li>
+            <li class="list-decimal" data-i18n="tncs_page.Bonuses_and_Promotions_Description_2"></li>
+            <li class="list-decimal" data-i18n="tncs_page.Bonuses_and_Promotions_Description_3"></li>
+          </ul>
+        </div>
+        
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.Liability_Disclaimers"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="tncs_page.Liability_Disclaimers_Description_1"></li>
+            <li class="list-decimal" data-i18n="tncs_page.Liability_Disclaimers_Description_2"></li>
+            <li class="list-decimal" data-i18n="tncs_page.Liability_Disclaimers_Description_3"></li>
+          </ul>
+        </div>
+        
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.Account_Privacy"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="tncs_page.Account_Privacy_Description_1"></li>
+            <li class="list-decimal" data-i18n="tncs_page.Account_Privacy_Description_2"></li>
+          </ul>
+        </div>
+        
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.Legal_Compliance"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="tncs_page.Legal_Compliance_Description_1"></li>
+            <li class="list-decimal" data-i18n="tncs_page.Legal_Compliance_Description_2"></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.Intellectual_Property"></div>
+          <div data-i18n="tncs_page.Intellectual_Property_Description"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.Governing_Law"></div>
+          <div data-i18n="tncs_page.Governing_Law_Description"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="tncs_page.Miscellaneous"></div>
+          <div>
+            <div data-i18n="tncs_page.Miscellaneous_Description_1"></div>
+            <div data-i18n="tncs_page.Miscellaneous_Description_2"></div>
+          </div>
+        </div>
+        
+      </div>
+
+      
+      @@include('../components/base/navbar-footer.html')
+      
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>

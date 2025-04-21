@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'Help Center'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home">
+      @@include('../components/base/navbar-top.html', {
+        title: 'privacy_policy_page.title', 
+        back_url: '/', 
+        icon_back_white: true,
+        show_accordion: false
+      })
+
+
+      <div class="min-h-screen p-4 flex flex-col gap-4 mb-10">
+
+        <div class="text-blue font-bold text-xl" data-i18n="privacy_policy_page.title1"></div>
+
+        <div data-i18n="privacy_policy_page.title1_Description"></div>
+
+        <div class="flex items-center bg-gray8 px-4 py-6 text-white font-bold text-xl whitespace-pre-line min-h-[120px]"></div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="privacy_policy_page.Purpose_of_Collecting_Information"></div>
+          <div data-i18n="privacy_policy_page.Purpose_of_Collecting_Information_Description"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="privacy_policy_page.Collection_of_Personal_Information"></div>
+          <div data-i18n="privacy_policy_page.Collection_of_Personal_Information_Description"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="privacy_policy_page.Marketing_Communications"></div>
+          <div data-i18n="privacy_policy_page.Marketing_Communications_Description"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="privacy_policy_page.Data_Sharing"></div>
+          <div data-i18n="privacy_policy_page.Data_Sharing_Description"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="privacy_policy_page.Our_Commitment_to_You"></div>
+          <div data-i18n="privacy_policy_page.Our_Commitment_to_You_Description"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="privacy_policy_page.Our_Commitment_to_You_Description_1"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Our_Commitment_to_You_Description_2"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Our_Commitment_to_You_Description_3"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Our_Commitment_to_You_Description_4"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Our_Commitment_to_You_Description_5"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Our_Commitment_to_You_Description_6"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Our_Commitment_to_You_Description_7"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Our_Commitment_to_You_Description_8"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Our_Commitment_to_You_Description_9"></li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="privacy_policy_page.Your_Rights"></div>
+          <div data-i18n="privacy_policy_page.Your_Rights_Description"></div>
+          <ul class="ml-4 flex flex-col gap-1">
+            <li class="list-decimal" data-i18n="privacy_policy_page.Your_Rights_Description_1"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Your_Rights_Description_2"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Your_Rights_Description_3"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Your_Rights_Description_4"></li>
+            <li class="list-decimal" data-i18n="privacy_policy_page.Your_Rights_Description_5"></li>
+          </ul>
+          <div data-i18n="responsible_gaming_page.Preventing_Gambling_Addiction_Description_10"></div>
+        </div>
+
+        <div class="flex flex-col gap-1">
+          <div class="font-semibold text-sm" data-i18n="privacy_policy_page.Use_of_Cookies"></div>
+          <div data-i18n="privacy_policy_page.Use_of_Cookies_Description"></div>
+          <div data-i18n="privacy_policy_page.Use_of_Cookies_Description_1"></div>
+        </div>
+        
+      </div>
+
+      
+      @@include('../components/base/navbar-footer.html')
+      
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>
