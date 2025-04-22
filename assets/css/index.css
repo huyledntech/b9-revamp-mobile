@@ -354,7 +354,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: var(--color-blue);
 }
 
-.home-categories .hide-when-more-item {
+.home-categories .hide-when-more-item:not(.active) {
   display: none;
 }
 .home-categories #home-categories-checkbox:checked ~ .collapse-title .hide-when-more-item {
@@ -362,6 +362,9 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .home-categories #home-categories-checkbox:checked ~ .collapse-title .more-item {
   display: none;
+}
+.home-categories #home-categories-checkbox:not(:checked) ~ .collapse-title .first-item {
+  display: none !important;
 }
 
 .recently-winners #recently-winners-checkbox:checked ~ .lucky-win {

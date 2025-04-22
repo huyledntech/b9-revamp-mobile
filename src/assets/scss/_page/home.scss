@@ -16,7 +16,9 @@
 
 .home-categories {
   .hide-when-more-item {
-    display: none;
+    &:not(.active) {
+      display: none;
+    }
   }
 
   #home-categories-checkbox {
@@ -29,6 +31,14 @@
 
         .more-item {
           display: none;
+        }
+      }
+    }
+
+    &:not(:checked) {
+      ~.collapse-title {
+        .first-item {
+          display: none !important;
         }
       }
     }

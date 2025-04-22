@@ -644,7 +644,14 @@
     "": "",
     "": ""
   },
-  "": "",
+  "arcade_page": {
+    "Tournament": "Tournament",
+    "Aviator": "Aviator",
+    "Spribe_Gaming": "Spribe Gaming",
+    "Plinko": "Plinko",
+    "Mini_Roulette": "Mini Roulette",
+    "Hilo": "Hilo"
+  },
   "": "",
   "": "",
   "": "",
