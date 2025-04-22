@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'Fishing'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home">
+      @@include('../components/base/navbar.html', {without_login: false})
+
+
+      <div class="min-h-screen">
+
+        @@include('../components/fishing/content.html')
+        
+      </div>
+
+      <!-- MODAL -->
+       
+      <!-- MODAL -->
+
+      
+      @@include('../components/base/navbar-footer.html')
+      
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>
