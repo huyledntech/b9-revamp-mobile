@@ -1,5 +1,5 @@
-<nav class="navbar fixed-top navbar-light fixed top-0 inset-x-0 !bg-dark z-50">
-  <div class="container content justify-between w-full">
+<nav class="navbar fixed-top flex flex-col fixed top-0 inset-x-0 !bg-dark z-50">
+  <div class="container content justify-between w-full !bg-dark">
     <div class="flex items-center">
       <!-- <button class="btn me-2" id="navMenu">
         <img src="assets/icons/menu.png" alt="" />
@@ -16,8 +16,8 @@
       }
     </div>
     <div class="flex items-center gap-2">
-      <button type="button" class="btn btn-language bg-gradient-to-b from-blue to-blue1 !border-none shadow-none !mr-0" id="selectLanguageModalBtn">中</button>
       @@if (!context.without_login) {
+        <button type="button" class="btn btn-language bg-gradient-to-b from-blue to-blue1 !border-none shadow-none !mr-0" id="selectLanguageModalBtn">中</button>
         <div class="btn-group flex items-center gap-1" role="group" aria-label="Basic mixed styles example">
           <a href="/deposit.html" class="btn btn-secondary btn-currency !text-white !bg-transparent !border !border-blue !shadow-none !pr-0">
             <!-- <img class="content__logo" src="assets/icons/navbar-wallet.svg" alt="" /> -->
@@ -50,10 +50,14 @@
     </div>
   </div>
 
-  <!-- <div class="text-animated">
-    <span class="text-overflow" data-i18n="notification_run">The announcement message will runs here. The announcement message will runs here. The announcement message will runs here</span>
-  </div> -->
-
+  <div class="bg-blue1 flex items-center justify-start w-full text-white h-6">
+    <div class="px-2">
+      <i class="fa-solid fa-volume-low"></i>
+    </div>
+    <marquee>
+      <span class="text-3xs" data-i18n="notification_run"></span>
+    </marquee>
+  </div>
 </nav>
 @@if (!!context.without_login) {
   @@include('./sidebar-without-login.html')

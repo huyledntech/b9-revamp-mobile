@@ -1,10 +1,9 @@
-<nav class="navbar fixed-top navbar-light nav-child fixed top-0 z-50">
+<nav class="navbar fixed-top navbar-light nav-child fixed top-0 z-50 !bg-dark text-white">
   <div class="container content items-center justify-between @@if (!context.back_url && !context.help_url) {justify-center}">
     @@if (!!context.back_url) {
       <a id="back_url" class="flex-1 @@if (!!context.use_back_url) {use_back_url}" href="@@back_url">
         @@if (!!context.icon_back_white) {
-          <!-- <img src="assets/icons/left-white.svg" alt="" /> -->
-          <i class="fa-solid fa-arrow-left text-white text-2xl"></i>
+          <i class="fa-solid fa-arrow-left text-white text-xl"></i>
         }
         @@if (!context.icon_back_white) {
           <img src="assets/icons/icon_back.png" alt="" />
@@ -12,7 +11,7 @@
       </a>
     }
     <!-- <div class="title" data-i18n="@@title">@@title</div> -->
-    <div class="title !capitalize flex-1 min-w-10/12" data-i18n="@@title"></div>
+    <div class="title !capitalize flex-1 min-w-10/12 text-white" data-i18n="@@title"></div>
     <div class="flex-1 @@if (!context.help_url) {opacity-0} @@if (!!context.right_expand_icon && !!context.right_expand_icon_url){d-none}">
       <img src="assets/icons/help.png" alt="" />
     </div>
@@ -22,7 +21,7 @@
     @@if (!!context.show_accordion) {
       <label id="navbar-accordion" class="cursor-pointer text-white">
         <input type="checkbox" name="navbar-accordion"  class="hidden"/>
-        <i class="fa-solid fa-caret-down text-2xl transition-transform duration-100"></i>
+        <i class="fa-solid fa-caret-down text-xl transition-transform duration-100"></i>
       </label>
     }
   </div>
