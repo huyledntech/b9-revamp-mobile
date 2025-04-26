@@ -163,6 +163,7 @@
   },
   "VIP_CLUB": "VIP CLUB",
   "vip": {
+    "title": "VIP Program",
     "INFO_TITLE_1": "Level Up, Win More",
     "INFO_DESCRIPTION_1": "Earn free credits with every new level—more levels, more rewards!",
     "INFO_TITLE_2": "Cash Back Rewards",
