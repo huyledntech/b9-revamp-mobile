@@ -101,3 +101,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   height: 14px;
   border-width: thin;
 }
+
+.modal {
+  transition: none !important;
+}
+.modal.modal-open, .modal[open], .modal:target {
+  background-color: rgba(0, 0, 0, 0.6);
+}

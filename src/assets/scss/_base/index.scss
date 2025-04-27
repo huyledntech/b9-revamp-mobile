@@ -109,3 +109,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   height: 14px;
   border-width: thin;
 }
+
+.modal {
+  transition: none !important;
+
+  &.modal-open,
+  &[open],
+  &:target {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}

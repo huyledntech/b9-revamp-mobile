@@ -26,9 +26,9 @@
   </div>
 
   <div class="flex items-center justify-between gap-4">
-    <button class="flex-1 rounded-lg bg-gradient-to-b h-10 from-blue to-blue1 text-white" data-i18n="B92u_Bank_page.Transfer_In"></button>
-    <button class="flex-1 rounded-lg bg-white h-10 text-blue border border-blue" data-i18n="B92u_Bank_page.Withdrawal_Out"></button>
-    <button class="flex-1 rounded-lg bg-white h-10 text-blue border border-blue relative">
+    <button class="flex-1 rounded-lg bg-gradient-to-b h-10 from-blue to-blue1 text-white" data-i18n="B92u_Bank_page.Transfer_In" onclick="transfer_in_modal.showModal()"></button>
+    <button class="flex-1 rounded-lg bg-white h-10 text-blue border border-blue" data-i18n="B92u_Bank_page.Withdrawal_Out" onclick="transfer_out_modal.showModal()"></button>
+    <button class="flex-1 rounded-lg bg-white h-10 text-blue border border-blue relative" onclick="deposit_to_B9_modal.showModal()">
       <span class="absolute -top-3 inset-x-0 text-4xs text-white flex items-center justify-center">
         <span class="bg-blue1 rounded-md px-4">Get Extra 1.1%</span>
       </span>
@@ -84,3 +84,242 @@
   </div>
 
 </div>
+
+
+<!-- TRANSFER IN MODAL -->
+<dialog id="transfer_in_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="B92u_Bank_page.Withdrawal_to_B92u_Bank"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4 flex flex-col gap-4">
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="B92u_Bank_page.Amount_SGD"></legend>
+        <label class="input bg-gray2 rounded-lg border-none mt-2 text-xs">
+          <input type="text" class="text-blue placeholder:!font-light" data-i18n="B92u_Bank_page.Amount_SGD_placeholder" data-i18n-attr="placeholder" placeholder="" value="" />
+        </label>
+        <div data-i18n="B92u_Bank_page.Amount_SGD_label"></div>
+      </fieldset>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Confirm_Submit" onclick="transfer_in_modal.close();transfer_in_success_modal.showModal()"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<dialog id="transfer_in_success_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="B92u_Bank_page.Successful"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div data-i18n="B92u_Bank_page.transfer_in_successful_desc"></div>
+      <div class="flex my-2">
+        <div data-i18n="B92u_Bank_page.transfer_in_successful_desc1"></div>
+        <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.transfer_in_successful_desc2"></a>
+      </div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Check_Status" onclick="transfer_in_success_modal.close()"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- TRANSFER IN MODAL -->
+
+
+<!-- TRANSFER OUT MODAL -->
+<dialog id="transfer_out_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="B92u_Bank_page.Withdrawal_to_Bank_Account"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4 flex flex-col gap-4">
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="B92u_Bank_page.Amount_SGD"></legend>
+        <label class="input bg-gray2 rounded-lg border-none mt-2 text-xs">
+          <input type="text" class="text-blue placeholder:!font-light" data-i18n="B92u_Bank_page.Amount_SGD_placeholder" data-i18n-attr="placeholder" placeholder="" value="" />
+        </label>
+        <div data-i18n="B92u_Bank_page.Amount_SGD_label"></div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="B92u_Bank_page.Bank_Account"></legend>
+        <select class="select bg-gray2 rounded-lg border-none mt-2 text-xs">
+          <option>DBS 123123123</option>
+          <option>DBS 123123123</option>
+          <option>DBS 123123123</option>
+        </select>
+      </fieldset>
+
+      <label class="label items-start gap-2">
+        <input type="checkbox" class="checkbox checkbox-xs rounded-xs border-blue1 mt-1" />
+        <div class="whitespace-pre-wrap text-blue1" data-i18n="B92u_Bank_page.Withdrawal_to_Bank_Account_checkbox"></div>
+      </label>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Confirm_Submit" onclick="transfer_out_modal.close();transfer_out_success_modal.showModal()"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<dialog id="transfer_out_success_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="B92u_Bank_page.Request_Submitted"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="flex flex-col gap-4">
+        <div data-i18n="B92u_Bank_page.Request_Submitted_desc"></div>
+        <div class="flex items-center gap-2">
+          <span data-i18n="B92u_Bank_page.Your_Transaction_ID_is"></span>
+          <a href="#" class="font-semibold underline">123123123</a>
+        </div>
+        <div class="text-center">
+          <span data-i18n="B92u_Bank_page.request_support"></span>
+          <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.request_support_1"></a>
+        </div>
+      </div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Check_Status" onclick="transfer_out_success_modal.close()"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- TRANSFER OUT MODAL -->
+
+
+<!-- DEPOSIT TO B9 MODAL -->
+<dialog id="deposit_to_B9_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="B92u_Bank_page.Deposit_to_B9Casino"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4 flex flex-col gap-4">
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="B92u_Bank_page.Amount_SGD"></legend>
+        <label class="input bg-gray2 rounded-lg border-none mt-2 text-xs">
+          <input type="text" class="text-blue placeholder:!font-light" data-i18n="B92u_Bank_page.Amount_SGD_placeholder" data-i18n-attr="placeholder" placeholder="" value="" />
+        </label>
+        <div data-i18n="B92u_Bank_page.Amount_SGD_label"></div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="B92u_Bank_page.Bonus"></legend>
+        <label class="flex items-center justify-between gap-2 input !shadow-none bg-gray2 rounded-lg border-none mt-2 text-xs text-blue">
+          <i class="fa-solid fa-gift text-xl"></i>
+          <div data-i18n="B92u_Bank_page.Bonus_label"></div>
+          <input type="checkbox" class="toggle toggle-xs border-blue border-2 text-blue" />
+        </label>
+        <select class="select bg-white rounded-lg border border-blue mt-2 text-xs">
+          <option>Bonus 1</option>
+          <option>Bonus 1</option>
+          <option>Bonus 1</option>
+        </select>
+      </fieldset>
+
+      <label class="label items-start gap-2">
+        <input type="checkbox" class="checkbox checkbox-xs rounded-xs border-blue1 mt-1" />
+        <div class="whitespace-pre-wrap text-blue1" data-i18n="B92u_Bank_page.Withdrawal_to_Bank_Account_checkbox"></div>
+      </label>
+     
+      <div class="modal-action flex flex-col gap-4 mt-2">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Confirm_Submit" onclick="deposit_to_B9_modal.close();deposit_to_B9_success_modal.showModal()"></button>
+      </div>
+
+      <div class="flex flex-col items-center justify-center gap-0">
+        <div data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support"></div>
+        <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support1"></a>
+      </div>
+
+    </div>
+  </div>
+</dialog>
+<dialog id="deposit_to_B9_success_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="B92u_Bank_page.Request_Submitted"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="flex flex-col gap-4">
+        <div data-i18n="B92u_Bank_page.Request_Submitted_desc"></div>
+        <div class="flex items-center gap-2">
+          <span data-i18n="B92u_Bank_page.Your_Transaction_ID_is"></span>
+          <a href="#" class="font-semibold underline">123123123</a>
+        </div>
+        <div class="text-center">
+          <span data-i18n="B92u_Bank_page.request_support"></span>
+          <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.request_support_1"></a>
+        </div>
+      </div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Check_Status" onclick="deposit_to_B9_success_modal.close()"></button>
+      </div>
+
+    </div>
+  </div>
+</dialog>
+<!-- DEPOSIT TO B9 MODAL -->
+

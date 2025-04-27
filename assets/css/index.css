@@ -161,6 +161,13 @@ input[type=date]::-webkit-calendar-picker-indicator {
   border-width: thin;
 }
 
+.modal {
+  transition: none !important;
+}
+.modal.modal-open, .modal[open], .modal:target {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 #mySidenav.sidenav {
   width: 100%;
   position: fixed;
