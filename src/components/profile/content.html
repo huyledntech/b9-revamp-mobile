@@ -12,7 +12,10 @@
 
   <!-- VERIFICATION -->
   <div class="px-4 mb-4 flex items-center gap-4 justify-between border border-blue rounded-lg min-h-11" data-aos="fade-up">
-    <div class="text-sm font-semibold" data-i18n="profile_page.User_Verification"></div>
+    <div class="text-sm font-semibold">
+      <span data-i18n="profile_page.User_Verification"></span>
+      <span>(1/4)</span>
+    </div>
     <div class="flex items-center gap-8">
       <div class="relative">
         <i class="fa-solid fa-user fa-xl"></i>
@@ -24,10 +27,10 @@
       <div class="relative opacity-50" onclick="verification_phone_number_popup.showModal()">
         <i class="fa-solid fa-mobile fa-xl"></i>
       </div>
-      <div class="relative">
+      <a href="/add-bank-verification.html" class="relative opacity-50">
         <i class="fa-solid fa-building-columns fa-xl"></i>
-        <i class="fa-solid fa-circle-check text-xs text-green-500 absolute -bottom-2 -right-[6px] bg-white rounded-full"></i>
-      </div>
+        <!-- <i class="fa-solid fa-circle-check text-xs text-green-500 absolute -bottom-2 -right-[6px] bg-white rounded-full"></i> -->
+      </a>
     </div>
   </div>
 
@@ -72,7 +75,7 @@
         <legend class="fieldset-legend text-blue1 py-0 px-1 absolute -top-[6px] left-3 z-10 bg-white text-sm" data-i18n="profile_page.Email"></legend>
         <label class="input w-full border-blue rounded-lg">
           <input type="text" class="" placeholder="" value="testing88@gmail.com" />
-          <div class="text-green-500 text-xs">
+          <div class="text-green-500 text-xs" onclick="verification_email_popup.showModal()">
             <i class="fa-solid fa-circle-check"></i> <span data-i18n="profile_page.Verified"></span>
           </div>
         </label>
@@ -83,7 +86,7 @@
         <legend class="fieldset-legend text-blue1 py-0 px-1 absolute -top-[6px] left-3 z-10 bg-white text-sm" data-i18n="profile_page.Phone_Number"></legend>
         <label class="input w-full border-blue rounded-lg">
           <input type="text" class="" placeholder="" value="+65 9123 4567" />
-          <div class="text-red-500 text-xs">
+          <div class="text-red-500 text-xs" onclick="verification_phone_number_popup.showModal()">
             <i class="fa-solid fa-circle-exclamation"></i> <span data-i18n="profile_page.Verify_Now"></span>
           </div>
         </label>

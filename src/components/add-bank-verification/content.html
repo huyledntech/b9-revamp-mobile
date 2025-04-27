@@ -1,0 +1,64 @@
+<!-- TOP NAV -->
+<div class="px-4 pb-0" data-aos="fade-in">
+  @@include('../base/top-nav-child/index.html', {
+    active: 'deposit',
+    top_items: 'transactions',
+  })
+</div>
+
+<!-- FORM -->
+<form class="px-4 flex flex-col gap-1">
+  <!-- BANK -->
+  <fieldset class="fieldset" data-aos="fade-in">
+    <legend class="fieldset-legend text-blue1 font-semibold text-sm" data-i18n="Add_Bank_Verification_page.Bank"></legend>
+    <select class="select w-full border-blue rounded-lg">
+      <option disabled selected data-i18n="Add_Bank_Verification_page.Please_select_a_Bank_Options"></option>
+      <option data-i18n="Add_Bank_Verification_page.Bank_1"></option>
+      <option data-i18n="Add_Bank_Verification_page.Bank_2"></option>
+      <option data-i18n="Add_Bank_Verification_page.Bank_3"></option>
+    </select>
+  </fieldset>
+
+  <!-- ACCOUNT NAME -->
+  <fieldset class="fieldset" data-aos="fade-up">
+    <legend class="fieldset-legend text-blue1 font-semibold text-sm" data-i18n="Add_Bank_Verification_page.Account_Name"></legend>
+    <input type="text" class="input w-full border-blue rounded-lg disabled:bg-gray2 disabled:text-blue1 disabled:text-sm disabled:font-semibold" placeholder="" value="Kim Seng Joo" disabled />
+  </fieldset>
+
+  <!-- ACCOUNT NUMBER -->
+  <fieldset class="fieldset" data-aos="fade-up">
+    <legend class="fieldset-legend text-blue1 font-semibold text-sm" data-i18n="Add_Bank_Verification_page.Account_Number"></legend>
+    <input type="text" class="input w-full border-blue rounded-lg" data-i18n="Add_Bank_Verification_page.Account_Number_Placeholder" data-i18n-attr="placeholder" placeholder="" value="" />
+  </fieldset>
+
+  <!-- Upload Attachment -->
+  <fieldset class="fieldset" data-aos="fade-up">
+    <legend class="fieldset-legend text-blue1 font-semibold text-sm" data-i18n="Add_Bank_Verification_page.Account_Number"></legend>
+    <label class="input w-full border-blue rounded-lg">
+      <input type="file" class="hidden" data-i18n="Add_Bank_Verification_page.Account_Number_Placeholder" data-i18n-attr="placeholder" placeholder="" value="" />
+      <div class="flex-1 opacity-50" data-i18n="Add_Bank_Verification_page.Upload_Attachment"></div>
+      <i class="fa-solid fa-upload text-blue text-base"></i>
+    </label>
+  </fieldset>
+
+  <div class="flex items-start gap-2 text-red-500" data-aos="fade-up">
+    <div class="">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+    <div class="flex flex-col gap-1">
+      <p data-i18n="Add_Bank_Verification_page.Upload_Attachment_Note"></p>
+      <p data-i18n="Add_Bank_Verification_page.Upload_Attachment_Note1"></p>
+      <p data-i18n="Add_Bank_Verification_page.Upload_Attachment_Note2"></p>
+    </div>
+  </div>
+
+  <div class="mt-10" data-aos="fade-up">
+    <button class="btn w-full rounded-lg bg-gradient-to-b from-blue to-blue1 text-white" data-i18n="Add_Bank_Verification_page.Upload_Verify_Now"></button>
+  </div>
+
+  <div class="mt-4 text-center" data-aos="fade-up">
+    <div data-i18n="Add_Bank_Verification_page.contact"></div>
+    <a href="#" class="underline font-semibold" data-i18n="Add_Bank_Verification_page.contact1"></a>
+  </div>
+
+</form>
