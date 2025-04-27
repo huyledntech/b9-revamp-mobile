@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'B92u Bank'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home">
+      @@include('../components/base/navbar.html', {without_login: false})
+      
+
+      <div class="min-h-screen">
+
+        @@include('../components/b92u-bank/content.html')
+        
+      </div>
+
+      
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>

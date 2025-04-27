@@ -50,14 +50,7 @@
     </div>
   </div>
 
-  <div class="bg-blue1 flex items-center justify-start w-full text-white h-6">
-    <div class="px-2">
-      <i class="fa-solid fa-volume-low"></i>
-    </div>
-    <marquee>
-      <span class="text-3xs" data-i18n="notification_run"></span>
-    </marquee>
-  </div>
+  @@include('./nav-notification-run.html')
 </nav>
 @@if (!!context.without_login) {
   @@include('./sidebar-without-login.html')
