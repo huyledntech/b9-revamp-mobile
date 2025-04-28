@@ -1,0 +1,37 @@
+<!-- TOP NAV -->
+<div class="px-4 pb-0" data-aos="fade-in">
+  @@include('../base/top-nav-child/index.html', {
+    active: 'deposit',
+    top_items: 'transactions',
+  })
+</div>
+
+<!-- MAIN WALLET -->
+<div class="px-4" data-aos="fade-in">
+  @@include('./main-wallet.html')
+</div>
+
+
+<div class="px-4 my-6" data-aos="fade-up">
+  <div class="rounded-xl overflow-hidden bg-dark">
+    <img src="assets/images/deposit/deposit-banner.png" alt="deposit-banner" class="w-full" />
+    <div class="p-6 flex flex-col gap-3">
+      <div class="text-white text-lg font-semibold" data-i18n="deposit_page.Prefer_Using_Crypto_Wallets_for_All_Transactions"></div>
+      <div class="text-gray-300" data-i18n="deposit_page.Opt_for_crypto_wallet_transactions_and_unlock"></div>
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center gap-1 text-blue">
+          <i class="fa-solid fa-circle-check"></i>
+          <div data-i18n="deposit_page.Opt_for_crypto_wallet_transactions_and_unlock_1"></div>
+        </div>
+        <div class="flex items-center gap-1 text-blue">
+          <i class="fa-solid fa-circle-check"></i>
+          <div data-i18n="deposit_page.Opt_for_crypto_wallet_transactions_and_unlock_2"></div>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-4 mt-4">
+        <a href="/deposit-crypto.html" class="btn bg-gradient-to-b h-10 rounded-lg w-full from-blue to-blue1 text-white font-semibold border-0 !shadow-none" data-i18n="deposit_page.yes"></a>
+        <a href="/deposit-universal.html" class="btn bg-gray1 h-10 rounded-lg w-full text-white font-semibold border-0 !shadow-none" data-i18n="deposit_page.no"></a>
+      </div>
+    </div>
+  </div>
+</div>
