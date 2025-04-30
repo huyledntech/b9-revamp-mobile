@@ -63,10 +63,12 @@
   .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-currency-fieldset,
   .crypto-currency-fieldset:has(option:checked:not([disabled])) ~ .crypto-network-fieldset,
   .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-address-fieldset,
+  .bank-fieldset:has(option:checked:not([disabled])) ~ .bank-info-fieldset,
   .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset {
     display: flex !important;
     flex-wrap: wrap;
   }
+  .channel-fieldset:has(option:checked:not([disabled])) ~ .action-fieldset,
   .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset {
     button {
       opacity: 1 !important;

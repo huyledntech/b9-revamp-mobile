@@ -30,23 +30,50 @@
       <!-- tab 1 -->
       <label class="tab">
         <input type="radio" name="deposit-crypto-tab" class="hidden" value="1" checked="checked" />
-        <div class="item" data-i18n="deposit_page.Crypto"></div>
+        <div class="item" data-i18n="deposit_page.Quick_Pay"></div>
       </label>
 
       <!-- tab 2 -->
       <label class="tab">
         <input type="radio" name="deposit-crypto-tab" class="hidden" value="2" />
+        <div class="item" data-i18n="deposit_page.E_Wallets"></div>
+      </label>
+
+      <!-- tab 3 -->
+      <label class="tab">
+        <input type="radio" name="deposit-crypto-tab" class="hidden" value="3" />
+        <div class="item" data-i18n="deposit_page.Bank_Transfer"></div>
+      </label>
+
+      <!-- tab 4 -->
+      <label class="tab">
+        <input type="radio" name="deposit-crypto-tab" class="hidden" value="4" />
         <div class="item" data-i18n="deposit_page.B92u_Bank"></div>
+      </label>
+
+      <!-- tab 5 -->
+      <label class="tab">
+        <input type="radio" name="deposit-crypto-tab" class="hidden" value="5" />
+        <div class="item" data-i18n="deposit_page.Crypto"></div>
       </label>
 
     </div>
     
     <div class="tab-content-list w-full flex flex-col gap-4">
       <div class="tab-content-item">
-        @@include('./tab-content-crypto.html')
+        @@include('./tab-content-quick-pay.html')
+      </div>
+      <div class="tab-content-item">
+        @@include('./tab-content-e-wallets.html')
+      </div>
+      <div class="tab-content-item">
+        @@include('./tab-content-bank-transfer.html')
       </div>
       <div class="tab-content-item">
         @@include('./tab-content-b92u-bank.html')
+      </div>
+      <div class="tab-content-item">
+        @@include('./tab-content-crypto.html')
       </div>
     </div>
   </div>

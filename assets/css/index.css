@@ -238,6 +238,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .select2 .selection .select2-selection__rendered {
   line-height: 40px !important;
   color: var(--color-blue1) !important;
+  font-weight: 600 !important;
 }
 .select2 .selection .select2-selection__arrow {
   top: 50% !important;
@@ -246,6 +247,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .select2 .selection .select2-selection__arrow b {
   border-color: var(--color-blue1) transparent transparent transparent !important;
+}
+.select2 .selection .select2-selection__placeholder {
+  opacity: 0.5 !important;
+  color: var(--color-blue) !important;
+  font-weight: 300 !important;
 }
 
 .select2-container--open {
@@ -1685,10 +1691,12 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .deposit-form .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-currency-fieldset,
 .deposit-form .crypto-currency-fieldset:has(option:checked:not([disabled])) ~ .crypto-network-fieldset,
 .deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-address-fieldset,
+.deposit-form .bank-fieldset:has(option:checked:not([disabled])) ~ .bank-info-fieldset,
 .deposit-form .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset {
   display: flex !important;
   flex-wrap: wrap;
 }
+.deposit-form .channel-fieldset:has(option:checked:not([disabled])) ~ .action-fieldset button,
 .deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset button {
   opacity: 1 !important;
   pointer-events: auto !important;

@@ -179,6 +179,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
 .select2 .selection .select2-selection__rendered {
   line-height: 40px !important;
   color: var(--color-blue1) !important;
+  font-weight: 600 !important;
 }
 .select2 .selection .select2-selection__arrow {
   top: 50% !important;
@@ -187,6 +188,11 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .select2 .selection .select2-selection__arrow b {
   border-color: var(--color-blue1) transparent transparent transparent !important;
+}
+.select2 .selection .select2-selection__placeholder {
+  opacity: 0.5 !important;
+  color: var(--color-blue) !important;
+  font-weight: 300 !important;
 }
 
 .select2-container--open {

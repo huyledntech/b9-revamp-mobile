@@ -1,13 +1,17 @@
-<div class="flex flex-col gap-2 deposit-form">
+<form class="flex flex-col gap-2 deposit-form">
+
+  <fieldset class="fieldset channel-fieldset">
+    <select class="select channel-select w-full border-blue rounded-lg">
+      <option disabled selected data-i18n="deposit_page.Select_a_Bank_Options"></option>
+      <option value="1">Maybank</option>
+      <option value="2">DBS Singapore</option>
+    </select>
+  </fieldset>
 
   <fieldset class="fieldset">
     <label class="input rounded-lg border-blue text-xs">
       <input type="text" class="text-blue placeholder:!font-light" data-i18n="deposit_page.Amount_Min_max" data-i18n-attr="placeholder" placeholder="" value="" />
     </label>
-    <div class="flex items-center gap-1">
-      <div data-i18n="deposit_page.B92U_Bank_Balance"></div>
-      <div class="font-semibold">SGD300.00</div>
-    </div>
   </fieldset>
 
   <fieldset class="fieldset bonus-fieldset">
@@ -38,8 +42,8 @@
 
   <div class="text-center text-xs mt-2" data-i18n="deposit_page.Bonus_desciption"></div>
  
-  <div class="modal-action flex flex-col gap-4 mt-2">
-    <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="deposit_page.Proceed" onclick="deposit_to_b92u_bank_success_modal.showModal()"></button>
+  <div class="modal-action flex flex-col gap-4 mt-2 action-fieldset">
+    <button type="button" class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm opacity-50 pointer-events-none" data-i18n="deposit_page.Proceed" onclick="deposit_to_quick_pay_proceed_modal.showModal()"></button>
   </div>
 
   <div class="flex flex-col items-center justify-center gap-0 mt-2">
@@ -47,11 +51,11 @@
     <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support1"></a>
   </div>
 
-</div>
+</form>
 
 
 <!-- SUCCESS MODAL -->
-<dialog id="deposit_to_b92u_bank_success_modal" class="modal">
+<dialog id="deposit_to_quick_pay_proceed_modal" class="modal">
   <div class="modal-box w-4/5 !p-0">
     <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
       <form class="opacity-0" method="dialog">
@@ -59,7 +63,7 @@
           <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
         </button>
       </form>
-      <div class="font-semibold" data-i18n="B92u_Bank_page.Request_Submitted"></div>
+      <div class="font-semibold" data-i18n="deposit_page.Payment_Gateway"></div>
       <form class="" method="dialog">
         <button class="">
           <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
@@ -67,20 +71,12 @@
       </form>
     </div>
     <div class="p-4">
-      <div class="flex flex-col gap-4">
-        <div data-i18n="deposit_page.success_crypto_popup_desciption"></div>
-        <div class="flex items-center gap-2">
-          <span data-i18n="B92u_Bank_page.Your_Transaction_ID_is"></span>
-          <a href="#" class="font-semibold underline">123123123</a>
-        </div>
-        <div class="text-center">
-          <span data-i18n="B92u_Bank_page.request_support"></span>
-          <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.request_support_1"></a>
-        </div>
+      <div class="flex flex-col gap-4 text-center">
+        <div data-i18n="deposit_page.Payment_Gateway_description"></div>
       </div>
      
       <div class="modal-action flex flex-col gap-4">
-        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Check_Status" onclick="deposit_to_b92u_bank_success_modal.close()"></button>
+        <a href="/quick-pay-success.html" class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="deposit_page.Proceed"></a>
       </div>
 
     </div>

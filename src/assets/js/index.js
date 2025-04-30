@@ -519,11 +519,14 @@ function initialize() {
    * SELECT2
    */
   $('select').each(function() {
+    var firstOption = $(this).children('option[disabled][selected]').first();
+    const placeholder = firstOption.length > 0 ? firstOption.text() : "Select";
+    firstOption.html("");
     $(this).select2({
       minimumResultsForSearch: Infinity,
       dropdownParent: $(this).parent(),
       dropdownCssClass: 'select2-custom-dropdown',
-      // placeholder: "Select a state",
+      placeholder: placeholder || "Select",
       // allowClear: true,
       templateResult: function (data) {
         const description = $(data.element).data('description');
@@ -567,6 +570,22 @@ function initialize() {
   /**
    * END DEPOSIT PAGE
    */
+
+  /**
+   * DEFAULT OPEN MODAL
+   */
+  setTimeout(() => {
+    const default_open_modal = urlParams.get("modal");
+    if (default_open_modal) {
+      const modal = document.getElementById(default_open_modal)
+      modal && modal.showModal();
+      window.history.pushState({}, document.title, window.location.pathname);
+    }
+  }, 2000);
+  /**
+   * END DEFAULT OPEN MODAL
+   */
+
 }
 
 console.log("--- index.jsaaa");
