@@ -8,56 +8,128 @@
     </select>
   </fieldset>
 
-  <fieldset class="fieldset crypto-currency-fieldset hidden">
-    <select class="select w-full border-blue rounded-lg">
-      <option disabled selected data-i18n="deposit_page.Select_a_Crypto_Currency_Options"></option>
-      <option value="USDT">USDT</option>
-    </select>
-  </fieldset>
-
-  <fieldset class="fieldset hidden crypto-network-fieldset">
-    <select class="select w-full border-blue rounded-lg">
-      <option disabled selected data-i18n="deposit_page.Select_a_Crypto_Network"></option>
-      <option value="ERC20">ERC20</option>
-      <option value="TRC20">TRC20</option>
-    </select>
-  </fieldset>
-
-  <div class="flex-col gap-2 border border-blue rounded-lg p-4 my-4 hidden crypto-address-fieldset">
-    <div class="text-sm font-semibold" data-i18n="deposit_page.Crypto_Address"></div>
-    <div class="flex justify-between items-center gap-2">
-      <div class="" data-i18n="">0xf9572c1e80a54c20e1a3080cecb6996e4add20f9</div>
-      <button class="flex items-center gap-1 copy-address-btn">
-        <i class="fa-solid fa-copy"></i>
-        <div class="text" data-i18n="deposit_page.copy"></div>
-      </button>
+  <!-- CHANNEL 1 SELECTED -->
+  <div class="flex-col gap-2 channel1-fieldset hidden">
+    <div>channel 1</div>
+    <fieldset class="fieldset crypto-currency-fieldset hidden">
+      <select class="select w-full border-blue rounded-lg">
+        <option disabled selected data-i18n="deposit_page.Select_a_Crypto_Currency_Options"></option>
+        <option value="USDT">USDT</option>
+      </select>
+    </fieldset>
+  
+    <fieldset class="fieldset hidden crypto-network-fieldset">
+      <select class="select w-full border-blue rounded-lg">
+        <option disabled selected data-i18n="deposit_page.Select_a_Crypto_Network"></option>
+        <option value="ERC20">ERC20</option>
+        <option value="TRC20">TRC20</option>
+      </select>
+    </fieldset>
+  
+    <div class="flex-col gap-2 border border-blue rounded-lg p-4 my-4 hidden crypto-address-fieldset">
+      <div class="text-sm font-semibold" data-i18n="deposit_page.Crypto_Address"></div>
+      <div class="flex justify-between items-center gap-2">
+        <div class="" data-i18n="">0xf9572c1e80a54c20e1a3080cecb6996e4add20f9</div>
+        <button class="flex items-center gap-1 copy-address-btn">
+          <i class="fa-solid fa-copy"></i>
+          <div class="text" data-i18n="deposit_page.copy"></div>
+        </button>
+      </div>
+      <div class="flex flex-col items-center gap-2">
+        <img src="assets/images/deposit/qr.png" alt="qr-code" class="">
+        <button class="btn h-[30px] border !border-blue1 rounded-lg text-blue1 px-10">
+          <i class="fa-solid fa-download"></i>
+          <span data-i18n="deposit_page.Save_QR_Code"></span>
+        </button>
+      </div>
+      <div>
+        <div>USDT - ERC20</div>
+        <div>
+          <span data-i18n="deposit_page.Exchange_Rate"></span>: <b>1USDT</b> <i class="fa-solid fa-arrow-right-arrow-left"></i> SGD1.3311 (<span data-i18n="deposit_page.References_Only"></span>)
+        </div>
+      </div>
+      <div class="flex flex-col gap-0 text-2xs text-red-500">
+        <div class="font-semibold" data-i18n="deposit_page.Important_Note"></div>
+        <div data-i18n="deposit_page.Important_Note_note_9"></div>
+      </div>
     </div>
-    <div class="flex flex-col items-center gap-2">
-      <img src="assets/images/deposit/qr.png" alt="qr-code" class="">
-      <button class="btn h-[30px] border !border-blue1 rounded-lg text-blue1 px-10">
-        <i class="fa-solid fa-download"></i>
-        <span data-i18n="deposit_page.Save_QR_Code"></span>
-      </button>
+
+    <div class="flex-col justify-center items-center gap-2 hidden crypto-completed-transfer-fieldset">
+      <button class="btn bg-gradient-to-r from-blue1 to-blue2 border-0 text-white rounded-lg w-full opacity-50 pointer-events-none" data-i18n="deposit_page.Completed_Transfer" onclick="deposit_to_crypto_success_modal.showModal()"></button>
+      <div class="text-center">
+        <div data-i18n="deposit_page.Completed_Transfer_desc"></div>
+        <a href="#" class="underline font-semibold" data-i18n="deposit_page.Completed_Transfer_desc1"></a>
+      </div>
     </div>
-    <div>
+
+  </div>
+
+  <!-- CHANNEL 2 SELECTED -->
+  <div class="flex-col gap-2 channel2-fieldset hidden">
+    <div>channel 2</div>
+
+    <fieldset class="fieldset crypto-currency-fieldset hidden">
+      <select class="select w-full border-blue rounded-lg">
+        <option disabled selected data-i18n="deposit_page.Select_a_Crypto_Currency_Options"></option>
+        <option value="USDT">USDT</option>
+        <option value="BITCOIN">BITCOIN</option>
+      </select>
+    </fieldset>
+
+    <fieldset class="fieldset hidden crypto-network-fieldset">
+      <select class="select w-full border-blue rounded-lg">
+        <option disabled selected data-i18n="deposit_page.Select_a_Crypto_Network"></option>
+        <option value="ERC20">ERC20</option>
+        <option value="TRC20">TRC20</option>
+      </select>
+    </fieldset>
+
+    <fieldset class="join fieldset hidden deposit-amount-sgd-fieldset !gap-0">
+      <div class="flex-1">
+        <label class="input rounded-l-lg border-blue text-xs">
+          <input type="text" class="text-blue placeholder:!font-light" data-i18n="deposit_page.Enter_a_Deposit_Amount" data-i18n-attr="placeholder" placeholder="" value="" />
+        </label>
+      </div>
+      <div class="bg-blue text-white font-semibold rounded-r-lg px-2 py-1 flex items-center justify-center min-w-[100px]">SGD</div>
+    </fieldset>
+
+    <fieldset class="join fieldset hidden deposit-amount-usdt-fieldset !gap-0">
+      <div class="flex-1">
+        <label class="input rounded-l-lg border-blue text-xs">
+          <input type="text" class="text-blue placeholder:!font-light" data-i18n="deposit_page.Enter_a_Deposit_Amount" data-i18n-attr="placeholder" placeholder="" value="" />
+        </label>
+      </div>
+      <div class="bg-blue text-white font-semibold rounded-r-lg px-2 py-1 flex items-center justify-center min-w-[100px]">USDT</div>
+    </fieldset>
+
+    <div class="deposit-amount-label-fieldset hidden flex-col gap-1 px-4">
       <div>USDT - ERC20</div>
       <div>
         <span data-i18n="deposit_page.Exchange_Rate"></span>: <b>1USDT</b> <i class="fa-solid fa-arrow-right-arrow-left"></i> SGD1.3311 (<span data-i18n="deposit_page.References_Only"></span>)
       </div>
     </div>
-    <div class="flex flex-col gap-0 text-2xs text-red-500">
-      <div class="font-semibold" data-i18n="deposit_page.Important_Note"></div>
-      <div data-i18n="deposit_page.Important_Note_note_9"></div>
+
+    <fieldset class="fieldset bonus-fieldset">
+      <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="B92u_Bank_page.Bonus"></legend>
+      <label class="flex items-center justify-between gap-2 input !shadow-none bg-gray2 rounded-lg border-none mt-2 text-xs text-blue">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-gift text-xl"></i>
+          <div data-i18n="B92u_Bank_page.Bonus_label"></div>
+        </div>
+        <input type="checkbox" name="deposit-bonus" class="toggle toggle-xs border-blue text-blue checked:bg-blue checked:text-white" />
+      </label>
+    </fieldset>
+
+    <div class="flex-col justify-center items-center gap-2 hidden crypto-completed-transfer-fieldset">
+      <button class="btn bg-gradient-to-r from-blue1 to-blue2 border-0 text-white rounded-lg w-full opacity-50 pointer-events-none" data-i18n="deposit_page.Proceed" onclick="deposit_to_crypto_proceed_modal.showModal()"></button>
+      <div class="text-center">
+        <div data-i18n="deposit_page.Completed_Transfer_desc"></div>
+        <a href="#" class="underline font-semibold" data-i18n="deposit_page.Completed_Transfer_desc1"></a>
+      </div>
     </div>
+
   </div>
 
-  <div class="flex-col justify-center items-center gap-2 hidden crypto-completed-transfer-fieldset">
-    <button class="btn bg-gradient-to-r from-blue1 to-blue2 border-0 text-white rounded-lg w-full opacity-50 pointer-events-none" data-i18n="deposit_page.Completed_Transfer" onclick="deposit_to_crypto_success_modal.showModal()"></button>
-    <div class="text-center">
-      <div data-i18n="deposit_page.Completed_Transfer_desc"></div>
-      <a href="#" class="underline font-semibold" data-i18n="deposit_page.Completed_Transfer_desc1"></a>
-    </div>
-  </div>
 
   <div class="my-4 flex flex-col gap-2 crypto-important-note-fieldset">
     <div class="text-sm font-semibold" data-i18n="deposit_page.Important_Note"></div>
@@ -106,6 +178,36 @@
      
       <div class="modal-action flex flex-col gap-4">
         <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Check_Status" onclick="deposit_to_crypto_success_modal.close()"></button>
+      </div>
+
+    </div>
+  </div>
+</dialog>
+<!-- SUCCESS MODAL -->
+
+<!-- SUCCESS MODAL -->
+<dialog id="deposit_to_crypto_proceed_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="deposit_page.Payment_Gateway"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="flex flex-col gap-4 text-center">
+        <div data-i18n="deposit_page.Payment_Gateway_description"></div>
+      </div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <a href="/crypto-success.html" class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="deposit_page.Proceed"></a>
       </div>
 
     </div>

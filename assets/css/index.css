@@ -1688,9 +1688,30 @@ input[type=date]::-webkit-calendar-picker-indicator {
   display: block;
 }
 
+.deposit-form .channel-fieldset:has(option[value="1"]:checked) ~ .channel1-fieldset {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.deposit-form .channel-fieldset:has(option[value="1"]:checked) ~ .channel1-fieldset .crypto-completed-transfer-fieldset,
+.deposit-form .channel-fieldset:has(option[value="1"]:checked) ~ .channel1-fieldset .crypto-currency-fieldset {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.deposit-form .channel-fieldset:has(option[value="2"]:checked) ~ .channel2-fieldset {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.deposit-form .channel-fieldset:has(option[value="2"]:checked) ~ .channel2-fieldset .crypto-completed-transfer-fieldset,
+.deposit-form .channel-fieldset:has(option[value="2"]:checked) ~ .channel2-fieldset .crypto-currency-fieldset {
+  display: flex !important;
+  flex-wrap: wrap;
+}
 .deposit-form .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-currency-fieldset,
 .deposit-form .crypto-currency-fieldset:has(option:checked:not([disabled])) ~ .crypto-network-fieldset,
 .deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-address-fieldset,
+.deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .deposit-amount-sgd-fieldset,
+.deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .deposit-amount-usdt-fieldset,
+.deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .deposit-amount-label-fieldset,
 .deposit-form .bank-fieldset:has(option:checked:not([disabled])) ~ .bank-info-fieldset,
 .deposit-form .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset {
   display: flex !important;
