@@ -857,20 +857,22 @@
     "Proceed": "Proceed",
     "Select_a_Bonus_Options": "Select a bonus",
     "Crypto_Wallet": "Crypto Wallet",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Unlock_Full_Access_with_Verification": "Unlock Full Access with Verification",
+    "Unlock_Full_Access_with_Verification1": "To enable <b>DEPOSITS & WITHDRAWALS</b> via Singapore banking, please verify your account. Prefer not to? You may continue using Crypto Wallet instead.",
+    "Unlock_Full_Access_with_Verification2": "As a thank you, you’ll receive a <b class='text-blue'>FREE SGD 9 BONUS</b> after successful verification.",
+    "Add_a_Bank_Account_Verify_Now": "Add a Bank Account & Verify Now",
+    "Stay_with_Crypto": "Stay with Crypto",
     "": "",
     "": "",
     "": ""
   },
   "Deposit_Crypto": "Deposit (Crypto)",
-  "Deposit_Universal": "Deposit (Universal)",
+  "Deposit_Universal": "Deposit",
   "": "",
   "": "",
   "": "",
   "": "",
   "": ""
 }
+
+ 

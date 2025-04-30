@@ -1,0 +1,28 @@
+<!-- TOP NAV -->
+<div class="px-4 pb-0" data-aos="fade-in">
+  @@include('../base/top-nav-child/index.html', {
+    active: 'deposit',
+    top_items: 'transactions',
+  })
+</div>
+
+<!-- MAIN WALLET -->
+<div class="px-4" data-aos="fade-in">
+  @@include('./main-wallet.html')
+</div>
+
+
+<div class="px-4 my-6" data-aos="fade-up">
+  <div class="rounded-xl overflow-hidden bg-dark">
+    <img src="assets/images/deposit/deposit-universal-wallet.png" alt="deposit-banner" class="w-full" />
+    <div class="p-6 flex flex-col gap-3">
+      <div class="text-white text-lg font-semibold" data-i18n="deposit_page.Unlock_Full_Access_with_Verification"></div>
+      <div class="text-gray-300" data-i18n="deposit_page.Unlock_Full_Access_with_Verification1"></div>
+      <div class="text-gray-300" data-i18n="deposit_page.Unlock_Full_Access_with_Verification2"></div>
+      <div class="flex flex-col items-center gap-4 mt-4">
+        <a href="/add-bank-verification.html" class="btn bg-gradient-to-b h-10 rounded-lg w-full from-blue to-blue1 text-white font-semibold border-0 !shadow-none" data-i18n="deposit_page.Add_a_Bank_Account_Verify_Now"></a>
+        <a href="/deposit-crypto.html" class="btn bg-gray1 h-10 rounded-lg w-full text-white font-semibold border-0 !shadow-none" data-i18n="deposit_page.Stay_with_Crypto"></a>
+      </div>
+    </div>
+  </div>
+</div>
