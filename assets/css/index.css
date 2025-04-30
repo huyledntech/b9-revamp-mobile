@@ -141,6 +141,10 @@ img {
 .btn {
   font-weight: 400;
 }
+.btn.disabled, .btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
 
 .scrollbar-hide {
   scrollbar-width: none;
@@ -166,6 +170,106 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .modal.modal-open, .modal[open], .modal:target {
   background-color: rgba(0, 0, 0, 0.6);
+}
+
+.custom-tabs {
+  gap: 10px;
+}
+.custom-tabs .tab-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-right: 10px;
+}
+.custom-tabs .tab-list::-webkit-scrollbar {
+  display: none;
+}
+.custom-tabs .tab-list > .tab {
+  flex: none;
+  padding: 3px 10px;
+  height: auto;
+  border-right: 1px solid var(--color-blue1);
+  filter: grayscale(0);
+  color: var(--color-blue1);
+  min-width: 50px;
+  text-decoration: underline;
+  font-weight: 600;
+  font-size: 16px;
+}
+.custom-tabs .tab-list > .tab:before {
+  display: none;
+}
+.custom-tabs .tab-list > .tab:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
+  opacity: 0.5;
+  color: var(--color-blue);
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+.custom-tabs .tab-list > .tab:last-child {
+  border-right: none;
+}
+.custom-tabs > .tab-content-list .tab-content-item {
+  display: none;
+}
+.custom-tabs > .tab-content-list .tab-content-item.active {
+  display: block;
+}
+
+.fieldset {
+  font-size: unset !important;
+}
+.fieldset .input {
+  width: 100%;
+}
+
+.select2 {
+  width: 100% !important;
+}
+.select2 .selection .select2-selection {
+  border-color: var(--color-blue) !important;
+  height: 40px !important;
+  border-radius: 10px !important;
+  padding: 0 5px !important;
+}
+.select2 .selection .select2-selection__rendered {
+  line-height: 40px !important;
+  color: var(--color-blue1) !important;
+}
+.select2 .selection .select2-selection__arrow {
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  right: 5px !important;
+}
+.select2 .selection .select2-selection__arrow b {
+  border-color: var(--color-blue1) transparent transparent transparent !important;
+}
+
+.select2-container--open {
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  width: 100% !important;
+  display: block !important;
+}
+.select2-container .select2-custom-dropdown {
+  width: 100% !important;
+}
+.select2-container .select2-dropdown {
+  margin-top: 3px;
+  border-radius: 10px !important;
+  border: 1px solid var(--color-blue) !important;
+  overflow: hidden !important;
+}
+.select2-container .select2-dropdown .select2-results__option {
+  padding: 10px !important;
+}
+.select2-container .select2-dropdown .select2-results__option--highlighted, .select2-container .select2-dropdown .select2-results__option--selected {
+  background-color: rgba(137, 137, 137, 0.1019607843) !important;
+  color: var(--color-blue1) !important;
 }
 
 #mySidenav.sidenav {
@@ -1526,4 +1630,73 @@ input[type=date]::-webkit-calendar-picker-indicator {
 }
 .inbox-table tbody tr td .checkbox-container .checkbox:checked {
   opacity: 1;
+}
+
+.tabs-deposit-crypto {
+  gap: 10px;
+}
+.tabs-deposit-crypto .tab-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-right: 10px;
+}
+.tabs-deposit-crypto .tab-list > .tab {
+  flex: none;
+  border-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 8px !important;
+  text-decoration: none !important;
+}
+.tabs-deposit-crypto .tab-list > .tab .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  min-width: 90px;
+  border-radius: 6px;
+  padding: 3px 10px;
+  border: none;
+  text-decoration: none !important;
+  background: linear-gradient(180deg, var(--color-blue), var(--color-blue1) 100%);
+  color: white;
+  font-size: 14px !important;
+  font-weight: 400;
+}
+.tabs-deposit-crypto .tab-list > .tab:before {
+  display: none;
+}
+.tabs-deposit-crypto .tab-list > .tab:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
+  opacity: 1 !important;
+}
+.tabs-deposit-crypto .tab-list > .tab:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) .item {
+  background: var(--color-gray4) !important;
+  color: var(--color-blue) !important;
+}
+.tabs-deposit-crypto > .tab-content-list .tab-content-item {
+  display: none;
+}
+.tabs-deposit-crypto > .tab-content-list .tab-content-item.active {
+  display: block;
+}
+
+.deposit-form .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-currency-fieldset,
+.deposit-form .crypto-currency-fieldset:has(option:checked:not([disabled])) ~ .crypto-network-fieldset,
+.deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-address-fieldset,
+.deposit-form .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset button {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+.deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-important-note-fieldset {
+  display: none !important;
+}
+.deposit-form .bonus-fieldset:has(input:checked:not([disabled])) ~ .select-bonus-fieldset {
+  display: flex !important;
+  flex-wrap: wrap;
 }

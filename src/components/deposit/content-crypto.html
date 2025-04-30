@@ -11,7 +11,45 @@
   @@include('./main-wallet.html')
 </div>
 
-<div class="px-4 my-6" data-aos="fade-up">
-  content-crypto.html
+<div class="px-4 mt-6 mb-10" data-aos="fade-up">
+  <div class="flex items-center justify-between">
+    <div class="text-base font-semibold" data-i18n="deposit_page.Deposit_Option"></div>
+    <div>
+      <fieldset class="fieldset">
+        <a href="/deposit-universal.html" class="label">
+          <i class="fa-solid fa-toggle-off text-xl text-blue"></i>
+          <!-- <input type="checkbox" class="toggle toggle-xs border-blue text-blue checked:bg-blue checked:text-white" /> -->
+          <span class="label-text" data-i18n="deposit_page.online_banking"></span>
+        </a>
+      </fieldset>
+    </div>
+  </div>
+
+  <div class="tabs custom-tabs tabs-deposit-crypto">
+    <div class="tab-list py-2 !gap-0">
+      <!-- tab 1 -->
+      <label class="tab">
+        <input type="radio" name="deposit-crypto-tab" class="hidden" value="1" checked="checked" />
+        <div class="item" data-i18n="deposit_page.Crypto"></div>
+      </label>
+
+      <!-- tab 2 -->
+      <label class="tab">
+        <input type="radio" name="deposit-crypto-tab" class="hidden" value="2" />
+        <div class="item" data-i18n="deposit_page.B92u_Bank"></div>
+      </label>
+
+    </div>
+    
+    <div class="tab-content-list w-full flex flex-col gap-4">
+      <div class="tab-content-item">
+        @@include('./tab-content-crypto.html')
+      </div>
+      <div class="tab-content-item">
+        @@include('./tab-content-b92u-bank.html')
+      </div>
+    </div>
+  </div>
+
 </div>
 

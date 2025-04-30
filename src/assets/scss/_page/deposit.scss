@@ -1,0 +1,87 @@
+.tabs-deposit-crypto {
+  gap: 10px;
+
+  .tab-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-right: 10px;
+
+    &>.tab {
+      flex: none;
+      border-right: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 8px !important;
+      text-decoration: none !important;
+
+      & .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        min-width: 90px;
+        border-radius: 6px;
+        padding: 3px 10px;
+        border: none;
+        text-decoration: none !important;
+        background: linear-gradient(180.00deg, var(--color-blue), var(--color-blue1) 100%);
+        color: white;
+        font-size: 14px !important;
+        font-weight: 400;
+      }
+
+      &:before {
+        display: none;
+      }
+
+      &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
+        opacity: 1 !important;
+
+        & .item {
+          background: var(--color-gray4) !important;
+          color: var(--color-blue) !important;
+        }
+      }
+    }
+  }
+
+  &>.tab-content-list {
+    .tab-content-item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+.deposit-form {
+  // crypto tabs
+  .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-currency-fieldset,
+  .crypto-currency-fieldset:has(option:checked:not([disabled])) ~ .crypto-network-fieldset,
+  .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-address-fieldset,
+  .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+  .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset {
+    button {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+    }
+  }
+  .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-important-note-fieldset {
+    display: none !important;
+  }
+  // crypto tabs
+
+  // b92u bank tabs
+  .bonus-fieldset:has(input:checked:not([disabled])) ~ .select-bonus-fieldset {
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+  // b92u bank tabs
+}

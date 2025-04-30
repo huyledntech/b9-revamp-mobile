@@ -411,20 +411,26 @@ function initialize() {
   /**
    * CUSTOM TABS
    */
-  const default_tab_active = $(".custom-tabs .tab input[type='radio']:checked").val();
-  if(default_tab_active) {
+  const default_tab_active = $(
+    ".custom-tabs .tab input[type='radio']:checked"
+  ).val();
+  if (default_tab_active) {
     // set default tab content active
-    const default_tab_content = $(".custom-tabs .tab-content-list .tab-content-item").eq(default_tab_active - 1);
+    const default_tab_content = $(
+      ".custom-tabs .tab-content-list .tab-content-item"
+    ).eq(default_tab_active - 1);
     default_tab_content.addClass("active");
   }
 
   // change tab content when click tab
-  $(".custom-tabs .tab input[type='radio']").on("change", function() {
+  $(".custom-tabs .tab input[type='radio']").on("change", function () {
     // remove active class from all tab content
     $(".custom-tabs .tab-content-list .tab-content-item").removeClass("active");
     // add active class to the clicked tab content
     const tab_active = $(this).val();
-    const tab_content = $(".custom-tabs .tab-content-list .tab-content-item").eq(tab_active - 1);
+    const tab_content = $(
+      ".custom-tabs .tab-content-list .tab-content-item"
+    ).eq(tab_active - 1);
     tab_content.addClass("active");
   });
   /**
@@ -442,7 +448,7 @@ function initialize() {
   const pokerKingRewardModal = $("#pokerKingRewardModal");
   const pokerKingLeaderboardModal = $("#pokerKingLeaderboardModal");
   const pokerKingOopsModal = $("#pokerKingOopsModal");
-  $("#draw-btn").on("click", function() {
+  $("#draw-btn").on("click", function () {
     poker_king_card_back.addClass("hidden");
     poker_king_card_front.removeClass("hidden");
 
@@ -455,10 +461,10 @@ function initialize() {
     // show random modal
     setTimeout(() => {
       const modal_list = [pokerKingCongratulationsModal, pokerKingOopsModal];
-      const random_modal = modal_list[Math.floor(Math.random() * modal_list.length)];
+      const random_modal =
+        modal_list[Math.floor(Math.random() * modal_list.length)];
       random_modal.attr("open", true);
     }, 500);
-
   });
   /**
    * END POKER KING
@@ -471,13 +477,13 @@ function initialize() {
   const navbar_accordion_input = $("#navbar-accordion input");
   const navbar_accordion_icon = $("#navbar-accordion i");
   const top_nav_child = $("#top-nav-child");
-  navbar_accordion_input.on("change", function() {
+  navbar_accordion_input.on("change", function () {
     const is_checked = $(this).is(":checked");
     if (is_checked) {
-      navbar_accordion_icon.css('transform', 'rotate(180deg)');
+      navbar_accordion_icon.css("transform", "rotate(180deg)");
       top_nav_child.removeClass("hidden");
     } else {
-      navbar_accordion_icon.css('transform', 'rotate(0deg)');
+      navbar_accordion_icon.css("transform", "rotate(0deg)");
       top_nav_child.addClass("hidden");
     }
   });
@@ -489,9 +495,11 @@ function initialize() {
    * INBOX
    */
   const inbox_tab_edit = $(".tabs-inbox input[name='inbox-tab-edit']");
-  inbox_tab_edit.on("change", function() {
+  inbox_tab_edit.on("change", function () {
     const is_checked = $(this).is(":checked");
-    const inbox_table_checkbox_container = $(".inbox-table .checkbox-container");
+    const inbox_table_checkbox_container = $(
+      ".inbox-table .checkbox-container"
+    );
     const inbox_actions_nav = $(".inbox-actions-nav");
     if (is_checked) {
       inbox_table_checkbox_container.removeClass("hidden");
@@ -506,6 +514,59 @@ function initialize() {
    */
 
 
+
+  /**
+   * SELECT2
+   */
+  $('select').each(function() {
+    $(this).select2({
+      minimumResultsForSearch: Infinity,
+      dropdownParent: $(this).parent(),
+      dropdownCssClass: 'select2-custom-dropdown',
+      // placeholder: "Select a state",
+      // allowClear: true,
+      templateResult: function (data) {
+        const description = $(data.element).data('description');
+        if (!description) { return data.text; }
+        return $(
+          `<div class="flex justify-between">
+            <span>${data.text}</span>
+            <span class="">${description}</span>
+          </div>`
+        );
+      },
+      templateSelection: function (data) {
+        const description = $(data.element).data('description');
+        if (!description) { return data.text; }
+        return $(
+          `<div class="flex justify-between font-semibold">
+            <span>${data.text}</span>
+            <span class="">${description}</span>
+          </div>`
+        );
+      }
+    });
+  })
+  /**
+   * SELECT2
+   */
+
+
+  /**
+   * DEPOSIT PAGE
+   */
+  $(".copy-address-btn").on("click", function () {
+    const address = $(this).data("address");
+    navigator.clipboard.writeText(address);
+    const copied_text = translator.translateForKey(
+      "deposit_page.copied",
+      _get_language
+    );
+    $(this).children(".text").text(copied_text);
+  });
+  /**
+   * END DEPOSIT PAGE
+   */
 }
 
 console.log("--- index.jsaaa");

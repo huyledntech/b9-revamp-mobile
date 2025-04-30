@@ -255,19 +255,51 @@
         <div data-i18n="B92u_Bank_page.Amount_SGD_label"></div>
       </fieldset>
 
-      <fieldset class="fieldset">
+      <!-- <fieldset class="fieldset">
         <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="B92u_Bank_page.Bonus"></legend>
         <label class="flex items-center justify-between gap-2 input !shadow-none bg-gray2 rounded-lg border-none mt-2 text-xs text-blue">
           <i class="fa-solid fa-gift text-xl"></i>
-          <div data-i18n="B92u_Bank_page.Bonus_label"></div>
-          <input type="checkbox" class="toggle toggle-xs border-blue border-2 text-blue" />
+          <div class="flex items-center gap-2">
+            <div data-i18n="B92u_Bank_page.Bonus_label"></div>
+            <input type="checkbox" class="toggle toggle-xs border-blue border-2 text-blue" />
+          </div>
         </label>
-        <select class="select bg-white rounded-lg border border-blue mt-2 text-xs">
-          <option>Bonus 1</option>
-          <option>Bonus 1</option>
-          <option>Bonus 1</option>
-        </select>
-      </fieldset>
+        <div class="mt-4">
+          <select class="select bg-white rounded-lg border border-blue mt-4 text-xs">
+            <option>Bonus 1</option>
+            <option>Bonus 1</option>
+            <option>Bonus 1</option>
+          </select>
+        </div>
+      </fieldset> -->
+
+      <div class="deposit-form">
+        <fieldset class="fieldset bonus-fieldset">
+          <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="B92u_Bank_page.Bonus"></legend>
+          <label class="flex items-center justify-between gap-2 input !shadow-none bg-gray2 rounded-lg border-none mt-2 text-xs text-blue">
+            <div class="flex items-center gap-2">
+              <i class="fa-solid fa-gift text-xl"></i>
+              <div data-i18n="B92u_Bank_page.Bonus_label"></div>
+            </div>
+            <input type="checkbox" name="deposit-bonus" class="toggle toggle-xs border-blue text-blue checked:bg-blue checked:text-white" />
+          </label>
+        </fieldset>
+      
+        <fieldset class="fieldset hidden select-bonus-fieldset">
+          <select class="select bg-white rounded-lg border border-blue mt-2 text-xs">
+            <option disabled selected data-i18n="deposit_page.Select_a_Bonus_Options"></option>
+            <option value="1" data-description="TO Require x10">
+              15% Daily first deposit bonus
+            </option>
+            <option value="1" data-description="TO Require x8">
+              10% Deposit bonus
+            </option>
+            <option value="1" data-description="TO Require x5">
+              5% Deposit bonus
+            </option>
+          </select>
+        </fieldset>
+      </div>
 
       <label class="label items-start gap-2">
         <input type="checkbox" class="checkbox checkbox-xs rounded-xs border-blue1 mt-1" />

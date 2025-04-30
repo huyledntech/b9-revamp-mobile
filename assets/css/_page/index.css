@@ -1176,3 +1176,72 @@
 .inbox-table tbody tr td .checkbox-container .checkbox:checked {
   opacity: 1;
 }
+
+.tabs-deposit-crypto {
+  gap: 10px;
+}
+.tabs-deposit-crypto .tab-list {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-right: 10px;
+}
+.tabs-deposit-crypto .tab-list > .tab {
+  flex: none;
+  border-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 8px !important;
+  text-decoration: none !important;
+}
+.tabs-deposit-crypto .tab-list > .tab .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  min-width: 90px;
+  border-radius: 6px;
+  padding: 3px 10px;
+  border: none;
+  text-decoration: none !important;
+  background: linear-gradient(180deg, var(--color-blue), var(--color-blue1) 100%);
+  color: white;
+  font-size: 14px !important;
+  font-weight: 400;
+}
+.tabs-deposit-crypto .tab-list > .tab:before {
+  display: none;
+}
+.tabs-deposit-crypto .tab-list > .tab:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
+  opacity: 1 !important;
+}
+.tabs-deposit-crypto .tab-list > .tab:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) .item {
+  background: var(--color-gray4) !important;
+  color: var(--color-blue) !important;
+}
+.tabs-deposit-crypto > .tab-content-list .tab-content-item {
+  display: none;
+}
+.tabs-deposit-crypto > .tab-content-list .tab-content-item.active {
+  display: block;
+}
+
+.deposit-form .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-currency-fieldset,
+.deposit-form .crypto-currency-fieldset:has(option:checked:not([disabled])) ~ .crypto-network-fieldset,
+.deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-address-fieldset,
+.deposit-form .channel-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-completed-transfer-fieldset button {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+.deposit-form .crypto-network-fieldset:has(option:checked:not([disabled])) ~ .crypto-important-note-fieldset {
+  display: none !important;
+}
+.deposit-form .bonus-fieldset:has(input:checked:not([disabled])) ~ .select-bonus-fieldset {
+  display: flex !important;
+  flex-wrap: wrap;
+}

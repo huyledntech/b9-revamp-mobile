@@ -89,6 +89,12 @@ img {
 
 .btn {
   font-weight: 400;
+
+  &.disabled,
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
 
 .scrollbar-hide {
@@ -117,5 +123,135 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   &[open],
   &:target {
     background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.custom-tabs {
+  gap: 10px;
+
+  .tab-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-right: 10px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &>.tab {
+      flex: none;
+      padding: 3px 10px;
+      height: auto;
+      border-right: 1px solid var(--color-blue1);
+      filter: grayscale(0);
+      color: var(--color-blue1);
+      min-width: 50px;
+      text-decoration: underline;
+      font-weight: 600;
+      font-size: 16px;
+
+      &:before {
+        display: none;
+      }
+
+      &:not(:checked, label:has(:checked), :hover, .tab-active, [aria-selected=true]) {
+        opacity: 0.5;
+        color: var(--color-blue);
+        text-decoration: none;
+        font-weight: 400;
+        font-size: 16px;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+
+    }
+  }
+
+  &>.tab-content-list {
+    .tab-content-item {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+.fieldset {
+  font-size: unset !important;
+
+  .input {
+    width: 100%;
+  }
+}
+
+.select2 {
+  width: 100% !important;
+
+  .selection {
+    .select2-selection {
+      border-color: var(--color-blue) !important;
+      height: 40px !important;
+      border-radius: 10px !important;
+      padding: 0 5px !important;
+
+      &__rendered {
+        line-height: 40px !important;
+        color: var(--color-blue1) !important;
+      }
+
+      &__arrow {
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        right: 5px !important;
+
+        b {
+          border-color: var(--color-blue1) transparent transparent transparent !important;
+        }
+      }
+    }
+  }
+}
+
+.select2-container {
+
+  &--open {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    width: 100% !important;
+    display: block !important;
+
+  }
+
+  .select2-custom-dropdown {
+    width: 100% !important;
+    // position: unset !important;
+  }
+
+  .select2-dropdown {
+    margin-top: 3px;
+    border-radius: 10px !important;
+    border: 1px solid var(--color-blue) !important;
+    overflow: hidden !important;
+
+    .select2-results {
+      &__option {
+        padding: 10px !important;
+
+        &--highlighted,
+        &--selected {
+          background-color: #8989891A !important;
+          color: var(--color-blue1) !important;
+        }
+      }
+    }
   }
 }

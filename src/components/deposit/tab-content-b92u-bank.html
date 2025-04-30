@@ -1,0 +1,89 @@
+<div class="flex flex-col gap-2 deposit-form">
+
+  <fieldset class="fieldset">
+    <label class="input rounded-lg border-blue text-xs">
+      <input type="text" class="text-blue placeholder:!font-light" data-i18n="deposit_page.Amount_Min_max" data-i18n-attr="placeholder" placeholder="" value="" />
+    </label>
+    <div class="flex items-center gap-1">
+      <div data-i18n="deposit_page.B92U_Bank_Balance"></div>
+      <div class="font-semibold">SGD300.00</div>
+    </div>
+  </fieldset>
+
+  <fieldset class="fieldset bonus-fieldset">
+    <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="B92u_Bank_page.Bonus"></legend>
+    <label class="flex items-center justify-between gap-2 input !shadow-none bg-gray2 rounded-lg border-none mt-2 text-xs text-blue">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-gift text-xl"></i>
+        <div data-i18n="B92u_Bank_page.Bonus_label"></div>
+      </div>
+      <input type="checkbox" name="deposit-bonus" class="toggle toggle-xs border-blue text-blue checked:bg-blue checked:text-white" />
+    </label>
+  </fieldset>
+
+  <fieldset class="fieldset hidden select-bonus-fieldset">
+    <select class="select bg-white rounded-lg border border-blue mt-4 text-xs">
+      <option disabled selected data-i18n="deposit_page.Select_a_Bonus_Options"></option>
+      <option value="1" data-description="TO Require x10">
+        15% Daily first deposit bonus
+      </option>
+      <option value="1" data-description="TO Require x8">
+        10% Deposit bonus
+      </option>
+      <option value="1" data-description="TO Require x5">
+        5% Deposit bonus
+      </option>
+    </select>
+  </fieldset>
+
+  <div class="text-center" data-i18n="deposit_page.Bonus_desciption"></div>
+ 
+  <div class="modal-action flex flex-col gap-4 mt-2">
+    <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="deposit_page.Proceed" onclick="deposit_to_b92u_bank_success_modal.showModal()"></button>
+  </div>
+
+  <div class="flex flex-col items-center justify-center gap-0">
+    <div data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support"></div>
+    <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support1"></a>
+  </div>
+
+</div>
+
+
+<!-- SUCCESS MODAL -->
+<dialog id="deposit_to_b92u_bank_success_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="B92u_Bank_page.Request_Submitted"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="flex flex-col gap-4">
+        <div data-i18n="deposit_page.success_crypto_popup_desciption"></div>
+        <div class="flex items-center gap-2">
+          <span data-i18n="B92u_Bank_page.Your_Transaction_ID_is"></span>
+          <a href="#" class="font-semibold underline">123123123</a>
+        </div>
+        <div class="text-center">
+          <span data-i18n="B92u_Bank_page.request_support"></span>
+          <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.request_support_1"></a>
+        </div>
+      </div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Check_Status" onclick="deposit_to_b92u_bank_success_modal.close()"></button>
+      </div>
+
+    </div>
+  </div>
+</dialog>
+<!-- SUCCESS MODAL -->
