@@ -120,6 +120,21 @@
       </label>
     </fieldset>
 
+    <fieldset class="fieldset hidden select-bonus-fieldset">
+      <select class="select bg-white rounded-lg border border-blue mt-4 text-xs">
+        <option disabled selected data-i18n="deposit_page.Select_a_Bonus_Options"></option>
+        <option value="1" data-description="TO Require x10">
+          15% Daily first deposit bonus
+        </option>
+        <option value="1" data-description="TO Require x8">
+          10% Deposit bonus
+        </option>
+        <option value="1" data-description="TO Require x5">
+          5% Deposit bonus
+        </option>
+      </select>
+    </fieldset>
+
     <div class="flex-col justify-center items-center gap-2 hidden crypto-completed-transfer-fieldset">
       <button class="btn bg-gradient-to-r from-blue1 to-blue2 border-0 text-white rounded-lg w-full opacity-50 pointer-events-none" data-i18n="deposit_page.Proceed" onclick="deposit_to_crypto_proceed_modal.showModal()"></button>
       <div class="text-center">
