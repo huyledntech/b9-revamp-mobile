@@ -17,48 +17,91 @@
       </div>
     </nav>
 
-    <div class="shadow-xl">
-      <a href="/vip.html" class="w-full">
-        <img src="assets/images/vip-banner.png" class="w-full" />
-      </a>
+    <div class="shadow-xl p-4">
+      <div class="bg-gray2 rounded-lg p-3">
+        <div class="flex items-start justify-start gap-3">
+          <div class="flex flex-col items-center justify-start gap-2">
+            <a href="/vip.html">
+              <img src="assets/images/vip/levels/silver.png" class="w-[60px]" />
+            </a>
+            <div>
+              <div class="text-[#053B7A80] text-xs" data-i18n="VIP_Ranking"></div>
+              <a href="/vip.html" class="text-sm font-semibold" data-i18n="Silver"></a>
+            </div>
+          </div>
+          <div class="flex-1 flex flex-col items-start justify-start gap-0 relative">
+            <div class="absolute top-0 right-0">
+              <i class="fa-solid fa-rotate text-2xl"></i>
+            </div>
+            <div><span data-i18n="hello"></span>, User123</div>
+            <div class="text-base font-semibold">MYR 185.81</div>
+            <div class="flex items-center gap-1 text-2xs">
+              <div data-i18n="Turnover_requirement_to_withdraw"></div>
+              <div class="flex items-center gap-1">
+                <div class="flex items-center gap-1">
+                  <i class="fa-solid fa-eye"></i>
+                  <div class="underline" data-i18n="tab_to_show"></div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col mt-4 w-full">
+              <progress class="progress text-blue bg-white w-full" value="50" max="70"></progress>
+              <div class="flex items-center justify-between w-full -mt-[13px] z-10">
+                <img src="assets/images/vip/levels/normal.png" class="w-4" />
+                <img src="assets/images/vip/levels/bronze.png" class="w-4" />
+                <img src="assets/images/vip/levels/rose-gold.png" class="w-4" />
+                <img src="assets/images/vip/levels/gold.png" class="w-4" />
+                <img src="assets/images/vip/levels/rose-gold.png" class="w-4" />
+                <img src="assets/images/vip/levels/diamond.png" class="w-4" />
+                <img src="assets/images/vip/levels/platinum.png" class="w-4" />
+              </div>
+            </div>
+            <div class="flex items-center gap-1 text-2xs mt-2">
+              <span class="font-semibold">SGD 230,852.00</span>
+              <span class="text-[#053B7A80]">/ SGD 300,000.00</span>
+              <span class="text-[#053B7A80]" data-i18n="to_next_VIP_Level"></span>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="flex items-center justify-center gap-2 mt-3">
         <span data-i18n="Go_to"></span>
-        <a href="/vip.html" class="text-blue1 font-bold underline flex items-center gap-1">
-          <span data-i18n="MY_VIP"></span>
+        <a href="/vip.html" class="text-blue1 font-bold flex items-center gap-1">
+          <span class="underline" data-i18n="MY_VIP"></span>
           <i class="fa-solid fa-crown"></i>
           <i class="fa-solid fa-chevron-right"></i>
         </a>
       </div>
     </div>
 
-    <div class="flex flex-col gap-0 w-full p-4">
+    <div class="flex flex-col gap-0 w-full p-4 sidebar-collapse">
       <div class="collapse collapse-arrow w-full mt-3">
-        <input type="radio" name="sidebar-games" checked="checked" class="!py-3 !min-h-auto" />
-        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="Transaction"></div>
+        <input type="checkbox" name="sidebar-games" value="transaction" checked="checked" class="!py-2 !min-h-auto" />
+        <div class="collapse-title text-lg font-semibold py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4" data-i18n="Transaction"></div>
         <div class="collapse-content !p-0">
           <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
             <a href="/deposit.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-circle-plus !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="Deposit"></div>
+              <div class="w-full text-center text-sm" data-i18n="Deposit"></div>
             </a>
             <a href="/withdrawal.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-circle-minus !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="Withdrawal"></div>
+              <div class="w-full text-center text-sm" data-i18n="Withdrawal"></div>
             </a>
             <a href="/transfer.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-arrow-right-arrow-left !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="Transfer"></div>
+              <div class="w-full text-center text-sm" data-i18n="Transfer"></div>
             </a>
             <a href="/history.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-futbol !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="History"></div>
+              <div class="w-full text-center text-sm" data-i18n="History"></div>
             </a>
           </div>
         </div>
       </div>
       <div class="collapse collapse-arrow w-full mt-3">
-        <input type="radio" name="sidebar-games" class="!py-3 !min-h-auto" />
-        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="Games"></div>
+        <input type="checkbox" name="sidebar-games" value="games" class="!py-2 !min-h-auto" />
+        <div class="collapse-title text-lg font-semibold px-0 py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4" data-i18n="Games"></div>
         <div class="collapse-content !p-0">
           <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
             @@include('./sidebar/Games.html')
@@ -66,8 +109,8 @@
         </div>
       </div>
       <div class="collapse collapse-arrow w-full mt-3">
-        <input type="radio" name="sidebar-games" class="!py-2 !min-h-auto"/>
-        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="Rewards"></div>
+        <input type="checkbox" name="sidebar-games" value="rewards" class="!py-2 !min-h-auto"/>
+        <div class="collapse-title text-lg font-semibold px-0 py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4" data-i18n="Rewards"></div>
         <div class="collapse-content !p-0">
           <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
             @@include('./sidebar/Rewards.html')
@@ -75,38 +118,38 @@
         </div>
       </div>
       <div class="collapse collapse-arrow w-full mt-3">
-        <input type="radio" name="sidebar-games" class="!py-3 !min-h-auto" />
-        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="Account_Settings"></div>
+        <input type="checkbox" name="sidebar-games" value="account-settings" class="!py-2 !min-h-auto" />
+        <div class="collapse-title text-lg font-semibold px-0 py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4" data-i18n="Account_Settings"></div>
         <div class="collapse-content !p-0">
           <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
             <a href="/profile.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-user !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="Profile"></div>
+              <div class="w-full text-center text-sm" data-i18n="Profile"></div>
             </a>
             <a href="/banking.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-building-columns !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="Banking"></div>
+              <div class="w-full text-center text-sm" data-i18n="Banking"></div>
             </a>
             <a href="/password.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-lock !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="Password"></div>
+              <div class="w-full text-center text-sm" data-i18n="Password"></div>
             </a>
             <a href="/inbox.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-envelope !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="Inbox"></div>
+              <div class="w-full text-center text-sm" data-i18n="Inbox"></div>
             </a>
             <a href="/regional-language.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-globe !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="Regional_Language"></div>
+              <div class="w-full text-center text-sm" data-i18n="Regional_Language"></div>
             </a>
             <a href="/user-kyc.html" class="col-span-1 flex flex-col items-center justify-start gap-1">
               <i class="fa-solid fa-shield-halved !text-3xl"></i>
-              <div class="w-full text-center" data-i18n="User_KYC"></div>
+              <div class="w-full text-center text-sm" data-i18n="User_KYC"></div>
             </a>
           </div>
         </div>
       </div>
-      <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4 mt-3 flex items-center gap-2">
+      <div class="collapse-title text-lg font-semibold px-0 py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4 mt-3 flex items-center gap-2">
         <img src="assets/images/download-app.png" class="h-[65px]" />
         <div>
           <div data-i18n="Download_Application" class="font-bold"></div>
@@ -115,16 +158,16 @@
         <i class="fa-solid fa-download !text-4xl text-gray1"></i>
       </div>
       <div class="collapse collapse-arrow w-full mt-3">
-        <input type="radio" name="sidebar-games" class="!py-2 !min-h-auto"/>
-        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="B9_Casino_Supports"></div>
+        <input type="checkbox" name="sidebar-games" value="b9-casino-supports" class="!py-2 !min-h-auto"/>
+        <div class="collapse-title text-lg font-semibold px-0 py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4" data-i18n="B9_Casino_Supports"></div>
         <div class="collapse-content !p-0">
           <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
             @@include('./sidebar/B9_Casino_Supports.html')
           </div>
         </div>
       </div>
-      <div id="regions-currencies-languages" class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4 mt-3" data-i18n="Regions_Currencies_Languages"></div>
-      <div id="regions-currencies-languages" class="collapse-title font-semibold px-0 py-2 !min-h-auto bg-blue1 text-white rounded-lg after:!top-[20px] px-4 mt-3 flex items-center gap-2">
+      <div id="regions-currencies-languages" class="collapse-title text-lg font-semibold px-0 py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4 mt-3" data-i18n="Regions_Currencies_Languages"></div>
+      <div id="regions-currencies-languages" class="collapse-title text-lg font-semibold px-0 py-2 !min-h-auto bg-blue1 text-white rounded-lg after:!top-[22px] px-4 mt-3 flex items-center gap-2">
         <i class="fa-solid fa-right-from-bracket !text-lg"></i>
         <div data-i18n="Logout"></div>
       </div>

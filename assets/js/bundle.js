@@ -586,6 +586,22 @@ function initialize() {
    * END DEFAULT OPEN MODAL
    */
 
+  /**
+   * SIDEBAR COLLAPSE
+   */
+  const sidebar_collapse = $(".sidebar-collapse input[type='checkbox']");
+  sidebar_collapse.on("change", function () {
+    const is_checked = $(this).is(":checked");
+    const sidebar_collapse_value = $(this).val();
+    sidebar_collapse.each(function () {
+      if ($(this).val() !== sidebar_collapse_value) {
+        $(this).prop("checked", false);
+      }
+    });
+  });
+  /**
+   * END SIDEBAR COLLAPSE
+   */
 }
 
 console.log("--- index.jsaaa");

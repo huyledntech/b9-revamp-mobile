@@ -6,12 +6,23 @@
       </div>
       <div class="text !text-white !mb-1 !text-xs" data-i18n="footer.MENU"></div>
     </a>
-    <a href="/register.html" class="nav-item @@if (context.active === 1) {active}">
-      <div class="img">
-        <i class="fa-solid fa-user text-white text-xl"></i>
-      </div>
-      <div class="text !text-white !mb-1 !text-xs" data-i18n="footer.REGISTER"></div>
-    </a>
+    @@if (!!context.without_login) {
+      <a href="/register.html" class="nav-item @@if (context.active === 1) {active}">
+        <div class="img">
+          <i class="fa-solid fa-user text-white text-xl"></i>
+        </div>
+        <div class="text !text-white !mb-1 !text-xs" data-i18n="footer.REGISTER"></div>
+      </a>
+    }
+    @@if (!context.without_login) {
+      <a href="/profile.html" class="nav-item @@if (context.active === 1) {active}">
+        <div class="img">
+          <i class="fa-solid fa-user text-white text-xl"></i>
+        </div>
+        <div class="text !text-white !mb-1 !text-xs" data-i18n="Account"></div>
+      </a>
+    }
+    
     <a href="/poker-king.html" class="nav-item @@if (context.active === 2) {active}">
       <div class="img relative">
         <div class="absolute -top-[60px] !h-[80px] !w-[80px]">

@@ -1,5 +1,5 @@
 <div id="mySidenav" class="sidenav">
-  <div class="left-nav !bg-white">
+  <div class="left-nav !justify-start !bg-white">
 
     <nav class="navbar fixed-top !min-h-auto sticky top-0 inset-x-0 z-50">
       <div class="w-full">
@@ -17,7 +17,7 @@
       </div>
     </nav>
 
-    <div class="flex flex-col gap-0 w-full p-4">
+    <div class="flex flex-col gap-0 w-full p-4 sidebar-collapse">
       <a href="" class="w-full">
         <img src="assets/images/welcome-banner.png" class="w-full" />
       </a>
@@ -26,8 +26,8 @@
         <a href="" class="text-blue1 font-bold underline" data-i18n="Login_here"></a>
       </div>
       <div class="collapse collapse-arrow w-full mt-3">
-        <input type="radio" name="sidebar-games" checked="checked" class="!py-3 !min-h-auto" />
-        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="Games"></div>
+        <input type="checkbox" name="sidebar-games" value="games" checked="checked" class="!py-2 !min-h-auto" />
+        <div class="collapse-title text-lg font-semibold px-0 !py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4" data-i18n="Games"></div>
         <div class="collapse-content !p-0">
           <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
             @@include('./sidebar/Games.html')
@@ -35,15 +35,15 @@
         </div>
       </div>
       <div class="collapse collapse-arrow w-full mt-3">
-        <input type="radio" name="sidebar-games" class="!py-2 !min-h-auto"/>
-        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="Rewards"></div>
+        <input type="checkbox" name="sidebar-games" value="rewards" class="!py-2 !min-h-auto"/>
+        <div class="collapse-title text-lg font-semibold px-0 !py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4" data-i18n="Rewards"></div>
         <div class="collapse-content !p-0">
           <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
             @@include('./sidebar/Rewards.html')
           </div>
         </div>
       </div>
-      <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4 mt-3 flex items-center gap-2">
+      <div class="collapse-title text-lg font-semibold px-0 !py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4 mt-3 flex items-center gap-2">
         <img src="assets/images/download-app.png" class="h-[65px]" />
         <div>
           <div data-i18n="Download_Application" class="font-bold"></div>
@@ -52,15 +52,15 @@
         <i class="fa-solid fa-download !text-4xl text-gray1"></i>
       </div>
       <div class="collapse collapse-arrow w-full mt-3">
-        <input type="radio" name="sidebar-games" class="!py-2 !min-h-auto"/>
-        <div class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4" data-i18n="B9_Casino_Supports"></div>
+        <input type="checkbox" name="sidebar-games" value="b9-casino-supports" class="!py-2 !min-h-auto"/>
+        <div class="collapse-title text-lg font-semibold px-0 !py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4" data-i18n="B9_Casino_Supports"></div>
         <div class="collapse-content !p-0">
           <div class="grid grid-cols-4 gap-x-2 gap-y-6 text-blue1 mt-2 bg-gray4 px-4 py-6 rounded-lg text-xs">
             @@include('./sidebar/B9_Casino_Supports.html')
           </div>
         </div>
       </div>
-      <div id="regions-currencies-languages" class="collapse-title font-semibold px-0 py-3 !min-h-auto text-blue1 rounded-lg after:!top-[20px] bg-gray4 px-4 my-3" data-i18n="Regions_Currencies_Languages"></div>
+      <div id="regions-currencies-languages" class="collapse-title text-lg font-semibold px-0 !py-2 !min-h-auto text-blue1 rounded-lg after:!top-[22px] bg-gray4 px-4 my-3" data-i18n="Regions_Currencies_Languages"></div>
     </div>
   
 
