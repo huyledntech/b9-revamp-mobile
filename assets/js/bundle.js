@@ -513,24 +513,24 @@ function initialize() {
    * END INBOX
    */
 
-
-
   /**
    * SELECT2
    */
-  $('select').each(function() {
-    var firstOption = $(this).children('option[disabled][selected]').first();
+  $("select").each(function () {
+    var firstOption = $(this).children("option[disabled][selected]").first();
     const placeholder = firstOption.length > 0 ? firstOption.text() : "Select";
     firstOption.html("");
     $(this).select2({
       minimumResultsForSearch: Infinity,
       dropdownParent: $(this).parent(),
-      dropdownCssClass: 'select2-custom-dropdown',
+      dropdownCssClass: "select2-custom-dropdown",
       placeholder: placeholder || "Select",
       // allowClear: true,
       templateResult: function (data) {
-        const description = $(data.element).data('description');
-        if (!description) { return data.text; }
+        const description = $(data.element).data("description");
+        if (!description) {
+          return data.text;
+        }
         return $(
           `<div class="flex justify-between">
             <span>${data.text}</span>
@@ -539,21 +539,22 @@ function initialize() {
         );
       },
       templateSelection: function (data) {
-        const description = $(data.element).data('description');
-        if (!description) { return data.text; }
+        const description = $(data.element).data("description");
+        if (!description) {
+          return data.text;
+        }
         return $(
           `<div class="flex justify-between font-semibold">
             <span>${data.text}</span>
             <span class="">${description}</span>
           </div>`
         );
-      }
+      },
     });
-  })
+  });
   /**
    * SELECT2
    */
-
 
   /**
    * DEPOSIT PAGE
@@ -577,7 +578,7 @@ function initialize() {
   setTimeout(() => {
     const default_open_modal = urlParams.get("modal");
     if (default_open_modal) {
-      const modal = document.getElementById(default_open_modal)
+      const modal = document.getElementById(default_open_modal);
       modal && modal.showModal();
       window.history.pushState({}, document.title, window.location.pathname);
     }
@@ -589,7 +590,7 @@ function initialize() {
   /**
    * SIDEBAR COLLAPSE
    */
-  const sidebar_collapse = $(".sidebar-collapse input[type='checkbox']");
+  const sidebar_collapse = $(".sidebar-collapse input[type='checkbox'], .vip-faq-item input[type='checkbox'], .footer-collapse input[type='checkbox']");
   sidebar_collapse.on("change", function () {
     const is_checked = $(this).is(":checked");
     const sidebar_collapse_value = $(this).val();
@@ -601,6 +602,84 @@ function initialize() {
   });
   /**
    * END SIDEBAR COLLAPSE
+   */
+
+  /**
+   * VIP LEVEL
+   */
+  const VIP_LEVELS = {
+    NORMAL: "normal",
+    BRONZE: "bronze",
+    SILVER: "silver",
+    ROSE_GOLD: "rose_gold",
+    GOLD: "gold",
+    PLATINUM: "platinum",
+    DIAMOND: "diamond",
+  };
+  const vipOrder = Object.values(VIP_LEVELS);
+
+  // current user vip level
+  const current_vip_level = $(".vip-level-table #current-vip-level");
+  const current_vip_level_value = current_vip_level.val();
+
+  // active vip level
+  const slider_active_vip_level = $(".vip-level-table #slider-active-vip-level");
+  const slider_active_vip_level_value = slider_active_vip_level.val(current_vip_level_value);
+  
+  const vip_title_slider_prev = $(".vip-level-table .vip-title-slider-prev");
+  const vip_title_slider_next = $(".vip-level-table .vip-title-slider-next");
+
+  function showNextVip(currentLevel, isFirst = false) {
+    const vip_title_slider = $(".vip-level-table .vip-title-slider");
+    const vip_level_table = $(".vip-level-table");
+    const currentIndex = vipOrder.indexOf(currentLevel);
+    const nextIndex = !isFirst ? currentIndex : Math.min(currentIndex + 1, vipOrder.length - 1);
+    const nextLevel = vipOrder[nextIndex];
+
+    console.log('currentLevel', currentLevel);
+    console.log('nextLevel', nextLevel);
+
+    // hide all vip level in thead
+    vip_title_slider.find("div[data-level]").addClass("hidden");
+
+    // show next vip level in thead
+    const nextDiv = vip_title_slider.find(`div[data-level="${nextLevel}"]`);
+    if (nextDiv) nextDiv.removeClass("hidden");
+
+    // hide all vip level in tbody
+    vip_level_table.find("td[data-level]").addClass("hidden");
+
+    // show next vip level in tbody
+    const nextTd = vip_level_table.find(`td[data-level="${nextLevel}"]`);
+    if (nextTd) nextTd.removeClass("hidden");
+
+
+    // disable next button if current level is diamond
+    vip_title_slider_next.prop("disabled", nextLevel === VIP_LEVELS.DIAMOND);
+
+    // disable prev button if current level is normal
+    vip_title_slider_prev.prop("disabled", nextLevel === VIP_LEVELS.NORMAL);
+
+    // update current active vip level
+    slider_active_vip_level.val(nextLevel);
+  }
+  // show default next vip level
+  showNextVip(current_vip_level_value, true);
+
+  vip_title_slider_prev.on("click", function () {
+    const currentLevel = slider_active_vip_level_value.val();
+    const prevLevel = vipOrder[vipOrder.indexOf(currentLevel) - 1];
+    showNextVip(prevLevel);
+  });
+
+  vip_title_slider_next.on("click", function () {
+    const currentLevel = slider_active_vip_level_value.val();
+    const nextLevel = vipOrder[vipOrder.indexOf(currentLevel) + 1];
+    showNextVip(nextLevel);
+  });
+
+  /**
+   * END VIP LEVEL
    */
 }
 

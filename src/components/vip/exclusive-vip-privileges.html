@@ -1,0 +1,225 @@
+<div class="flex flex-col gap-2 text-white vip-content vip-level-table">
+  <input type="hidden" id="current-vip-level" class="text-black" value="normal" />
+  <input type="hidden" id="slider-active-vip-level" class="text-black" value="" />
+
+  <div class="flex justify-between items-center">
+    <div class="text-blue1 font-semibold text-base flex items-center gap-1">
+      <div data-i18n="vip.VIP_Privileges"></div>
+      <div class="font-normal text-xs" data-i18n="vip.VIP_Privileges_Description"></div>
+    </div>
+  </div>
+
+  <div class="overflow-x-auto">
+    <table class="table table-zebra text-blue1 table-sm rounded-b-none rounded-t-lg overflow-hidden">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th class=" text-blue1 bg-gray5" data-i18n="vip.Privileges"></th>
+          <th class="text-center text-blue1 bg-gray5">
+            <img src="@@current.image" width="20" height="20" class="mx-auto" />
+            <div data-i18n="@@current.title"></div>
+          </th>
+          <th class="text-center text-blue1 bg-gray5 w-[140px]">
+           <div class="flex items-end justify-center gap-3">
+              <button class="w-4 h-4 p-1 rounded-sm bg-blue1 flex items-center justify-center vip-title-slider-prev disabled:opacity-50">
+                <i class="fa-solid fa-chevron-left text-white text-xs"></i>
+              </button>
+              <div class="capitalize vip-title-slider">
+                <div class="hidden" data-level="normal">
+                  <img src="@@normal.image" width="20" height="20" class="mx-auto" />
+                  <div data-i18n="@@normal.title"></div>
+                </div>
+                <div class="hidden" data-level="bronze">
+                  <img src="@@bronze.image" width="20" height="20" class="mx-auto" />
+                  <div data-i18n="@@bronze.title"></div>
+                </div>
+                <div class="hidden" data-level="silver">
+                  <img src="@@silver.image" width="20" height="20" class="mx-auto" />
+                  <div data-i18n="@@silver.title"></div>
+                </div>
+                <div class="hidden" data-level="rose_gold">
+                  <img src="@@rose_gold.image" width="20" height="20" class="mx-auto" />
+                  <div data-i18n="@@rose_gold.title"></div>
+                </div>
+                <div class="hidden" data-level="gold">
+                  <img src="@@gold.image" width="20" height="20" class="mx-auto" />
+                  <div data-i18n="@@gold.title"></div>
+                </div>
+                <div class="hidden" data-level="platinum">
+                  <img src="@@platinum.image" width="20" height="20" class="mx-auto" />
+                  <div data-i18n="@@platinum.title"></div>
+                </div>
+                <div class="hidden" data-level="diamond">
+                  <img src="@@diamond.image" width="20" height="20" class="mx-auto" />
+                  <div data-i18n="@@diamond.title"></div>
+                </div>
+              </div>
+              <button class="w-4 h-4 p-1 rounded-sm bg-blue1 flex items-center justify-center vip-title-slider-next disabled:opacity-50">
+                <i class="fa-solid fa-chevron-right text-white text-xs"></i>
+              </button>
+           </div>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Accumulated_Deposit"></td>
+          <td>@@current.Accumulated_Deposit</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Accumulated_Deposit</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Accumulated_Deposit</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Accumulated_Deposit</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Accumulated_Deposit</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Accumulated_Deposit</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Accumulated_Deposit</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Accumulated_Deposit</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Life_Span"></td>
+          <td>@@current.Life_Span</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Life_Span</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Life_Span</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Life_Span</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Life_Span</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Life_Span</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Life_Span</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Life_Span</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Membership_Maintenance"></td>
+          <td>@@current.Membership_Maintenance</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Membership_Maintenance</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Membership_Maintenance</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Membership_Maintenance</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Membership_Maintenance</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Membership_Maintenance</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Membership_Maintenance</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Membership_Maintenance</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Upgrade_Bonus"></td>
+          <td>@@current.Upgrade_Bonus</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Upgrade_Bonus</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Upgrade_Bonus</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Upgrade_Bonus</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Upgrade_Bonus</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Upgrade_Bonus</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Upgrade_Bonus</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Upgrade_Bonus</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Maintenance_Bonus"></td>
+          <td>@@current.Maintenance_Bonus</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Maintenance_Bonus</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Maintenance_Bonus</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Maintenance_Bonus</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Maintenance_Bonus</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Maintenance_Bonus</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Maintenance_Bonus</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Maintenance_Bonus</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Birthday_Bonus"></td>
+          <td>@@current.Birthday_Bonus</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Birthday_Bonus</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Birthday_Bonus</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Birthday_Bonus</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Birthday_Bonus</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Birthday_Bonus</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Birthday_Bonus</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Birthday_Bonus</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Live_Casino"></td>
+          <td>@@current.Live_Casino</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Live_Casino</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Live_Casino</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Live_Casino</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Live_Casino</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Live_Casino</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Live_Casino</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Live_Casino</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Sportsbook_Esports"></td>
+          <td>@@current.Sportsbook_Esports</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Sportsbook_Esports</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Sportsbook_Esports</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Sportsbook_Esports</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Sportsbook_Esports</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Sportsbook_Esports</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Sportsbook_Esports</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Sportsbook_Esports</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Slots_Fishing"></td>
+          <td>@@current.Slots_Fishing</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Slots_Fishing</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Slots_Fishing</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Slots_Fishing</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Slots_Fishing</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Slots_Fishing</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Slots_Fishing</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Slots_Fishing</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.4D"></td>
+          <td>@@current.4D</td>
+          <td class="hidden text-center" data-level="normal">@@normal.4D</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.4D</td>
+          <td class="hidden text-center" data-level="silver">@@silver.4D</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.4D</td>
+          <td class="hidden text-center" data-level="gold">@@gold.4D</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.4D</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.4D</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Withdrawal_Limit"></td>
+          <td>@@current.Withdrawal_Limit</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Withdrawal_Limit</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Withdrawal_Limit</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Withdrawal_Limit</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Withdrawal_Limit</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Withdrawal_Limit</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Withdrawal_Limit</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Withdrawal_Limit</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Transaction_Limit_SGD"></td>
+          <td>@@current.Transaction_Limit_SGD</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Transaction_Limit_SGD</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Transaction_Limit_SGD</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Transaction_Limit_SGD</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Transaction_Limit_SGD</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Transaction_Limit_SGD</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Transaction_Limit_SGD</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Transaction_Limit_SGD</td>
+        </tr>
+        <!-- row 1 -->
+        <tr>
+          <td data-i18n="vip.Transaction_Limit_CRYPTO"></td>
+          <td>@@current.Transaction_Limit_CRYPTO</td>
+          <td class="hidden text-center" data-level="normal">@@normal.Transaction_Limit_CRYPTO</td>
+          <td class="hidden text-center" data-level="bronze">@@bronze.Transaction_Limit_CRYPTO</td>
+          <td class="hidden text-center" data-level="silver">@@silver.Transaction_Limit_CRYPTO</td>
+          <td class="hidden text-center" data-level="rose_gold">@@rose_gold.Transaction_Limit_CRYPTO</td>
+          <td class="hidden text-center" data-level="gold">@@gold.Transaction_Limit_CRYPTO</td>
+          <td class="hidden text-center" data-level="platinum">@@platinum.Transaction_Limit_CRYPTO</td>
+          <td class="hidden text-center" data-level="diamond">@@diamond.Transaction_Limit_CRYPTO</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
