@@ -29,7 +29,12 @@
       </label>
 
       <label class="absolute top-2 right-0">
-        <i class="fa-solid fa-pen-to-square text-lg"></i>
+        <div class="show-delete-icon">
+          <i class="fa-solid fa-pen-to-square text-lg"></i>
+        </div>
+        <div class="hide-delete-icon hidden">
+          <i class="fa-solid fa-circle-xmark text-lg"></i>
+        </div>
         <input type="checkbox" name="inbox-tab-edit" class="hidden" />
       </label>
     </div>
@@ -57,7 +62,37 @@
     </div>
     <div class="w-2/3 flex items-center gap-2">
       <button class="btn btn-sm flex-1 rounded-lg border-blue border-2 text-blue min-h-[40px]" data-i18n="inbox_page.Mark_as_read"></button>
-      <button class="btn btn-sm flex-1 rounded-lg bg-gradient-to-b from-blue to-blue1 text-white min-h-[40px]" data-i18n="inbox_page.Delete"></button>
+      <button class="btn btn-sm flex-1 rounded-lg bg-gradient-to-b from-blue to-blue1 text-white min-h-[40px]" data-i18n="inbox_page.Delete" onclick="inbox_delete_popup.showModal()"></button>
     </div>
   </div>
  </div>
+
+
+ <!-- MODAL -->
+ <dialog id="inbox_delete_popup" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-base"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="inbox_page.delete_popup_title"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="text-center">
+        <p class="" data-i18n="inbox_page.delete_popup_description"></p>
+      </div>
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="inbox_page.yes"></button>
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl bg-gray1 text-white !font-semibold text-sm shadow-none" data-i18n="inbox_page.cancel"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- MODAL -->

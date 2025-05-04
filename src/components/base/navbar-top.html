@@ -11,7 +11,7 @@
       </a>
     }
     <!-- <div class="title" data-i18n="@@title">@@title</div> -->
-    <div class="title !capitalize flex-1 min-w-10/12 text-white" data-i18n="@@title"></div>
+    <div class="title !text-xl !capitalize flex-1 min-w-10/12 text-white" data-i18n="@@title"></div>
     <!-- <div class="flex-1 @@if (!context.help_url) {opacity-0 w-0} @@if (!!context.right_expand_icon && !!context.right_expand_icon_url){d-none}">
       <img src="assets/icons/help.png" alt="" />
     </div> -->
@@ -23,6 +23,9 @@
         <input type="checkbox" name="navbar-accordion"  class="hidden"/>
         <i class="fa-solid fa-caret-down text-xl transition-transform duration-100"></i>
       </label>
+    }
+    @@if (!context.show_accordion) {
+      <div class="min-w-6"></div>
     }
   </div>
   @@if (!!context.nav_expand_url || !!context.nav_expand_active_btn || !!content.nav_expand_active_btn_text) {

@@ -1,8 +1,21 @@
+<!-- TOP NAV -->
+<div class="px-4 pb-0" data-aos="fade-in">
+  @@include('../base/top-nav-child/index.html', {
+    active: 'inbox',
+    top_items: 'accounts',
+  })
+</div>
+
 <div class="flex flex-col gap-6 mt-4 mb-10">
 
   <div class="px-4">
-    <div class="text-xl font-bold" data-aos="fade-in">
-      Last Chance to Win SGD188! 🎉
+    <div class="text-xl font-bold flex items-center justify-between" data-aos="fade-in">
+      <div>
+        Last Chance to Win SGD188! 🎉
+      </div>
+      <button class="" onclick="inbox_delete_popup.showModal()">
+        <i class="fa-solid fa-trash text-base"></i>
+      </button>
     </div>
     <div class="text-xs">26 Feb 2025 - 11:29</div>
     <div class="py-4" data-aos="fade-up">
@@ -26,3 +39,33 @@
   </div>
 
 </div>
+
+
+<!-- MODAL -->
+<dialog id="inbox_delete_popup" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-base"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="inbox_page.delete_popup_title"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="text-center">
+        <p class="" data-i18n="inbox_page.delete_popup_description"></p>
+      </div>
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="inbox_page.yes"></button>
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl bg-gray1 text-white !font-semibold text-sm shadow-none" data-i18n="inbox_page.cancel"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- MODAL -->

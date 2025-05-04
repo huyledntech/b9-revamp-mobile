@@ -9,18 +9,20 @@
 <div class="flex flex-col gap-6">
 
   <!-- COIN -->
-  <div class="px-4 flex flex-col gap-1" data-aos="fade-in">
-    <div class="flex items-center gap-1">
-      <div class="text-base font-semibold" data-i18n="cash_rebate_page.Available_to_Claim"></div>
-      (SGD)
-    </div>
-    <div class="flex items-center justify-between gap-1">
-      <div class="flex items-center gap-2">
-        <i class="fa-solid fa-coins text-yellow-500 text-lg"></i>
-        <div class="text-xl font-bold">53.72</div>
+  <div class="px-4" data-aos="fade-in">
+    <div class="flex flex-col gap-1 border-b-1 border-gray-400 pb-2">
+      <div class="flex items-center gap-1">
+        <div class="text-base font-semibold" data-i18n="cash_rebate_page.Available_to_Claim"></div>
+        (SGD)
       </div>
-      <div>
-        <button class="btn btn-xs bg-blue text-white min-w-[100px] shadow-none rounded-full border-none" data-i18n="cash_rebate_page.Claim_now"></button>
+      <div class="flex items-center justify-between gap-1">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-coins text-yellow-500 text-lg"></i>
+          <div class="text-xl font-bold">53.72</div>
+        </div>
+        <div>
+          <button class="btn btn-xs bg-blue text-white min-w-[100px] shadow-none rounded-full border-none" data-i18n="cash_rebate_page.Claim_now"></button>
+        </div>
       </div>
     </div>
   </div>
@@ -49,7 +51,7 @@
             </td>
             <td class="px-1 text-2xs" data-i18n="cash_rebate_page.Credited"></td>
             <td class="text-center">
-              <img src="/assets/icons/rebate.svg" alt="receipt" class="w-2.5 mx-auto">
+              <img src="/assets/icons/rebate.svg" alt="receipt" class="w-2.5 mx-auto" onclick="cash_rebate_receipt_modal.showModal()">
             </td>
           </tr>
 
@@ -62,7 +64,7 @@
             </td>
             <td class="px-1 text-2xs" data-i18n="cash_rebate_page.Credited"></td>
             <td class="text-center">
-              <img src="/assets/icons/rebate.svg" alt="receipt" class="w-2.5 mx-auto">
+              <img src="/assets/icons/rebate.svg" alt="receipt" class="w-2.5 mx-auto" onclick="cash_rebate_receipt_modal.showModal()">
             </td>
           </tr>
 
@@ -142,3 +144,99 @@
 
 
 </div>
+
+<!-- MODAL -->
+<dialog id="cash_rebate_receipt_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="cash_rebate_page.Cash_Rebate_Receipt"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4 text-center">
+      <div class="overflow-x-auto">
+        <table class="table table-sm table-zebra">
+          <!-- head -->
+          <thead>
+            <tr class="bg-blue border-b-0">
+              <th class="!text-white px-1 pl-2 py-2 text-xs" data-i18n="cash_rebate_page.Category"></th>
+              <th class="!text-white px-1 py-2 text-xs" data-i18n="cash_rebate_page.Valid_Bet"></th>
+              <th class="!text-white px-1 py-2 text-xs" data-i18n="cash_rebate_page.Rebate_per"></th>
+              <th class="text-center !text-white px-1 py-2 text-xs" data-i18n="cash_rebate_page.Amount"></th>
+            </tr>
+          </thead>
+          <tbody>
+  
+            <!-- row 1 -->
+            <tr class="border-b-0">
+              <td class="px-1 text-2xs text-black">Live Casino</td>
+              <td class="px-1 text-2xs text-black">5,388.00</td>
+              <td class="px-1 text-2xs text-black">0.5</td>
+              <td class="px-1 text-2xs text-black font-semibold">26.94</td>
+            </tr>
+  
+            <!-- row 1 -->
+            <tr class="border-b-0">
+              <td class="px-1 text-2xs text-black">Sports</td>
+              <td class="px-1 text-2xs text-black">38,885.00</td>
+              <td class="px-1 text-2xs text-black">0.5</td>
+              <td class="px-1 text-2xs text-black font-semibold">192.42</td>
+            </tr>
+  
+            <!-- row 1 -->
+            <tr class="border-b-0">
+              <td class="px-1 text-2xs text-black">Esports</td>
+              <td class="px-1 text-2xs text-black">388.00</td>
+              <td class="px-1 text-2xs text-black">0.5</td>
+              <td class="px-1 text-2xs text-black font-semibold">1.94</td>
+            </tr>
+  
+            <!-- row 1 -->
+            <tr class="border-b-0">
+              <td class="px-1 text-2xs text-black">Slots</td>
+              <td class="px-1 text-2xs text-black">1,166,300.50</td>
+              <td class="px-1 text-2xs text-black">0.5</td>
+              <td class="px-1 text-2xs text-black font-semibold">5,831.50</td>
+            </tr>
+  
+            <!-- row 1 -->
+            <tr class="border-b-0">
+              <td class="px-1 text-2xs text-black">Fishing</td>
+              <td class="px-1 text-2xs text-black">20.00</td>
+              <td class="px-1 text-2xs text-black">0.5</td>
+              <td class="px-1 text-2xs text-black font-semibold">0.10</td>
+            </tr>
+  
+            <!-- row 1 -->
+            <tr class="border-b-0">
+              <td class="px-1 text-2xs text-black">Lottery 4D</td>
+              <td class="px-1 text-2xs text-black">10,800.50</td>
+              <td class="px-1 text-2xs text-black">0.5</td>
+              <td class="px-1 text-2xs text-black font-semibold">54.00</td>
+            </tr>
+  
+          </tbody>
+        </table>
+      </div>
+      <div class="flex gap-1 bg-gradient-to-b from-blue to-blue1 text-white p-4">
+        <div class="flex-1 flex flex-col gap-1">
+          <div class="text-2xs" data-i18n="cash_rebate_page.Total_Valid_Bet"></div>
+          <div class="font-semibold">1,221,782.00</div>
+        </div>
+        <div class="flex-1 flex flex-col gap-1">
+          <div class="text-2xs" data-i18n="cash_rebate_page.Total_Rebate"></div>
+          <div class="font-semibold">6,108.91</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- MODAL -->

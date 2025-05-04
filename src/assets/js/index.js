@@ -500,6 +500,22 @@ function initialize() {
     const inbox_table_checkbox_container = $(
       ".inbox-table .checkbox-container"
     );
+    const show_delete_icon = $(".tabs-inbox .show-delete-icon");
+    const hide_delete_icon = $(".tabs-inbox .hide-delete-icon");
+    const inbox_table_action_button = $(".inbox-table .action button");
+    const inbox_table_action_link = $(".inbox-table .action a");
+
+    if (is_checked) {
+      show_delete_icon.addClass("hidden");
+      hide_delete_icon.removeClass("hidden");
+      inbox_table_action_button.removeClass("hidden");
+      inbox_table_action_link.addClass("hidden");
+    } else {
+      show_delete_icon.removeClass("hidden");
+      hide_delete_icon.addClass("hidden");
+      inbox_table_action_button.addClass("hidden");
+      inbox_table_action_link.removeClass("hidden");
+    }
     const inbox_actions_nav = $(".inbox-actions-nav");
     if (is_checked) {
       inbox_table_checkbox_container.removeClass("hidden");

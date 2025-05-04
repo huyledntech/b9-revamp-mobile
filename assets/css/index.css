@@ -60,7 +60,7 @@
 :root {
   --primary-color: #4E7FFF;
   --max-with-mobile: 768px;
-  --default-font-size: 13px;
+  --default-font-size: 14px;
   --default-small-font-size: 13px;
   --default-padding-content: 20px;
   --default-mobile-padding-content: 15px;
@@ -140,6 +140,7 @@ img {
 
 .btn {
   font-weight: 400;
+  border: 0;
 }
 .btn.disabled, .btn[disabled] {
   opacity: 0.5;
