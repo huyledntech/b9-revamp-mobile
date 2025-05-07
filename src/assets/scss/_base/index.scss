@@ -228,6 +228,18 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
+.phone-code {
+  .select2 {
+    .selection {
+      .select2-selection {
+        border-color: var(--color-gray3) !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+    }
+  }
+}
+
 .select2-container {
 
   &--open {

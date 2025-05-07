@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'Help Center'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home">
+      @@include('../components/base/navbar-top.html', {
+        title: 'contact_us_page.Contact_Us', 
+        back_url: 'javascript:history.back()', 
+        icon_back_white: true,
+        show_accordion: false
+      })
+
+
+      <div class="min-h-screen p-4 flex flex-col gap-4">
+
+        <div class="flex items-center bg-gray8 px-4 py-6 text-white font-bold text-xl whitespace-pre-line" data-i18n="contact_us_page.title" data-aos="fade-in"></div>
+
+        <div class="" data-i18n="contact_us_page.description" data-aos="fade-up"></div>
+        
+      </div>
+
+      
+      @@include('../components/base/navbar-footer.html')
+      
+      @@include('../components/base/navbar-bottom.html', {active: -1})
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>
