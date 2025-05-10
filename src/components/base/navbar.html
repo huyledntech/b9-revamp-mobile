@@ -19,13 +19,13 @@
       @@if (!context.without_login) {
         <!-- <button type="button" class="btn btn-language bg-gradient-to-b from-blue to-blue1 !border-none shadow-none !mr-0" id="selectLanguageModalBtn">中</button> -->
         <div class="btn-group flex items-center gap-2" role="group" aria-label="Basic mixed styles example">
-          <a href="/deposit.html" class="btn btn-secondary btn-currency !text-white !bg-transparent !border !border-blue !shadow-none !px-3">
+          <label for="open_total_funds" class="btn btn-secondary btn-currency !text-white !bg-transparent !border !border-blue !shadow-none !px-3">
             <i class="fa-solid fa-coins text-yellow-500"></i>
             <span class="font-normal">520,50</span>
             <!-- <span class="btn !px-1 !border-none !bg-blue shadow-none text-white">
               <i class="fa-solid fa-pager"></i>
             </span> -->
-          </a>
+          </label>
           <a href="/refer.html" class="btn !px-1 !border-none !bg-transparent shadow-none text-blue">
             <i class="fa-solid fa-users text-xl"></i>
           </a>
@@ -62,3 +62,78 @@
 <!-- MODAL -->
 @@include('../please-login-modal.html')
 <!-- MODAL -->
+
+@@if (!context.without_login) {
+  <div class="drawer z-60">
+    <input id="open_total_funds" type="checkbox" class="drawer-toggle" />
+    <div class="drawer-side">
+      <label for="open_total_funds" aria-label="close sidebar" class="drawer-overlay"></label>
+      <div class="menu bg-white rounded-t-lg text-base-content mt-[calc(100dvh-400px)] h-[400px] w-full p-0 !transition-none">
+        <div class="text-blue1">
+          <div class="bg-blue1 text-white p-4 rounded-t-lg">
+            <div class="flex gap-3 items-center">
+              <div data-i18n="total_funds "></div>
+              <div class="flex gap-1 items-center opacity-50 text-2xs">
+                <i class="fa-light fa-eye-slash"></i>
+                <div data-i18n="hide_balance"></div>
+              </div>
+            </div>
+            <div class="flex gap-3 items-center justify-between mt-1">
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid fa-coins text-xl text-yellow-500"></i>
+                <span class="font-semibold text-lg">520,50</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i class="fa-solid fa-rotate text-lg"></i>
+                <button class="btn btn-sm rounded-full h-7 border-none shadow-none bg-blue text-white px-5" data-i18n="deposit_page.Restore_all"></button>
+              </div>
+            </div>
+          </div>
+          <div class="p-4 flex flex-col gap-4">
+            <div class="flex gap-2 items-center justify-between px-4 py-2 bg-gray2 rounded-lg font-semibold">
+              <div data-i18n="deposit_page.Main_Wallet"></div>
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid fa-coins text-xl text-yellow-500"></i>
+                <span class="font-semibold">MYR 320.50</span>
+              </div>
+            </div>
+            <div class="flex gap-2 items-center justify-between px-4 py-2 bg-gray2 rounded-lg">
+              <div class="flex items-center gap-1">
+                <div data-i18n="Total_Funds_in"></div>
+                <div data-i18n="B92u_Bank" class="font-semibold"></div>
+              </div>
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid fa-coins text-xl text-yellow-500"></i>
+                <span class="font-semibold">MYR 220.00</span>
+              </div>
+            </div>
+            <div class="flex gap-2 items-center justify-between px-4 py-2 bg-gray2 rounded-lg">
+              <div class="flex items-center gap-1">
+                <div data-i18n="Balance"></div>
+                <div data-i18n="Turnover_Require_to_Withdraw" class="font-semibold"></div>
+              </div>
+              <div class="flex gap-1 items-center">
+                <i class="fa-solid fa-coins text-xl text-yellow-500"></i>
+                <span class="font-semibold">MYR 185.50</span>
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center justify-between gap-4 px-4">
+            <a href="/deposit.html" role="button" class="flex-1 flex items-center justify-center rounded-lg bg-gradient-to-b h-10 from-blue to-blue1 text-white" data-i18n="Deposit"></a>
+            <a href="/withdraw.html" role="button" class="flex-1 flex items-center justify-center rounded-lg bg-white h-10 text-blue border border-blue" data-i18n="Withdrawal"></a>
+            <a href="/b92u-bank.html" role="button" class="flex-1 flex items-center justify-center rounded-lg bg-white h-10 text-blue border border-blue relative">
+              <span class="absolute -top-3 inset-x-0 text-4xs text-white flex items-center justify-center">
+                <span class="bg-blue1 rounded-md px-4">Daily 9% p.a Interest</span>
+              </span>
+              <span data-i18n="B92u_Bank"></span>
+            </a>
+          </div>
+          <div class="p-4 flex flex-col gap-1 items-center justify-center">
+            <div data-i18n="contact_info"></div>
+            <a href="#" data-i18n="contact_info_description" class="font-semibold underline"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+}
