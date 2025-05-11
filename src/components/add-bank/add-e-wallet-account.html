@@ -1,0 +1,73 @@
+
+<!-- FORM -->
+<form class="px-4 flex flex-col gap-1"  data-aos="fade-in">
+  <!-- BANK -->
+  <fieldset class="fieldset">
+    <legend class="fieldset-legend text-blue1 font-semibold text-sm" data-i18n="Add_Bank_Verification_page.eWallet_Channel"></legend>
+    <select class="select w-full border-blue rounded-lg">
+      <option disabled selected data-i18n="Add_Bank_Verification_page.Please_select_a_eWallet_Options"></option>
+      <option data-i18n="Add_Bank_Verification_page.Bank_1"></option>
+      <option data-i18n="Add_Bank_Verification_page.Bank_2"></option>
+      <option data-i18n="Add_Bank_Verification_page.Bank_3"></option>
+    </select>
+  </fieldset>
+
+  <!-- ACCOUNT NAME -->
+  <fieldset class="fieldset">
+    <legend class="fieldset-legend text-blue1 font-semibold text-sm" data-i18n="Add_Bank_Verification_page.Account_Name"></legend>
+    <input type="text" class="input w-full border-blue rounded-lg disabled:bg-gray2 disabled:text-blue1 disabled:text-sm disabled:font-semibold" placeholder="" value="Kim Seng Joo" disabled />
+  </fieldset>
+
+  <!-- ACCOUNT NUMBER -->
+  <fieldset class="fieldset">
+    <legend class="fieldset-legend text-blue1 font-semibold text-sm" data-i18n="Add_Bank_Verification_page.Account_Number"></legend>
+    <input type="text" class="input w-full border-blue rounded-lg" data-i18n="Add_Bank_Verification_page.Account_Number_Placeholder" data-i18n-attr="placeholder" placeholder="" value="" />
+  </fieldset>
+
+  <div class="flex items-start gap-2 text-red-500 mt-4">
+    <div class="">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+    </div>
+    <div class="flex flex-col gap-1">
+      <p data-i18n="Add_Bank_Verification_page.Make_sure_your_eWallet_name"></p>
+    </div>
+  </div>
+
+  <div class="mt-10">
+    <button type="button" class="btn w-full rounded-lg bg-gradient-to-b from-blue to-blue1 text-white" data-i18n="Add_Bank_Verification_page.Confirm_Add_Account" onclick="success_popup.showModal()"></button>
+  </div>
+
+  <div class="mt-4 text-center">
+    <div data-i18n="Add_Bank_Verification_page.contact"></div>
+    <a href="#" class="underline font-semibold" data-i18n="Add_Bank_Verification_page.contact1"></a>
+  </div>
+
+</form>
+
+
+<!-- SUCCESS POPUP -->
+<dialog id="success_popup" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="Add_Bank_Verification_page.Bank_Account_Added"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="text-center mb-4" data-i18n="Add_Bank_Verification_page.Bank_Account_Added_Description"></div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <a href="@@back_url" class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="Add_Bank_Verification_page.Bank_Account_Added_Action"></a>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- SUCCESS POPUP -->

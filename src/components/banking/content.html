@@ -3,11 +3,135 @@
   @@include('../base/top-nav-child/index.html', {
     active: 'banking',
     top_items: 'accounts',
-    default_show: true,
+    default_show: false,
   })
 </div>
 
 <!-- CONTENT -->
-<div class="px-4" data-aos="fade-up">
-  CONTENT
+<div class="flex flex-col gap-4 p-4 mb-10">
+
+  <!-- VERIFICATION -->
+  <div>
+    @@include('../profile/verification.html')
+  </div>
+
+
+  <div class="mb-4" data-aos="fade-up">
+    <div class="text-sm font-semibold" data-i18n="banking_page.Bank_Details"></div>
+    <div class="mt-2 rounded-lg border border-blue">
+      <div class="overflow-x-auto mb-2 p-3">
+        <table class="table table-xs">
+          <!-- head -->
+          <thead>
+            <tr class="!border-b-blue1">
+              <th class="text-sm font-semibold text-blue1" data-i18n="banking_page.Bank"></th>
+              <th class="text-sm font-semibold text-blue1" data-i18n="banking_page.Account_Number"></th>
+              <th class="text-sm font-semibold text-blue1" data-i18n="banking_page.Status"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- row 1 -->
+            <tr class="!border-b-transparent">
+              <td class="py-2">
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                  <div>HSBC</div>
+                </div>
+              </td>
+              <td class="py-2">
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                  <i class="fa-solid fa-trash-can" onclick="delete_popup.showModal()"></i>
+                  <div>154821504545</div>
+                </div>
+              </td>
+              <td class="py-2">
+                <div class="flex items-center gap-2 text-sm">
+                  <i class="fa-solid fa-clock-three"></i>
+                  <div data-i18n="banking_page.Pending_Verification"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="!border-b-transparent">
+              <td class="py-2">
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                  <div>OCBC</div>
+                </div>
+              </td>
+              <td class="py-2">
+                <div class="flex items-center gap-2 text-sm font-semibold">
+                  <i class="fa-solid fa-trash-can" onclick="delete_popup.showModal()"></i>
+                  <div>154821504545</div>
+                </div>
+              </td>
+              <td class="py-2">
+                <div class="flex items-center gap-2 text-sm text-green-500">
+                  <i class="fa-solid fa-clock-three"></i>
+                  <div data-i18n="banking_page.Verified"></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <a href="/add-bank-account.html" class="w-full p-2 text-blue opacity-80 font-light flex items-center justify-center gap-2">
+        <i class="fa-solid fa-circle-plus"></i>
+        <span data-i18n="banking_page.Add_Bank_Account"></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="mb-4" data-aos="fade-up">
+    <div class="text-sm font-semibold" data-i18n="banking_page.eWallet_Details"></div>
+    <div class="mt-2 rounded-lg border border-blue">
+      <a href="/add-e-wallet-account.html" class="w-full p-2 text-blue opacity-80 font-light flex items-center justify-center gap-2">
+        <i class="fa-solid fa-circle-plus"></i>
+        <span data-i18n="banking_page.Add_eWallet_Account"></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="mb-4" data-aos="fade-up">
+    <div class="text-sm font-semibold" data-i18n="banking_page.Crypto_Address"></div>
+    <div class="mt-2 rounded-lg border border-blue">
+      <a href="/add-crypto-address.html" class="w-full p-2 text-blue opacity-80 font-light flex items-center justify-center gap-2">
+        <i class="fa-solid fa-circle-plus"></i>
+        <span data-i18n="banking_page.Add_Crypto_Address"></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="flex flex-col items-center text-xs" data-aos="fade-up">
+    <div class="" data-i18n="profile_page.contact_info"></div>
+    <div class="font-semibold underline" data-i18n="profile_page.support_info"></div>
+  </div>
+
+
 </div>
+
+
+<!-- DELETE POPUP -->
+<dialog id="delete_popup" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="banking_page.Confirm_Crypto_Address_Deletion"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="text-center mb-4" data-i18n="banking_page.Confirm_Crypto_Address_Deletion_description"></div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="banking_page.Yes"></button>
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gray1 text-white !font-semibold text-sm" data-i18n="banking_page.No"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- DELETE POPUP -->
