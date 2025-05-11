@@ -1034,8 +1034,14 @@
   "Add_a_Bank_Account": "Add a Bank Account",
   "Add_a_eWallet_Account": "Add a eWallet Account",
   "Add_a_Crypto_Address": "Add a Cryptocurrency Address",
-  "": "",
-  "": "",
+  "notification_popup": {
+    "General": "General",
+    "Maintenance": "Maintenance",
+    "": "",
+    "": "",
+    "": ""
+  },
+  "Announcement": "Announcement",
   "": "",
   "": "",
   "": "",

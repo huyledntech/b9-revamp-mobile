@@ -1,0 +1,50 @@
+<dialog id="notification_view_all_popup" class="modal">
+  <div class="modal-box w-[90%] !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="Announcement"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <!-- TABS -->
+      <div class="tabs custom-tabs tabs-inbox">
+        <div class="tab-list py-2 relative w-full">
+          <!-- tab 1 -->
+          <label class="tab !py-0">
+            <input type="radio" name="inbox-tab" class="hidden" value="1" checked="checked" />
+            <div class="flex items-center gap-2 text-sm">
+              <div data-i18n="notification_popup.General"></div>
+            </div>
+          </label>
+
+          <!-- tab 2 -->
+          <label class="tab !py-0 !border-r-0">
+            <input type="radio" name="inbox-tab" class="hidden" value="2" />
+            <div class="flex items-center gap-2 text-sm">
+              <div data-i18n="notification_popup.Maintenance"></div>
+            </div>
+          </label>
+
+        </div>
+        
+        <div class="tab-content-list w-full flex flex-col gap-4">
+          <div class="tab-content-item">
+            @@include('./notification-popup-content/general.html')
+          </div>
+          <div class="tab-content-item">
+            @@include('./notification-popup-content/maintenance.html')
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</dialog>
