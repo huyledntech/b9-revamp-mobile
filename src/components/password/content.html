@@ -3,11 +3,252 @@
   @@include('../base/top-nav-child/index.html', {
     active: 'password',
     top_items: 'accounts',
-    default_show: true,
+    default_show: false,
   })
 </div>
 
 <!-- CONTENT -->
-<div class="px-4" data-aos="fade-up">
-  CONTENT
+<div class="flex flex-col gap-4 p-4 mb-10">
+
+  <!-- VERIFICATION -->
+  <div>
+    @@include('../profile/verification.html')
+  </div>
+
+  <form>
+
+    <!-- PERSONAL INFORMATION -->
+    <div class="" data-aos="fade-up">
+      <fieldset class="fieldset relative my-4">
+        <legend class="text-base font-semibold" data-i18n="password_page.Current_Password"></legend>
+        <label class="input w-full border-blue rounded-lg">
+          <input type="text" class="w-full" data-i18n="password_page.Please_enter_current_password" data-i18n-attr="placeholder" placeholder="" />
+          <div class="text-base">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+        </label>
+      </fieldset>
+      <fieldset class="fieldset relative my-4">
+        <legend class="text-base font-semibold" data-i18n="password_page.New_Password"></legend>
+        <label class="input w-full border-blue rounded-lg">
+          <input type="text" class="w-full" data-i18n="password_page.Please_enter_new_password" data-i18n-attr="placeholder" placeholder="" />
+          <div class="text-base">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+        </label>
+        <div class="validate mt-2">
+          <div class="password-strong flex items-start gap-2">
+            <div class="w-6 h-1.5 bg-gray2 rounded-sm"></div>
+            <div class="w-6 h-1.5 bg-gray2 rounded-sm"></div>
+            <div class="w-6 h-1.5 bg-gray2 rounded-sm"></div>
+            <div class="w-6 h-1.5 bg-gray2 rounded-sm"></div>
+            <div class="w-6 h-1.5 bg-gray2 rounded-sm"></div>
+          </div>
+          <div class="password-weak flex flex-col items-start gap-2 mt-2">
+            <div class="flex items-center gap-2 opacity-50 text-blue">
+              <i class="fa-solid fa-circle-check text-gray1"></i>
+              <div class="text-xs" data-i18n="password_page.Use_6_12_characters"></div>
+            </div>
+            <div class="flex items-center gap-2 opacity-50 text-blue">
+              <i class="fa-solid fa-circle-check text-gray1"></i>
+              <div class="text-xs" data-i18n="password_page.Besides_letters"></div>
+            </div>
+            <div class="flex items-center gap-2 opacity-50 text-blue">
+              <i class="fa-solid fa-circle-check text-gray1"></i>
+              <div class="text-xs" data-i18n="password_page.Password_is_case_sensitive"></div>
+            </div>
+            <div class="flex items-center gap-2 text-red-500">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <div class="text-xs" data-i18n="password_page.Avoid_using_the_same_password_of_multiple_sites"></div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="fieldset relative my-4">
+        <legend class="text-base font-semibold" data-i18n="password_page.Confirm_New_Password"></legend>
+        <label class="input w-full border-blue rounded-lg">
+          <input type="text" class="w-full" data-i18n="password_page.Please_enter_confirm_new_password" data-i18n-attr="placeholder" placeholder="" />
+          <div class="text-base">
+            <i class="fa-solid fa-eye"></i>
+          </div>
+        </label>
+      </fieldset>
+    </div>
+
+    <!-- <div class="flex flex-col items-center text-xs" data-aos="fade-up">
+      <div class="" data-i18n="profile_page.contact_info"></div>
+      <div class="font-semibold underline" data-i18n="profile_page.support_info"></div>
+    </div> -->
+
+    <div class="mt-10" data-aos="fade-up">
+      <button class="btn w-full shadow-none border-none bg-gradient-to-b from-blue to-blue1 text-white rounded-lg" data-i18n="profile_page.Save_Changes"></button>
+    </div>
+
+  </form>
+
 </div>
+
+
+
+
+<!-- VERIFICATION PHONE NUMBER POPUP -->
+<dialog id="verification_phone_number_popup" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="profile_page.Contact_Number_Verification"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="profile_page.verification_phone_number_popup_title"></legend>
+        <label class="input bg-gray2 rounded-lg border-none mt-2">
+          <input type="text" class="text-blue" required placeholder="" value="+601****7751" />
+          <button class="text-white bg-blue1 rounded-full px-2 py-[2px] !text-2xs" data-i18n="profile_page.Change" onclick="verification_phone_number_popup.close();change_contact_number_popup.showModal()"></button>
+        </label>
+      </fieldset>
+
+      <div class="flex justify-center items-center gap-4 text-blue my-4">
+        <div class="text-center flex flex-col items-center gap-1 opacity-50">
+          <i class="fa-brands fa-square-whatsapp text-[60px]"></i>
+          <div class="underline" data-i18n="profile_page.Whatsapp"></div>
+        </div>
+        <div class="text-center" data-i18n="profile_page.or"></div>
+        <div class="text-center flex flex-col items-center gap-1">
+          <i class="fa-solid fa-comment-sms text-[60px]"></i>
+          <div class="" data-i18n="profile_page.SMS"></div>
+        </div>
+      </div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="profile_page.Verify_Now"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- VERIFICATION PHONE NUMBER POPUP -->
+
+<!-- CHANGE CONTACT NUMBER POPUP -->
+<dialog id="change_contact_number_popup" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="profile_page.Change_Contact_Number"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="profile_page.New_Contact_Number"></legend>
+        <div class="flex items-center gap-2 mt-2">
+          <select class="w-20 select text-blue bg-gray2 rounded-lg border-none">
+            <option>+60</option>
+            <option>+65</option>
+            <option>+66</option>
+            <option>+67</option>
+            <option>+68</option>
+            <option>+69</option>
+            <option>+70</option>
+            <option>+71</option>
+          </select>
+          <label class="flex-1 input bg-gray2 rounded-lg border-none">
+            <input type="text" class="text-blue" required data-i18n="profile_page.Enter_your_new_contact_number" data-i18n-attr="placeholder" placeholder="" value="" />
+          </label>
+        </div>
+        <p class="fieldset-label text-red-500">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span data-i18n="profile_page.new_contact_number_note"></span>
+        </p>
+      </fieldset>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="profile_page.Verify_Now"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- CHANGE CONTACT NUMBER POPUP -->
+
+<!-- VERIFICATION EMAIL POPUP -->
+<dialog id="verification_email_popup" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="profile_page.Email_Verification"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="profile_page.verification_email_popup_title"></legend>
+        <label class="input bg-gray2 rounded-lg border-none mt-2">
+          <input type="email" class="text-blue" required placeholder="" value="aw****@gmail.com" />
+          <button class="text-white bg-blue1 rounded-full px-2 py-[2px] !text-2xs" data-i18n="profile_page.Change" onclick="verification_email_popup.close();change_email_popup.showModal()"></button>
+        </label>
+      </fieldset>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="profile_page.Verify_Now"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- VERIFICATION EMAIL POPUP -->
+
+<!-- CHANGE EMAIL POPUP -->
+<dialog id="change_email_popup" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="profile_page.Change_Email"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <fieldset class="fieldset">
+        <legend class="fieldset-legend text-blue1 py-0 px-1 text-sm" data-i18n="profile_page.New_Email"></legend>
+        <label class="input bg-gray2 rounded-lg border-none mt-2">
+          <input type="email" class="text-blue" required data-i18n="profile_page.Please_enter_your_new_email" data-i18n-attr="placeholder" placeholder="" value="" />
+        </label>
+        <p class="fieldset-label text-red-500">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <span data-i18n="profile_page.new_email_note"></span>
+        </p>
+      </fieldset>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="profile_page.Verify_Now"></button>
+      </div>
+    </div>
+  </div>
+</dialog>
+<!-- CHANGE EMAIL POPUP -->

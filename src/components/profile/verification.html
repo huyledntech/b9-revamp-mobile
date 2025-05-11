@@ -1,0 +1,29 @@
+<div class=" mb-4" data-aos="fade-up">
+  <div class="px-4 flex items-center gap-4 justify-between border border-blue rounded-lg min-h-11">
+    <div class="text-sm font-semibold">
+      <span data-i18n="profile_page.User_Verification"></span>
+      <span>(1/4)</span>
+    </div>
+    <div class="flex items-center gap-8">
+      <div class="relative">
+        <i class="fa-solid fa-user fa-xl"></i>
+        <i class="fa-solid fa-circle-check text-xs text-green-500 absolute -bottom-2 -right-[6px] bg-white rounded-full"></i>
+      </div>
+      <div class="relative opacity-50" onclick="verification_email_popup.showModal()">
+        <i class="fa-solid fa-envelope fa-xl"></i>
+      </div>
+      <div class="relative opacity-50" onclick="verification_phone_number_popup.showModal()">
+        <i class="fa-solid fa-mobile fa-xl"></i>
+      </div>
+      <a href="/add-bank-verification.html" class="relative opacity-50">
+        <i class="fa-solid fa-building-columns fa-xl"></i>
+        <!-- <i class="fa-solid fa-circle-check text-xs text-green-500 absolute -bottom-2 -right-[6px] bg-white rounded-full"></i> -->
+      </a>
+    </div>
+  </div>
+  <div class="text-center text-2xs flex items-center justify-center gap-1 mt-1">
+    <div class="underline" data-i18n="profile_page.Verify_now"></div>
+    <div data-i18n="profile_page.Get_a"></div>
+    <div class="font-semibold" data-i18n="profile_page.Free_SGD9"></div>
+  </div>
+</div>
