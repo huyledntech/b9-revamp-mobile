@@ -1,0 +1,61 @@
+<div class="flex flex-col gap-2 deposit-form">
+
+  <fieldset class="fieldset">
+    <label class="input rounded-lg border-blue text-xs">
+      <input type="text" class="text-blue placeholder:!font-light" data-i18n="deposit_page.Amount_Min_max" data-i18n-attr="placeholder" placeholder="" value="" />
+      <button class="bg-blue text-white rounded-full px-4 py-1 text-xs" data-i18n="withdrawal_page.All_In"></button>
+    </label>
+    <div class="flex items-center gap-1 px-4">
+      <div data-i18n="withdrawal_page.b92u_bank_description"></div>
+    </div>
+  </fieldset>
+
+  <div class="modal-action flex flex-col gap-4 mt-2">
+    <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-l from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="deposit_page.Proceed" onclick="withdrawal_to_b92u_bank_success_modal.showModal()"></button>
+  </div>
+
+  <div class="flex flex-col items-center justify-center gap-0 mt-2">
+    <div data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support"></div>
+    <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support1"></a>
+  </div>
+
+</div>
+
+
+<!-- SUCCESS MODAL -->
+<dialog id="withdrawal_to_b92u_bank_success_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="B92u_Bank_page.Request_Submitted"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="flex flex-col gap-4">
+        <div data-i18n="deposit_page.success_crypto_popup_desciption"></div>
+        <div class="flex items-center gap-2">
+          <span data-i18n="B92u_Bank_page.Your_Transaction_ID_is"></span>
+          <a href="#" class="font-semibold underline">123123123</a>
+        </div>
+        <div class="text-center">
+          <span data-i18n="B92u_Bank_page.request_support"></span>
+          <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.request_support_1"></a>
+        </div>
+      </div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Check_Status" onclick="withdrawal_to_b92u_bank_success_modal.close()"></button>
+      </div>
+
+    </div>
+  </div>
+</dialog>
+<!-- SUCCESS MODAL -->
