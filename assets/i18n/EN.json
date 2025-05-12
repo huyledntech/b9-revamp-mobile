@@ -28,9 +28,7 @@
     "Privacy_Policy": "Privacy Policy",
     "About_Us": "About Us",
     "TermsConditions": "Terms & Conditions",
-    "Login_Register": "Login / Register",
-    "": "",
-    "": ""
+    "Login_Register": "Login / Register"
   },
   "footer_section": {
     "copy_right": "@2020 Uwin33. All rights reserved.",
@@ -39,10 +37,7 @@
     "Responsible_Gaming": "Responsible Gaming",
     "Security_Trust": "Security & Trust",
     "Certification": "Certification",
-    "Payment_Methods": "Payment Methods",
-    "": "",
-    "": "",
-    "": ""
+    "Payment_Methods": "Payment Methods"
   },
   "LOGIN": "Login",
   "REGISTER": "Register",
@@ -446,7 +441,7 @@
     "Account_Security_Description_1": "Learn more about our <b>Privacy Policy</b>.",
     "Account_Security_Description_2": "Understand our <b>KYC Verification</b> requirements.",
     "need_more_help": "Need more help?",
-    "need_more_help_description": "Don’t hesitate — reach out through our <b>24/7 Live Chat</b>. We’re here to ensure your experience is smooth and enjoyable.",
+    "need_more_help_description": "Don't hesitate — reach out through our <b>24/7 Live Chat</b>. We're here to ensure your experience is smooth and enjoyable.",
     "": "",
     "": "",
     "": ""
@@ -898,7 +893,7 @@
     "Crypto_Wallet": "Crypto Wallet",
     "Unlock_Full_Access_with_Verification": "Unlock Full Access with Verification",
     "Unlock_Full_Access_with_Verification1": "To enable <b>DEPOSITS & WITHDRAWALS</b> via Singapore banking, please verify your account. Prefer not to? You may continue using Crypto Wallet instead.",
-    "Unlock_Full_Access_with_Verification2": "As a thank you, you’ll receive a <b class='text-blue'>FREE SGD 9 BONUS</b> after successful verification.",
+    "Unlock_Full_Access_with_Verification2": "As a thank you, you'll receive a <b class='text-blue'>FREE SGD 9 BONUS</b> after successful verification.",
     "Add_a_Bank_Account_Verify_Now": "Add a Bank Account & Verify Now",
     "Stay_with_Crypto": "Stay with Crypto",
     "Quick_Pay": "Quick Pay",
