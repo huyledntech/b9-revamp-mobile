@@ -1,0 +1,78 @@
+<!-- TOP NAV -->
+<div class="px-4 pb-0" data-aos="fade-in">
+  @@include('../base/top-nav-child/index.html', {
+    active: 'transfer',
+    top_items: 'transactions',
+  })
+</div>
+
+<!-- MAIN WALLET -->
+<div class="px-4" data-aos="fade-in">
+  @@include('../deposit/main-wallet.html')
+</div>
+
+<div class="px-4 mt-6 mb-10" data-aos="fade-up">
+
+  <form class="flex flex-col gap-2 deposit-form">
+
+    <fieldset class="fieldset bank-fieldset">
+      <label class="label text-blue1 font-semibold" data-i18n="transfer_page.Transfer_From"></label>
+      <select class="select channel-select w-full border-blue rounded-lg">
+        <option disabled selected data-i18n="transfer_page.Please_select_a_wallet"></option>
+        <option value="1">Wallet 1</option>
+        <option value="2">Wallet 2</option>
+      </select>
+    </fieldset>
+
+    <fieldset class="fieldset bank-fieldset">
+      <label class="label text-blue1 font-semibold" data-i18n="transfer_page.Transfer_To"></label>
+      <select class="select channel-select w-full border-blue rounded-lg">
+        <option disabled selected data-i18n="transfer_page.Please_select_a_wallet"></option>
+        <option value="1">Wallet 1</option>
+        <option value="2">Wallet 2</option>
+      </select>
+    </fieldset>
+
+    <div class="modal-action flex flex-col gap-4 mt-2 action-fieldset">
+      <button type="button" class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="transfer_page.Transfer" onclick="transfer_success_modal.showModal()"></button>
+    </div>
+  
+    <div class="flex flex-col items-center justify-center gap-0 mt-2">
+      <div data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support"></div>
+      <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support1"></a>
+    </div>
+
+  </form>
+
+</div>
+
+
+<!-- SUCCESS MODAL -->
+<dialog id="transfer_success_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="transfer_page.Transfer_Successful"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="flex flex-col items-center justify-center gap-4">
+        <div class="text-center" data-i18n="transfer_page.Transfer_Successful_description"></div>
+      </div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="transfer_page.Start_Playing" onclick="transfer_success_modal.close()"></button>
+      </div>
+
+    </div>
+  </div>
+</dialog>
+<!-- SUCCESS MODAL -->

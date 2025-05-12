@@ -1,0 +1,104 @@
+<form class="flex flex-col gap-2 deposit-form">
+
+  <div class="flex items-center justify-end mb-1">
+    <a href="/add-e-wallet-account.html">
+      <i class="fa-solid fa-circle-plus"></i>
+      <span data-i18n="withdrawal_page.Add_eWallet_Account"></span>
+    </a>
+  </div>
+
+  <fieldset class="fieldset bank-fieldset">
+    <select class="select channel-select w-full border-blue rounded-lg">
+      <option disabled selected data-i18n="deposit_page.Select_a_Bank_Options"></option>
+      <option value="1">Maybank</option>
+      <option value="2">DBS Singapore</option>
+    </select>
+  </fieldset>
+
+  <div class="flex-col gap-2 border border-blue rounded-lg p-4 mb-4 hidden bank-info-fieldset">
+    <div class="flex items-center justify-start gap-2">
+      <div class="text-sm font-semibold min-w-[100px]" data-i18n="deposit_page.Account_Name"></div>
+      <div class="">A&X DIY Enterprise</div>
+    </div>
+    <div class="flex items-center justify-start gap-2">
+      <div class="text-sm font-semibold min-w-[100px]" data-i18n="deposit_page.Deposit_Amount"></div>
+      <div class="">Min. MYR50, Max. MYR50,000</div>
+    </div>
+    <div class="flex items-center justify-start gap-2">
+      <div class="text-sm font-semibold min-w-[100px]" data-i18n="deposit_page.Account_Number"></div>
+      <div class="">01200182301</div>
+    </div>
+    <div class="flex flex-col items-center gap-2">
+      <img src="assets/images/deposit/qr-code.png" alt="qr-code" class="!max-w-[130px]">
+      <button type="button" class="btn h-[40px] !border-0 bg-blue shadow-none rounded-lg text-white px-10 w-full">
+        <span data-i18n="deposit_page.Save_Account_Info_on_Device"></span>
+      </button>
+    </div>
+    <div class="flex flex-col gap-0 text-2xs text-red-500">
+      <div class="font-semibold" data-i18n="deposit_page.Important_Note"></div>
+      <div data-i18n="deposit_page.Important_Note_note_10"></div>
+    </div>
+  </div>
+
+  <fieldset class="fieldset">
+    <label class="input rounded-lg border-blue text-xs">
+      <input type="text" class="text-blue placeholder:!font-light" data-i18n="deposit_page.Amount_Min_max" data-i18n-attr="placeholder" placeholder="" value="" />
+    </label>
+  </fieldset>
+
+
+  <div class="flex items-start gap-2 text-sm mt-2 text-red-500" >
+    <i class="fa-solid fa-triangle-exclamation text-base mt-1"></i>
+    <div data-i18n="withdrawal_page.e_wallets_note"></div>
+  </div>
+ 
+  <div class="modal-action flex flex-col gap-4 mt-2 action-fieldset">
+    <button type="button" class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-l from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="deposit_page.Proceed" onclick="withdrawal_to_e_wallets_proceed_success_modal.showModal()"></button>
+  </div>
+
+  <div class="flex flex-col items-center justify-center gap-0 mt-2">
+    <div data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support"></div>
+    <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support1"></a>
+  </div>
+
+</form>
+
+
+
+<!-- SUCCESS MODAL -->
+<dialog id="withdrawal_to_e_wallets_proceed_success_modal" class="modal">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="B92u_Bank_page.Request_Submitted"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4">
+      <div class="flex flex-col gap-4">
+        <div data-i18n="deposit_page.success_crypto_popup_desciption"></div>
+        <div class="flex items-center gap-2">
+          <span data-i18n="B92u_Bank_page.Your_Transaction_ID_is"></span>
+          <a href="#" class="font-semibold underline">123123123</a>
+        </div>
+        <div class="text-center">
+          <span data-i18n="B92u_Bank_page.request_support"></span>
+          <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.request_support_1"></a>
+        </div>
+      </div>
+     
+      <div class="modal-action flex flex-col gap-4">
+        <button class="btn btn-lg !min-h-10 flex-1 rounded-xl shadow-lg bg-gradient-to-b from-blue to-blue1 text-white !font-semibold text-sm" data-i18n="B92u_Bank_page.Check_Status" onclick="withdrawal_to_e_wallets_proceed_success_modal.close()"></button>
+      </div>
+
+    </div>
+  </div>
+</dialog>
+<!-- SUCCESS MODAL -->
