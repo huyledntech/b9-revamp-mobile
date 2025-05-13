@@ -697,6 +697,26 @@ function initialize() {
   /**
    * END VIP LEVEL
    */
+
+  /**
+   * HISTORY PAGE
+   */
+  const history_content_select = $(".history-content .history-content-select");
+  history_show_table(history_content_select.val());
+  history_content_select.on("change", function () {
+    const selected_value = $(this).val();
+    history_show_table(selected_value);
+  });
+  function history_show_table(value) {
+    $(".history-content .history-content-table > div").addClass("hidden");
+    const selected_table = $(`.history-content .${value}-table`);
+    selected_table.removeClass("hidden");
+  }
+  /**
+   * HISTORY PAGE
+   */
+  
+  
 }
 
 console.log("--- index.jsaaa");

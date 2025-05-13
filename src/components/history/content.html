@@ -1,0 +1,61 @@
+<!-- TOP NAV -->
+<div class="px-4 pb-0" data-aos="fade-in">
+  @@include('../base/top-nav-child/index.html', {
+    active: 'history',
+    top_items: 'transactions',
+  })
+</div>
+
+<div class="history-content">
+  <div class="px-4 mt-6 mb-10 flex flex-col gap-4" data-aos="fade-in">
+    <fieldset class="fieldset">
+      <select class="select w-full border-blue rounded-lg history-content-select">
+        <option value="deposit" data-i18n="history_page.Deposit"></option>
+        <option value="withdrawal" data-i18n="history_page.Withdrawal"></option>
+        <option value="transfer" data-i18n="history_page.Transfer"></option>
+        <option value="promotion" data-i18n="history_page.Promotion"></option>
+        <option value="betting" data-i18n="history_page.Betting"></option>
+      </select>
+    </fieldset>
+    <div class="flex items-center justify-between gap-2">
+      <fieldset class="fieldset flex-1">
+        <label class="input rounded-lg border-blue text-xs">
+          <input type="date" class="text-blue placeholder:!font-light" data-i18n="" data-i18n-attr="placeholder" placeholder="" value="" />
+        </label>
+      </fieldset>
+      <span class="px-2" data-i18n="history_page.to"></span>
+      <fieldset class="fieldset flex-1">
+        <label class="input rounded-lg border-blue text-xs">
+          <input type="date" class="text-blue placeholder:!font-light" data-i18n="" data-i18n-attr="placeholder" placeholder="" value="" />
+        </label>
+      </fieldset>
+    </div>
+    <div class="flex-col justify-center items-center gap-2">
+      <button class="btn bg-gradient-to-b from-blue to-blue1 border-0 text-white rounded-lg w-full" data-i18n="history_page.Search"></button>
+    </div>
+    
+    <div data-aos="fade-up" class="history-content-table">
+      <div class="deposit-table hidden">
+        @@include('./deposit-table.html') 
+      </div>
+      <div class="withdrawal-table hidden">
+        @@include('./withdrawal-table.html')
+      </div>
+      <div class="transfer-table hidden">
+        @@include('./transfer-table.html')
+      </div>
+      <div class="promotion-table hidden">
+        @@include('./promotion-table.html')
+      </div>
+      <div class="betting-table hidden">
+        @@include('./betting-table.html')
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="flex flex-col items-center justify-center gap-0 mt-6" data-aos="fade-up">
+    <div data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support"></div>
+    <a href="#" class="font-semibold underline" data-i18n="B92u_Bank_page.Deposit_to_B9Casino_support1"></a>
+  </div>
+</div>

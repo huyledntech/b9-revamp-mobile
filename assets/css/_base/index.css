@@ -225,3 +225,18 @@ input[type=date]::-webkit-calendar-picker-indicator {
   background-color: rgba(137, 137, 137, 0.1019607843) !important;
   color: var(--color-blue1) !important;
 }
+
+.custom-pagination {
+  gap: 5px;
+}
+.custom-pagination .join-item {
+  background-color: transparent !important;
+  color: var(--color-blue1) !important;
+  padding: 0 5px !important;
+  font-size: 13px !important;
+  height: 28px !important;
+}
+.custom-pagination .join-item.btn-active {
+  text-decoration: underline !important;
+  font-weight: 600 !important;
+}
