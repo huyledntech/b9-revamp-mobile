@@ -1,15 +1,26 @@
+<!-- Oops MODAL -->
 <dialog id="pokerKingOopsModal" class="modal">
-  <div class="modal-box text-center">
-    <div class="z-10 flex flex-col gap-2">
-      <h3 class="text-lg font-bold border-b border-gray2 pb-4" data-i18n="poker_king.Oops"></h3>
-      <div class="py-4">
-        <p class="whitespace-pre-line leading-6" data-i18n="poker_king.Oops_Description_1"></p>
-        <p class="whitespace-pre-line leading-6 font-bold" data-i18n="poker_king.Oops_Description_2"></p>
-        <p class="whitespace-pre-line leading-6" data-i18n="poker_king.Oops_Description_3"></p>
-      </div>
-      <form method="dialog">
-        <button id="draw-btn" class="bg-[url(assets/images/poker-king/Poker-Mini-Game-Btn.png)] bg-no-repeat bg-center bg-contain text-white text-center mt-2 text-base font-bold mx-auto w-[150px] h-[50px] flex items-center justify-center" data-i18n="poker_king.Close"></button>
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
       </form>
+      <div class="font-semibold" data-i18n="poker_king.No_Tickets_Available"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4 flex flex-col gap-4 items-center justify-center">
+      <div class="text-center" data-i18n="poker_king.Oops_Description"></div>
+      <div class="mt-4 flex gap-2 flex-col w-full">
+        <a href="/deposit.html" class="btn bg-gradient-to-b from-blue to-blue1 text-white rounded-lg w-full" data-i18n="poker_king.Deposit_Now" ></a>
+        <button class="btn bg-gray1 text-white rounded-lg w-full" data-i18n="poker_king.Close" onclick="pokerKingOopsModal.close()"></button>
+      </div>
     </div>
   </div>
 </dialog>
+<!-- Oops MODAL -->

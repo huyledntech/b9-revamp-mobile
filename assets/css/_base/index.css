@@ -235,6 +235,7 @@ input[type=date]::-webkit-calendar-picker-indicator {
   padding: 0 5px !important;
   font-size: 13px !important;
   height: 28px !important;
+  box-shadow: none !important;
 }
 .custom-pagination .join-item.btn-active {
   text-decoration: underline !important;

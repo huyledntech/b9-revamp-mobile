@@ -1,14 +1,38 @@
+<!-- Congratulations MODAL -->
 <dialog id="pokerKingCongratulationsModal" class="modal">
-  <div class="modal-box text-center">
-    <div class="z-10 flex flex-col gap-2">
-      <h3 class="text-lg font-bold border-b border-gray2 pb-4" data-i18n="poker_king.Congratulations"></h3>
-      <p class="py-4 whitespace-pre-line leading-6" data-i18n="poker_king.Congratulations_Description"></p>
-      <div class="flex items-center justify-center gap-2 font-bold text-xl bg-gray6 p-2 border-3 border-gray7 rounded-full w-2/3 mx-auto">
+  <div class="modal-box w-4/5 !p-0">
+    <div class="flex items-center justify-between bg-blue1 text-white h-12 px-4">
+      <form class="opacity-0" method="dialog">
+        <button class="">
+          <i class="fa-solid fa-circle-xmark text-white text-lg"></i>
+        </button>
+      </form>
+      <div class="font-semibold" data-i18n="poker_king.Congratulations"></div>
+      <form class="" method="dialog">
+        <button class="">
+          <i class="fa-light fa-circle-xmark text-white text-2xl"></i>
+        </button>
+      </form>
+    </div>
+    <div class="p-4 flex flex-col gap-4 items-center justify-center">
+      <div class="flex-1 flex items-center justify-center gap-2">
+        <img src="assets/images/poker-king/Poker-Card-Spades-10.png" alt="card" class="w-9 drop-shadow-lg">
+        <img src="assets/images/poker-king/Poker-Card-Spades-J.png" alt="card" class="w-9 drop-shadow-lg">
+        <img src="assets/images/poker-king/Poker-Card-Spades-K.png" alt="card" class="w-9 drop-shadow-lg">
+        <img src="assets/images/poker-king/Poker-Card-Spades-Q.png" alt="card" class="w-9 drop-shadow-lg">
+        <img src="assets/images/poker-king/Poker-Card-Spades-1.png" alt="card" class="w-9 drop-shadow-lg">
+      </div>
+
+      <div class="text-center" data-i18n="poker_king.Congratulations_Description"></div>
+      <div class="flex items-center justify-center gap-2 font-bold text-xl bg-white p-2 border-3 border-blue rounded-full w-2/3 mx-auto">
         <i class="fa-solid fa-coins text-yellow-500 text-2xl"></i> SGD 500
       </div>
-      <form method="dialog">
-        <button id="draw-btn" class="bg-[url(assets/images/poker-king/Poker-Mini-Game-Btn.png)] bg-no-repeat bg-center bg-contain text-white text-center mt-2 text-base font-bold mx-auto w-[150px] h-[50px] flex items-center justify-center" data-i18n="poker_king.Collect"></button>
-      </form>
+      <div class="text-center" data-i18n="poker_king.Congratulations_Description1"></div>
+
+      <div class="mt-4 w-full">
+        <button class="btn bg-gradient-to-b from-blue to-blue1 text-white rounded-lg w-full" data-i18n="poker_king.Got_it_Continue" onclick="pokerKingCongratulationsModal.close()"></button>
+      </div>
     </div>
   </div>
 </dialog>
+<!-- Congratulations MODAL -->
