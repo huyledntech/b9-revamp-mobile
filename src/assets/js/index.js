@@ -525,6 +525,14 @@ function initialize() {
       inbox_actions_nav.addClass("hidden");
     }
   });
+  const inbox_select_all = $("#inbox_select_all");
+  inbox_select_all.on("change", function () {
+    const is_checked = $(this).is(":checked");
+    const inbox_table_checkbox = $(
+      ".inbox-table .checkbox-container input[type='checkbox']"
+    );
+    inbox_table_checkbox.prop("checked", is_checked);
+  });
   /**
    * END INBOX
    */
