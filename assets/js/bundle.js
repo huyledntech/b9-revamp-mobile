@@ -52,7 +52,7 @@ $(function () {
  *
  */
 $(window).on("load", function () {
-  setTimeout(removeLoader, 500); //wait for page load PLUS x second
+  setTimeout(removeLoader, 1000); //wait for page load PLUS x second
 });
 
 function removeLoader() {
@@ -722,6 +722,40 @@ function initialize() {
   }
   /**
    * HISTORY PAGE
+   */
+
+
+  /**
+   * HOME PAGE MODAL
+   */
+  const home_page_default_time = 3000;
+  const message_from_b9_modal = document.getElementById("message_from_b9_modal");
+  const maximize_your_rewards_modal = document.getElementById("maximize_your_rewards_modal");
+  const daily_mystery_reward_awaiting_modal = document.getElementById("daily_mystery_reward_awaiting_modal");
+  const introducing_bonus_mania_modal = document.getElementById("introducing_bonus_mania_modal");
+  const never_miss_a_bonus_modal = document.getElementById("never_miss_a_bonus_modal");
+
+  setTimeout(() => {
+    message_from_b9_modal && message_from_b9_modal.showModal();
+  }, home_page_default_time);
+  setTimeout(() => {
+    maximize_your_rewards_modal && maximize_your_rewards_modal.showModal();
+    message_from_b9_modal.close();
+  }, home_page_default_time * 2);
+  setTimeout(() => {
+    daily_mystery_reward_awaiting_modal && daily_mystery_reward_awaiting_modal.showModal();
+    maximize_your_rewards_modal.close();
+  }, home_page_default_time * 3);
+  setTimeout(() => {
+    introducing_bonus_mania_modal && introducing_bonus_mania_modal.showModal();
+    daily_mystery_reward_awaiting_modal.close();
+  }, home_page_default_time * 4);
+  setTimeout(() => {
+    never_miss_a_bonus_modal && never_miss_a_bonus_modal.showModal();
+    introducing_bonus_mania_modal.close();
+  }, home_page_default_time * 5);
+  /**
+   * HOME PAGE MODAL
    */
   
   
