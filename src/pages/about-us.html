@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="">
+  @@include('../components/base/header.html', {title: 'About Us'})
+  <body>
+    
+    <!-- Content -->
+    <section class="main home">
+      @@include('../components/base/navbar-top.html', {
+        title: 'about_us_page.About_Us', 
+        back_url: 'javascript:history.back()', 
+        icon_back_white: true,
+        show_accordion: false
+      })
+
+
+      <div class="min-h-screen p-4 flex flex-col gap-4">
+
+        <div class="flex items-center bg-gray8 px-4 py-6 text-white font-bold text-xl whitespace-pre-line h-[120px]" data-aos="fade-in"></div>
+
+        <p class="text-blue font-bold text-xl" data-i18n="about_us_page.About_B9Casino" data-aos="fade-up"></p>
+        <p class="" data-i18n="about_us_page.description1" data-aos="fade-up"></p>
+        <p class="" data-i18n="about_us_page.description2" data-aos="fade-up"></p>
+        <p class="font-semibold text-base" data-i18n="about_us_page.Customer_Support_Excellence" data-aos="fade-up"></p>
+        <p class="" data-i18n="about_us_page.description3" data-aos="fade-up"></p>
+        <p class="font-semibold text-base" data-i18n="about_us_page.Security_and_Fairness_Commitment" data-aos="fade-up"></p>
+        <p class="" data-i18n="about_us_page.description4" data-aos="fade-up"></p>
+        
+      </div>
+
+      
+    </section>
+    
+    @@include('../components/base/footer.html')
+  </body>
+</html>

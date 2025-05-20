@@ -473,10 +473,17 @@ function initialize() {
   /**
    * NAVBAR ACCORDION
    */
-  const navbar_accordion = $("#navbar-accordion");
-  const navbar_accordion_input = $("#navbar-accordion input");
-  const navbar_accordion_icon = $("#navbar-accordion i");
+  const navbar_accordion = document.getElementById("navbar_accordion");
+  const navbar_accordion_input = $("#navbar_accordion input");
+  const navbar_accordion_icon = $("#navbar_accordion i");
   const top_nav_child = $("#top-nav-child");
+
+  // show default active accordion navbar except promotions page
+  if(!location.pathname.includes("promotions")) {
+    setTimeout(() => {
+      navbar_accordion.click()
+    }, 1000);
+  }
   navbar_accordion_input.on("change", function () {
     const is_checked = $(this).is(":checked");
     if (is_checked) {
@@ -614,7 +621,7 @@ function initialize() {
   /**
    * SIDEBAR COLLAPSE
    */
-  const sidebar_collapse = $(".sidebar-collapse input[type='checkbox'], .vip-faq-item input[type='checkbox'], .footer-collapse input[type='checkbox']");
+  const sidebar_collapse = $(".sidebar-collapse input[type='checkbox'], .vip-faq-item input[type='checkbox'], .footer-collapse input[type='checkbox'], .b92u-bank-collapse input[type='checkbox']");
   sidebar_collapse.on("change", function () {
     const is_checked = $(this).is(":checked");
     const sidebar_collapse_value = $(this).val();
@@ -740,25 +747,74 @@ function initialize() {
   }, home_page_default_time);
   setTimeout(() => {
     maximize_your_rewards_modal && maximize_your_rewards_modal.showModal();
-    message_from_b9_modal.close();
+    message_from_b9_modal && message_from_b9_modal.close();
   }, home_page_default_time * 2);
   setTimeout(() => {
     daily_mystery_reward_awaiting_modal && daily_mystery_reward_awaiting_modal.showModal();
-    maximize_your_rewards_modal.close();
+    maximize_your_rewards_modal && maximize_your_rewards_modal.close();
   }, home_page_default_time * 3);
   setTimeout(() => {
     introducing_bonus_mania_modal && introducing_bonus_mania_modal.showModal();
-    daily_mystery_reward_awaiting_modal.close();
+    daily_mystery_reward_awaiting_modal && daily_mystery_reward_awaiting_modal.close();
   }, home_page_default_time * 4);
   setTimeout(() => {
     never_miss_a_bonus_modal && never_miss_a_bonus_modal.showModal();
-    introducing_bonus_mania_modal.close();
+    introducing_bonus_mania_modal && introducing_bonus_mania_modal.close();
   }, home_page_default_time * 5);
+  setTimeout(() => {
+    never_miss_a_bonus_modal && never_miss_a_bonus_modal.close();
+  }, home_page_default_time * 6);
   /**
    * HOME PAGE MODAL
    */
-  
-  
+
+  /**
+   * TOGGLE BALANCE
+   */
+  let show_balance = true;
+  const balance_amount = "MYR 520.50";
+  const main_wallet_amount = "MYR 320.50";
+  const b92u_bank_amount = "MYR 220.00";
+  const turnover_require_to_withdraw = "MYR 185.50";
+  const amount_hide = "****";
+  $("#balance_amount").text(balance_amount);
+  $("#main_wallet_amount").text(main_wallet_amount);
+  $("#b92u_bank_amount").text(b92u_bank_amount);
+  $("#turnover_require_to_withdraw").text(turnover_require_to_withdraw);
+  $("#toggle_balance").on("click", function () {
+    show_balance = !show_balance;
+    $("#toggle_balance .hide_balance").toggleClass("hidden");
+    $("#toggle_balance .show_balance").toggleClass("hidden");
+    if (show_balance) {
+      $("#balance_amount").text(balance_amount);
+      $("#main_wallet_amount").text(main_wallet_amount);
+      $("#b92u_bank_amount").text(b92u_bank_amount);
+      $("#turnover_require_to_withdraw").text(turnover_require_to_withdraw);
+    } else {
+      $("#balance_amount").text(amount_hide);
+      $("#main_wallet_amount").text(amount_hide);
+      $("#b92u_bank_amount").text(amount_hide);
+      $("#turnover_require_to_withdraw").text(amount_hide);
+    }
+  });
+  /**
+   * END TOGGLE BALANCE
+   */
+
+  /**
+   * COPY REFERRAL CODE
+   */
+  $("#copy_referral_code").on("click", function () {
+    navigator.clipboard.writeText("YEBAQ4");
+    const copied_text = translator.translateForKey(
+      "deposit_page.copied",
+      _get_language
+    );
+    $(this).text(copied_text);
+  });
+  /**
+   * END COPY REFERRAL CODE
+   */
 }
 
 console.log("--- index.jsaaa");

@@ -1001,6 +1001,7 @@
   "Back_to_Login": "Back to Login",
   "total_funds": "Total Funds (MYR)",
   "hide_balance": "Hide Balance",
+  "show_balance": "Show Balance",
   "Total_Funds_in": "Total Funds in",
   "Balance": "Balance",
   "Turnover_Require_to_Withdraw": "Turnover Require to Withdraw",
@@ -1143,7 +1144,18 @@
     "": "",
     "": ""
   },
-  "": "",
+  "about_us_page": {
+    "About_Us": "About Us",
+    "About_B9Casino": "About B9Casino",
+    "description1": "B9Casino is a premier online gaming platform dedicated to providing high-quality casino entertainment in the Asia Pacific region. Our vision is simple: deliver exceptional gaming experiences and unbeatable value. At B9Casino, we offer industry-leading gaming products, outstanding promotions, and reliable customer support, ensuring an enjoyable and satisfying experience for every player.",
+    "description2": "Our extensive gaming selection includes Baccarat, Roulette, SicBo, popular online slots, and progressive jackpots, all presented on an advanced platform with stunning graphics, immersive animations, customizable gameplay speeds, and dynamic sound effects. We aim to cater to diverse player preferences, providing endless opportunities for exciting wins.",
+    "Customer_Support_Excellence": "Customer Support Excellence",
+    "description3": "Our customer service team is available 24/7, dedicated to addressing your questions and resolving issues promptly, courteously, and effectively. At B9Casino, customer satisfaction is paramount, and we continually strive to exceed your expectations through exceptional service.",
+    "Security_and_Fairness_Commitment": "Security and Fairness Commitment",
+    "description4": "To maintain fairness and system integrity, each player is permitted only one B9Casino account, subject to regular security checks. We employ cutting-edge software technology and rigorous security protocols to guarantee fair gameplay and safeguard your personal information, providing a secure and trustworthy gaming environment.",
+    "": "",
+    "": ""
+  },
   "": "",
   "": "",
   "": "",

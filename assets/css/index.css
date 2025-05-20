@@ -177,7 +177,6 @@ img {
 
 .btn {
   font-weight: 400;
-  border: 0;
 }
 .btn.disabled, .btn[disabled] {
   opacity: 0.5;
