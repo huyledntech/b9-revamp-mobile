@@ -621,7 +621,7 @@ function initialize() {
   /**
    * SIDEBAR COLLAPSE
    */
-  const sidebar_collapse = $(".sidebar-collapse input[type='checkbox'], .vip-faq-item input[type='checkbox'], .footer-collapse input[type='checkbox'], .b92u-bank-collapse input[type='checkbox']");
+  const sidebar_collapse = $(".sidebar-collapse input[type='checkbox'], .vip-faq-item input[type='checkbox'], .footer-collapse input[type='checkbox'], .B92U-bank-collapse input[type='checkbox']");
   sidebar_collapse.on("change", function () {
     const is_checked = $(this).is(":checked");
     const sidebar_collapse_value = $(this).val();
@@ -774,12 +774,12 @@ function initialize() {
   let show_balance = true;
   const balance_amount = "MYR 520.50";
   const main_wallet_amount = "MYR 320.50";
-  const b92u_bank_amount = "MYR 220.00";
+  const B92U_bank_amount = "MYR 220.00";
   const turnover_require_to_withdraw = "MYR 185.50";
   const amount_hide = "****";
   $("#balance_amount").text(balance_amount);
   $("#main_wallet_amount").text(main_wallet_amount);
-  $("#b92u_bank_amount").text(b92u_bank_amount);
+  $("#B92U_bank_amount").text(B92U_bank_amount);
   $("#turnover_require_to_withdraw").text(turnover_require_to_withdraw);
   $("#toggle_balance").on("click", function () {
     show_balance = !show_balance;
@@ -788,12 +788,12 @@ function initialize() {
     if (show_balance) {
       $("#balance_amount").text(balance_amount);
       $("#main_wallet_amount").text(main_wallet_amount);
-      $("#b92u_bank_amount").text(b92u_bank_amount);
+      $("#B92U_bank_amount").text(B92U_bank_amount);
       $("#turnover_require_to_withdraw").text(turnover_require_to_withdraw);
     } else {
       $("#balance_amount").text(amount_hide);
       $("#main_wallet_amount").text(amount_hide);
-      $("#b92u_bank_amount").text(amount_hide);
+      $("#B92U_bank_amount").text(amount_hide);
       $("#turnover_require_to_withdraw").text(amount_hide);
     }
   });

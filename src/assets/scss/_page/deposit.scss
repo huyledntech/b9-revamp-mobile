@@ -118,11 +118,11 @@
 
   // crypto tabs
 
-  // b92u bank tabs
+  // B92U bank tabs
   .bonus-fieldset:has(input:checked:not([disabled]))~.select-bonus-fieldset {
     display: flex !important;
     flex-wrap: wrap;
   }
 
-  // b92u bank tabs
+  // B92U bank tabs
 }

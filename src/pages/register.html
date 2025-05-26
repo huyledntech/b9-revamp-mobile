@@ -65,13 +65,15 @@
             <div class="join w-full">
               <div class="w-[100px] phone-code">
                 <select class="select">
-                  <option>+65</option>
-                  <option>+66</option>
-                  <option>+67</option>
+                  <option value="+65">+65</option>
+                  <option value="+60">+60</option>
+                  <option value="+673">+673</option>
+                  <option value="+84">+84</option>
+                  <option value="+855">+855</option>
                 </select>
               </div>
               <div class="w-full input validator join-item input border-gray3 rounded-lg rounded-l-none">
-                <input type="text" data-i18n="Phone_Number" data-i18n-attr="placeholder" class="placeholder:text-blue1 w-full" autocomplete="one-time-code"/>
+                <input type="text" data-i18n="Phone_Number" data-i18n-attr="placeholder" class="placeholder:text-blue1 w-full" autocomplete="one-time-code" maxlength="8" pattern="[0-9]*" inputmode="numeric"/>
               </div>
             </div>
             <input type="email" data-i18n="Email" data-i18n-attr="placeholder" class="input border-gray3 placeholder:text-blue1 rounded-lg w-full" autocomplete="one-time-code"/>
@@ -83,10 +85,10 @@
               <input type="checkbox" checked="checked" class="checkbox" />
               <span data-i18n="register_aree1"></span>
             </label>
-            <label class="fieldset-label text-blue1 text-sm">
+            <!-- <label class="fieldset-label text-blue1 text-sm">
               <input type="checkbox" checked="checked" class="checkbox" />
               <span data-i18n="register_aree2"></span>
-            </label>
+            </label> -->
             <button class="btn bg-gradient-to-r from-blue1 to-blue2 text-white rounded-lg w-full" data-i18n="Register"></button>
             <div class="">
               <span data-i18n="already_have_account"></span>
@@ -101,5 +103,58 @@
     </section>
     
     @@include('../components/base/footer.html')
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const countrySelect = document.querySelector('.phone-code .select');
+        const countryDropdown = document.querySelector('#popover-1');
+        const countryButton = document.querySelector('[popovertarget="popover-1"]');
+        const countryCodeMap = {
+          'SG': '+65',
+          'MY': '+60',
+          'BN': '+673',
+          'VN': '+84',
+          'KH': '+855'
+        };
+
+        // Disable manual selection of phone code
+        countrySelect.disabled = true;
+
+        // Update country button and phone code when a country is selected
+        countryDropdown.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const countryCode = this.querySelector('span').textContent;
+            const countryImg = this.querySelector('img').src;
+            
+            // Update button content
+            countryButton.querySelector('img').src = countryImg;
+            countryButton.querySelector('span').textContent = countryCode;
+            
+            // Update phone code select value
+            const newCode = countryCodeMap[countryCode];
+            countrySelect.value = newCode;
+            
+            // Also update selected option
+            Array.from(countrySelect.options).forEach(option => {
+              option.selected = option.value === newCode;
+            });
+            
+            // Trigger change event
+            countrySelect.dispatchEvent(new Event('change'));
+            
+            // Close dropdown
+            countryButton.click();
+          });
+        });
+
+        // // Set initial phone code based on default country (SG)
+        // const initialCode = countryCodeMap['SG'];
+        // console.log("initialCode: ", initialCode)
+        // countrySelect.value = initialCode;
+        // Array.from(countrySelect.options).forEach(option => {
+        //   option.selected = option.value === initialCode;
+        // });
+      });
+    </script>
   </body>
 </html>
