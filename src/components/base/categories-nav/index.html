@@ -1,6 +1,6 @@
 <div id="top-nav-child" class="home-categories @@if (context.default_hide) {hidden}">
   <div class="collapse bg-gray4 p-4 rounded-2xl text-xs">
-    <input id="home-categories-checkbox" type="checkbox" name="home-categories" class="hidden" />
+    <input id="home-categories-checkbox" type="checkbox" name="home-categories" class="hidden" @@if (context.isAll) {checked} />
     <div class="collapse-title w-full p-0">
       <div class="grid grid-cols-5 gap-x-2 gap-y-6 mt-2 w-full text-blue">
         <a href="/sports.html" class="col-span-1 flex flex-col items-center justify-start gap-1 @@if (context.active === 4) {first-item} @@if (context.active === 0) {text-blue1 active}">
