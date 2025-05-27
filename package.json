@@ -23,5 +23,8 @@
     "gulp-sass": "^5.1.0",
     "node-sass": "npm:sass",
     "sass": "^1.66.1"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }
