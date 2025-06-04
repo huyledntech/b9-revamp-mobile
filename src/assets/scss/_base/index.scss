@@ -197,6 +197,11 @@ input[type="date"]::-webkit-calendar-picker-indicator {
       font-weight: 600;
       font-size: 16px;
 
+      &.remove-tab-border {
+        border-right: none !important;
+        text-decoration: none !important;
+      }
+
       &:before {
         display: none;
       }

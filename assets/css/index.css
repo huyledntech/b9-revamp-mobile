@@ -236,6 +236,10 @@ input[type=date]::-webkit-calendar-picker-indicator {
   font-weight: 600;
   font-size: 16px;
 }
+.custom-tabs .tab-list > .tab.remove-tab-border {
+  border-right: none !important;
+  text-decoration: none !important;
+}
 .custom-tabs .tab-list > .tab:before {
   display: none;
 }

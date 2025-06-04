@@ -815,6 +815,26 @@ function initialize() {
   /**
    * END COPY REFERRAL CODE
    */
+
+  /**
+  * CASINO GAME LOBBY
+  */
+  const pragmatic_play_tab = $('.tabs-casino-game .tab.pragmatic_play_tab');
+  const game_lobby_tab = $('.tabs-casino-game .tab.game_lobby_tab');
+  game_lobby_tab.on('click', function () {
+    pragmatic_play_tab.addClass('hidden');
+    game_lobby_tab.addClass('remove-tab-border');
+  });
+
+  $('.casino-game-lobby .item').on('click', function () {
+    pragmatic_play_tab.click();
+    pragmatic_play_tab.removeClass('hidden');
+    game_lobby_tab.removeClass('remove-tab-border');
+  });
+  /**
+  * CASINO GAME LOBBY
+  */
+   
 }
 
 console.log("--- index.jsaaa");
