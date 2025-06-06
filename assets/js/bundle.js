@@ -100,8 +100,8 @@ const LANGUAGES = {
   KH_EN: "KH_EN",
   KH_CH: "KH_CH",
 };
-const PREFERED_REGION = "preferred_region";
-const PREFERED_LANGUAGE = "preferred_language";
+const PREFERED_REGION = "B9_PREFERED_REGION";
+const PREFERED_LANGUAGE = "B9_PREFERED_LANGUAGE";
 const DEFAULT_LANGUAGE = LANGUAGES.EN;
 const DEFAULT_REGION = "International";
 
@@ -117,7 +117,7 @@ var translator = new Translator({
   persist: true,
   persistKey: PREFERED_LANGUAGE,
   filesLocation: "assets/i18n",
-  // filesLocation: "https://raw.githubusercontent.com/huylesitdn/uwin-mobile/main/assets/i18n",
+  // filesLocation: "https://raw.githubusercontent.com/huyledntech/b9-revamp-mobile/main/assets/i18n",
 });
 
 const queryString = window.location.search;
@@ -777,21 +777,22 @@ function initialize() {
   const B92U_bank_amount = "MYR 220.00";
   const turnover_require_to_withdraw = "MYR 185.50";
   const amount_hide = "****";
-  $("#balance_amount").text(balance_amount);
+  $(".balance_amount").text(balance_amount);
   $("#main_wallet_amount").text(main_wallet_amount);
   $("#B92U_bank_amount").text(B92U_bank_amount);
   $("#turnover_require_to_withdraw").text(turnover_require_to_withdraw);
-  $("#toggle_balance").on("click", function () {
+  $(".toggle_balance").on("click", function (e) {
+    e.preventDefault();
     show_balance = !show_balance;
-    $("#toggle_balance .hide_balance").toggleClass("hidden");
-    $("#toggle_balance .show_balance").toggleClass("hidden");
+    $(".toggle_balance .hide_balance").toggleClass("hidden");
+    $(".toggle_balance .show_balance").toggleClass("hidden");
     if (show_balance) {
-      $("#balance_amount").text(balance_amount);
+      $(".balance_amount").text(balance_amount);
       $("#main_wallet_amount").text(main_wallet_amount);
       $("#B92U_bank_amount").text(B92U_bank_amount);
       $("#turnover_require_to_withdraw").text(turnover_require_to_withdraw);
     } else {
-      $("#balance_amount").text(amount_hide);
+      $(".balance_amount").text(amount_hide);
       $("#main_wallet_amount").text(amount_hide);
       $("#B92U_bank_amount").text(amount_hide);
       $("#turnover_require_to_withdraw").text(amount_hide);

@@ -21,10 +21,18 @@
         <div class="btn-group flex items-center gap-2" role="group" aria-label="Basic mixed styles example">
           <label for="open_total_funds" class="btn btn-secondary btn-currency !text-white !bg-transparent !border !border-blue !shadow-none !px-3">
             <i class="fa-solid fa-coins text-yellow-500"></i>
-            <span class="font-normal">520,50</span>
+            <span class="font-normal balance_amount">520,50</span>
             <!-- <span class="btn !px-1 !border-none !bg-blue shadow-none text-white">
               <i class="fa-solid fa-pager"></i>
             </span> -->
+            <div class="toggle_balance opacity-50 text-2xs">
+              <div class="flex gap-1 items-center hide_balance">
+                <i class="fa-light fa-eye-slash"></i>
+              </div>
+              <div class="flex gap-1 items-center show_balance hidden">
+                <i class="fa-light fa-eye"></i>
+              </div>
+            </div>
           </label>
           <a href="/refer.html" class="btn !px-1 !border-none !bg-transparent shadow-none text-blue">
             <i class="fa-solid fa-users text-xl"></i>
@@ -73,7 +81,7 @@
           <div class="bg-blue1 text-white p-4 rounded-t-lg">
             <div class="flex gap-3 items-center">
               <div data-i18n="total_funds "></div>
-              <div id="toggle_balance" class="opacity-50 text-2xs">
+              <div class="toggle_balance opacity-50 text-2xs">
                 <div class="flex gap-1 items-center hide_balance">
                   <i class="fa-light fa-eye-slash"></i>
                   <div data-i18n="hide_balance"></div>
@@ -87,7 +95,7 @@
             <div class="flex gap-3 items-center justify-between mt-1">
               <div class="flex gap-1 items-center">
                 <i class="fa-solid fa-coins text-xl text-yellow-500"></i>
-                <span id="balance_amount" class="font-semibold text-lg"></span>
+                <span class="balance_amount font-semibold text-lg"></span>
               </div>
               <div class="flex items-center gap-2">
                 <i class="fa-solid fa-rotate text-lg"></i>
