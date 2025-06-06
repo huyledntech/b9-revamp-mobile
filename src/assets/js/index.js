@@ -100,8 +100,8 @@ const LANGUAGES = {
   KH_EN: "KH_EN",
   KH_CH: "KH_CH",
 };
-const PREFERED_REGION = "preferred_region";
-const PREFERED_LANGUAGE = "preferred_language";
+const PREFERED_REGION = "B9_PREFERED_REGION";
+const PREFERED_LANGUAGE = "B9_PREFERED_LANGUAGE";
 const DEFAULT_LANGUAGE = LANGUAGES.EN;
 const DEFAULT_REGION = "International";
 
@@ -117,7 +117,7 @@ var translator = new Translator({
   persist: true,
   persistKey: PREFERED_LANGUAGE,
   filesLocation: "assets/i18n",
-  // filesLocation: "https://raw.githubusercontent.com/huylesitdn/uwin-mobile/main/assets/i18n",
+  // filesLocation: "https://raw.githubusercontent.com/huyledntech/b9-revamp-mobile/main/assets/i18n",
 });
 
 const queryString = window.location.search;
