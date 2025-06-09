@@ -116,8 +116,8 @@ var translator = new Translator({
   registerGlobally: "__",
   persist: true,
   persistKey: PREFERED_LANGUAGE,
-  filesLocation: "assets/i18n",
-  // filesLocation: "https://raw.githubusercontent.com/huyledntech/b9-revamp-mobile/main/assets/i18n",
+  // filesLocation: "assets/i18n",
+  filesLocation: "https://raw.githubusercontent.com/huyledntech/b9-revamp-mobile/main/assets/i18n",
 });
 
 const queryString = window.location.search;
