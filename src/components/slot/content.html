@@ -17,12 +17,32 @@
   </div>
 
   <!-- Game lobby -->
-  <div class="" data-aos="fade-up">
-    <div class="flex justify-between items-center px-4">
-      <div class="text-blue1 font-semibold text-base" data-i18n="4d.GAME_LOBBY"></div>
+  <div class="px-2" data-aos="fade-up">
+    <div class="tabs custom-tabs tabs-casino-game">
+      <div class="tab-list py-2 !gap-0">
+        <!-- tab 1 -->
+        <label class="tab game_lobby_tab remove-tab-border">
+          <input type="radio" name="casino-game-tab" class="hidden" value="1" checked="checked" />
+          <div data-i18n="4d.GAME_LOBBY"></div>
+        </label>
+  
+        <!-- tab 2 -->
+        <label class="tab pragmatic_play_tab hidden">
+          <input type="radio" name="casino-game-tab" class="hidden" value="2" />
+          <div data-i18n="casino_page.Pragmatic_Play"></div>
+        </label>
+      </div>
+      
+      <div class="tab-content-list w-full flex flex-col gap-4">
+        <div class="tab-content-item">
+          @@include('../casino/game-lobby.html')
+        </div>
+        <div class="tab-content-item">
+          @@include('../casino/pragmatic-play.html')
+        </div>
+      </div>
     </div>
-
-    @@include('./game-lobby.html')
+    
   </div>
 
   <!-- MOST CLAIMED PROMOTIONS -->

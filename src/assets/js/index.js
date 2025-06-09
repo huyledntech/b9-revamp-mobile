@@ -828,7 +828,6 @@ function initialize() {
   });
 
   $('.casino-game-lobby .item').on('click', function () {
-    alert('click');
     pragmatic_play_tab.click();
     pragmatic_play_tab.removeClass('hidden');
     game_lobby_tab.removeClass('remove-tab-border');
