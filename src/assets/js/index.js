@@ -481,7 +481,7 @@ function initialize() {
   // show default active accordion navbar except promotions page
   if(!location.pathname.includes("promotions")) {
     setTimeout(() => {
-      navbar_accordion.click()
+      navbar_accordion && navbar_accordion.click()
     }, 1000);
   }
   navbar_accordion_input.on("change", function () {
@@ -828,6 +828,7 @@ function initialize() {
   });
 
   $('.casino-game-lobby .item').on('click', function () {
+    alert('click');
     pragmatic_play_tab.click();
     pragmatic_play_tab.removeClass('hidden');
     game_lobby_tab.removeClass('remove-tab-border');
